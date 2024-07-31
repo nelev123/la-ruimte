@@ -9,6 +9,6 @@
     <xi:include href="./stelsels/gauss-jordan.ptx" />
 
     <exercises xml:id="exercises-stelsels">
-        <xi:include href="./stelsels/bundel-waaier-oef.ptx"/>
+        <xi:include href="./rechten-vlakken/bundel-waaier-oef.ptx"/>
     </exercises>
 </chapter>

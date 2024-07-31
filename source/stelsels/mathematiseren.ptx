@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section>
+<section xml:id="stelsels-mathematiseren">
     <title>Mathematiseren</title>
     <introduction>
       <p>
@@ -31,7 +31,7 @@
           </p>
         </solution>
       </exercise>
-      <exercise>
+      <exercise  xml:id="oef-stelsel-1">
         <statement>
           <p>
             Anna, Brigitte en Charlotte vormen een driegeslacht. Samen zijn ze 105 jaar oud. Anna is negen jaar ouder dan Brigitte en Charlotte samen. Jammer genoeg komen Anna en Charlotte samen nog drie jaartjes te kort om dubbel zo oud als Brigitte te zijn. Hoe oud zijn deze

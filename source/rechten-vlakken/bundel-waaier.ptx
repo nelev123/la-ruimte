@@ -105,6 +105,8 @@
       </solution>
     </activity>
 
+    <!-- TODO opdracht over evenwijdige rechten-->
+
     <assemblage>
       <title>Rechtenbundel</title>
       <p>
@@ -130,7 +132,6 @@
 
   </subsection>
 
-
   <subsection>
     <title>Vlakkenwaaiers in de ruimte</title>
 
@@ -144,8 +145,10 @@
       </p>
     </assemblage>
 
+    <!--TODO: voorbeelden van enkele vlakken; evenwijdige vlakken-->    
+
     <p>
-        De snijlijn van twee niet-evenwijdige vlakken is een rechte, dus onderstaand <m>2 \times 3</m>-stelsel <mdash/> 2 vergelijkingen en 3 onbekenden<mdash/> beschrijft dus eigenlijk een rechte. 
+        De snijlijn van twee niet-evenwijdige vlakken is een rechte, dus onderstaand <m>2 \times 3</m>-stelsel <mdash/> 2 vergelijkingen en 3 onbekenden<mdash/> beschrijft een rechte. 
         <me>
           \begin{cases} x+y-z=4 \\ x-3z=2 \end{cases}
         </me>
@@ -178,7 +181,7 @@
     </example>
 
     <p>
-      Om het snijpunt van twee rechten te bepalen los je het corresponderende stelsel cartesische vergelijkingen op. De snijlijn van twee vlakken kan je op dezelfde manier bepalen. We hebben nu drie variabelen en slechts twee vergelijkingen, dus het stelsel is opgelost van zodra elke vergelijking maximaal twee variabelen bevat. De tweede vergelijking staat al in de juiste vorm en het volstaat om bijvoorbeeld <m>x</m> te elimineren uit de eerste vergelijking:
+      Om het snijpunt van twee rechten te bepalen los je het corresponderende stelsel cartesische vergelijkingen op. De snijlijn van twee vlakken kan je op dezelfde manier bepalen. We hebben nu drie variabelen en slechts twee vergelijkingen, dus het stelsel is opgelost van zodra elke vergelijking maximaal twee variabelen bevat<fn>Meer uitleg hierover vind je in <xref ref=""/></fn>. De tweede vergelijking staat al in de juiste vorm en het volstaat om bijvoorbeeld <m>x</m> te elimineren uit de eerste vergelijking:
       <md>
         <mrow>\amp \begin{cases} x+y-z=4 \\ x-3z=2 \end{cases} \Bigg \rvert \begin{matrix} 1 \\ -1 \end{matrix}</mrow>
         <mrow>\Leftrightarrow \; \amp \begin{cases} y+2z=2 \\ x-3z=2 \end{cases}</mrow>
@@ -189,57 +192,12 @@
         x = 2 + 3 k \\ y=2-2k \\ z =k 
         \end{cases} \qquad ( k \in \mathbb{R})
       </me>
-      We noemen dit een <term>parametervoorstelling</term> van de rechte; voor elke waarde van <m>k</m> krijgen we een ander punt van de rechte <m>a</m>. De oplossingenverzameling zelf noteren we dan als
+      We krijgen dus gewoon een <term>parametervoorstelling</term> van de rechte en de oplossingenverzameling zelf noteren we als
       <me>
         V=\lbrace (2+3k,2-2k,k) | k \in \mathbb{R} \rbrace
       </me>
     </p>
-    <exercises>
-      <exercise>
-        <statement>
-          <p>
-            Bepaal een parametervoorstelling van de snijlijn van de vlakken <m>\alpha \leftrightarrow 2x+y+3z-1=0</m> en <m>\beta \leftrightarrow x+3z-5=0</m>.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Stelsel vereenvoudigen met de combinatiemethode: <m>\begin{cases}y-3z+9=0 \\ x+3z-5=0\end{cases}</m>. Een mogelijke parametervoorstelling krijgen we door te stellen dat <m>z=k \Rightarrow \begin{cases}x=5-3k\\y=-9+3k\\z=k\end{cases}</m>. Er zijn een oneindig aantal mogelijkheden, dus controleer je resultaat met Geogebra.
-          </p>
-          <p>
-            <url href="https://www.geogebra.org/3d/strj7kev" />
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Gegeven twee vlakken <m>\alpha \leftrightarrow x+y+z+2=0</m> en <m>\beta \leftrightarrow x-y+2z+1=0</m> met snijlijn <m>d</m>. Bepaal een cartesische vergelijking van het vlak door <m>P(1,0,1)</m> en <m>d</m>.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Vlakkenwaaier door <m>d</m>: <m>k(x+y+z+2)+m(x-y+2z+1)=0</m>. Coördinaten van punt <m>P</m> invullen geeft <m>4k+4m=0 \Rightarrow k=1 \text{ en } m=-1</m>; waarden van <m>k</m> en <m>m</m> invullen in de vlakkenwaaier <m>\Rightarrow 2y-z+1=0</m>.
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Gegeven de rechte <m>f \leftrightarrow x-5=\dfrac{y+b-3}{3}=\dfrac{z-6}{5}</m> en het vlak <m>\alpha \leftrightarrow ax+3y+bz-8=0</m>. Bepaal <m>a</m> en <m>b</m> zodat de rechte in het vlak ligt.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Vlakkenwaaier door <m>f</m>: <m>k(3x-y-12-b)+m(5x-z-19)=0</m>. <m>k</m> en <m>m</m> bepalen waarvoor vlakkenwaaier zich herleidt tot het vlak <m>\alpha</m>:
-            <md>
-              <mrow>\amp k(3x-y-12-b)+m(5x-z-19)=ax+3y+bz-8</mrow>
-              <mrow>\Rightarrow \; \amp (3k+5m)x-ky-mz-12k-kb-19m=ax+3y+bz-8</mrow>
-            </md>
-            Uit de coëfficiënten van <m>y</m> en <m>z</m> volgt onmiddellijk dat <m>k=-3</m> en <m>m=-b</m>. De constante term leidt tot de vergelijking <m>-12k-kb-19m=-8</m> en na invullen van <m>k</m> en <m>m</m> leidt dit tot <m>b=-2</m> en bijgevolg ook <m>m=2</m>. Uit de coëfficiënt van <m>x</m> volgt dat <m>a=3k+5m=-9+10=1</m>.
-          </p>
-        </solution>
-      </exercise>
-    </exercises>
+
   </subsection>
 </section>
 

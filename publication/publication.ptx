@@ -85,7 +85,7 @@
       theorem="no"
       proof="no"
       definition="no"
-      example="no"
+      example="yes"
       example-solution="yes"
       project="no"
       task="no"
