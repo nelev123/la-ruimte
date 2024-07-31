@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <subsection>
+    <title>Elementaire rij-operaties op de uitgebreide matrix</title>
+    <p>
+      Het schrijfwerk kan verminderd worden door de variabelen niet expliciet op te schrijven. Bij het bovenstaande stelsel hoort de volgende <term>uitgebreide matrix</term>:
+      <me>
+        \begin{bmatrix} 1 \amp 1 \amp 1 \amp 105\\-1 \amp 1 \amp 1 \amp -9 \\ 1 \amp -2 \amp 1 \amp -3 \end{bmatrix}
+      </me>
+      De laatste kolom wordt gevormd door het rechterlid en de andere kolommen door de coëfficiënten van elke variabele.
+    </p>
+    <p>
+      Om de oplossing van het stelsel te bepalen herleiden we deze matrix tot de <term>rij-canonieke matrix</term>
+      <me>
+        \begin{bmatrix} 1 \amp 0 \amp 0 \amp 57\\ 0 \amp 1 \amp 0 \amp 36 \\ 0 \amp 0 \amp 1 \amp 12 \end{bmatrix}
+      </me>
+       waaruit de oplossing onmiddellijk kan afgelezen worden. Dit gebeurt via de volgende <term>elementaire rij-operaties</term>
+      <md>
+        <mrow>\amp \begin{bmatrix} 1 \amp 1 \amp 1 \amp 105\\-1 \amp 1 \amp 1 \amp -9 \\ 1 \amp -2 \amp 1 \amp -3 \end{bmatrix}\overset{R_2 \to R_2+R_1}{\underset{R_3 \to R_3-R_1}{\sim}} \begin{bmatrix} 1 \amp 1 \amp 1 \amp 105\\ 0 \amp 2 \amp 2 \amp 96 \\ 0 \amp -3 \amp 0 \amp -108 \end{bmatrix}</mrow>
+         <mrow>\overset{R_3 \to \frac{R_3}{-3}}{\sim} \; \amp \begin{bmatrix} 1 \amp 1 \amp 1 \amp 105\\ 0 \amp 2 \amp 2 \amp 96 \\ 0 \amp 1 \amp 0 \amp 36 \end{bmatrix} \overset{R_2 \leftrightarrow R_3 }{\sim} \begin{bmatrix} 1 \amp 1 \amp 1 \amp 105\\ 0 \amp 1 \amp 0 \amp 36  \\ 0 \amp 2 \amp 2 \amp 96  \end{bmatrix}</mrow>
+         <mrow>\overset{R_1 \to R_1-R_2}{\underset{R_3 \to R_3-2R_2}{\sim}} \; \amp \begin{bmatrix} 1 \amp 0 \amp 1 \amp 69\\ 0 \amp 1 \amp 0 \amp 36  \\ 0 \amp 0 \amp 2 \amp 24  \end{bmatrix} \overset{R_3 \to \frac{R_3}{2}}{\sim} \begin{bmatrix} 1 \amp 0 \amp 1 \amp 69\\ 0 \amp 1 \amp 0 \amp 36  \\ 0 \amp 0 \amp 1 \amp 12  \end{bmatrix}</mrow>
+         <mrow>\overset{R_1 \to R_1-R_3}{\sim} \; \amp  \begin{bmatrix} 1 \amp 0 \amp 0 \amp 57\\ 0 \amp 1 \amp 0 \amp 36  \\ 0 \amp 0 \amp 1 \amp 12  \end{bmatrix}</mrow>
+      </md>
+    </p>
+
+    <assemblage>
+      <title>De uitgebreide matrix en de rij-canonieke matrix</title>
+      <p>
+        Gegeven het <m>m \times n</m>-stelsel
+        <me>
+          \begin{cases}
+          a_{11}x_1+a_{12}x_2+\ldots+a_{1j}x_j+\ldots+a_{1n}x_n=b_1 \\
+          a_{21}x_1+a_{22}x_2+\ldots+a_{2j}x_j+\ldots+a_{2n}x_n=b_2 \\
+          \vdots \\
+          a_{i1}x_1+a_{i2}x_2+\ldots+a_{ij}x_j+\ldots+a_{in}x_n=b_i \\
+          \vdots \\
+          a_{m1}x_1+a_{m2}x_2+\ldots+a_{mj}x_j+\ldots+a_{mn}x_n=b_m
+          \end{cases}
+        </me>
+        We noemen
+        <me>
+          A = \begin{bmatrix}
+          a_{11} \amp a_{12} \amp a_{13} \amp\ldots \amp a_{1j} \ldots \amp a_{1n}\\
+          a_{21} \amp a_{22} \amp a_{23} \amp\ldots \amp a_{2j} \ldots \amp a_{2n}\\
+          \vdots \amp\vdots \amp\vdots \amp\ldots \amp\vdots \amp\vdots \\
+          a_{i1} \amp a_{i2} \amp a_{i3} \amp\ldots \amp a_{ij} \ldots \amp a_{in}\\
+          \vdots \amp\vdots \amp\vdots \amp\ldots \amp\vdots \amp\vdots \\
+          a_{m1} \amp a_{m2} \amp a_{m3} \amp\ldots \amp a_{mj} \ldots \amp a_{mn}\\
+          \end{bmatrix}
+        </me>
+        de coëfficiëntenmatrix en
+        <me>
+          A_b = \begin{bmatrix}
+          a_{11} \amp a_{12} \amp a_{13} \amp\ldots \amp a_{1j} \ldots \amp a_{1n} \amp b_1\\
+          a_{21} \amp a_{22} \amp a_{23} \amp\ldots \amp a_{2j} \ldots \amp a_{2n} \amp b_2\\
+          \vdots \amp\vdots \amp\vdots \amp\ldots \amp\vdots \amp\vdots \amp \vdots \\
+          a_{i1} \amp a_{i2} \amp a_{i3} \amp\ldots \amp a_{ij} \ldots \amp a_{in}\\
+          \vdots \amp\vdots \amp\vdots \amp\ldots \amp\vdots \amp\vdots \amp b_i\\
+          a_{m1} \amp a_{m2} \amp a_{m3} \amp\ldots \amp a_{mj} \ldots \amp a_{mn} \amp b_m\\
+          \end{bmatrix}
+        </me>
+        de uitgebreide matrix. 
+      </p>
+      <p>
+        Bij de methode van Gauss-Jordan wordt de uitgebreide matrix herleid tot de rij-canonieke matrix. Deze matrix heeft de volgende eigenschappen:
+        <ul>
+          <li>
+            <p>
+              Eventuele nulrijen staan altijd onderaan.
+            </p>
+          </li>
+          <li>
+            <p>
+              In de niet-nulrijen is het eerste van 0 verschillende element altijd gelijk aan 1. Dit noemen we de spillen. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Boven en onder de spillen staan enkel nullen.
+            </p>
+          </li>
+          <li>
+            <p>
+              Elke rij begin met meer nullen dan de vorige. De spillen staan dus in trapvorm.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <!--gelijkwaardige stelsels hebben dezelfde oplossingenverzameling-->
+    </assemblage>
+    <assemblage>
+      <!--beter uitleggen cfr. p. 128-->
+      <title>Methode van Gauss-Jordan</title>
+      <p>
+        Bij de methode van Gauss-Jordan wordt de uitgebreide matrix van het stelsel herleid tot de rij-canonieke matrix via de volgende elementaire rij-operaties:
+        <ul>
+          <li>
+            <p>
+              Het verwisselen van twee rijen.
+            </p>
+          </li>
+          <li>
+            <p>
+              Een rij vermenigvuldigen met een van nul verschillend getal.
+            </p>
+          </li>
+          <li>
+            <p>
+              Bij een rij een veelvoud van een andere rij optellen.
+            </p>
+          </li>
+          <li>
+            Bij een veelvoud van een rij een veelvoud van een andere rij optellen.
+          </li>
+        </ul>
+        De oplossing van het stelsel kan gemakkelijk uit de rij-canonieke matrix afgelezen worden.
+      </p>
+      <p>
+        Praktisch ga je als volgt te werk:
+        <ol>
+          <li>
+            <p>
+              Zorg ervoor dat het eerste getal in de eerste rij verschillend is van nul (<m>=</m> de spil) door eventueel rijen te verwisselen.
+            </p>
+          </li>
+          <li>
+            <p>
+              Pas elementaire rij-operaties toe om de getallen onder deze spil nul te maken. Als je een nulrij krijgt, dan plaats je die onderaan.
+            </p>
+          </li>
+          <li>
+            <p>
+              Ga nu een rij naar beneden en herhaal de volgende stappen: het tweede getal in de tweede rij wordt de spil en de getallen  erboven en eronder moeten nul worden.
+            </p>
+          </li>
+          <li>
+            <p>
+              Herhaal tot je geen spil meer kan vinden.
+            </p>
+          </li>
+          <li>
+            <p>
+              Herleid alle spillen tot 1.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </assemblage>
+    <activity>
+      <statement>
+        <p>
+          Los een tweetal stelsels (maar niet oefening 7 of 8) uit <xref ref="stelsels-mathematiseren"/>  op met de methode van Gauss-Jordan. De oplossingen staan bij de oefeningen van de vorige paragraaf.
+        </p>
+      </statement>
+    </activity>
+  </subsection>

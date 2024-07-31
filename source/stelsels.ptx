@@ -5,10 +5,24 @@
     
     <xi:include href="./stelsels/mathematiseren.ptx" />
     <!-- <xi:include href="./stelsels/mathematiseren-opl.ptx" /> vervangen van zodra oplossen van stelsels gezien is -->
+    
     <xi:include href="./rechten-vlakken/bundel-waaier.ptx" />  
-    <xi:include href="./stelsels/gauss-jordan.ptx" />
+
+    <section>
+    <title>Stelsels oplossen met de methode van Gauss-Jordan</title>
+    <introduction>
+        <p>
+        In deze paragraaf lossen we stelsels op met de methode van Gauss-Jordan. Dit is eigenlijk gewoon de combinatiemethode die je al kent, maar waarbij er iets systematischer te werk wordt gegaan.
+        </p>
+    </introduction>
+    <xi:include href="./stelsels/combinatie.ptx"/>
+    <xi:include href="./stelsels/rijoperaties.ptx"/>
+    </section>
+
+    <xi:include href="./stelsels/oplossingen-stelsel.ptx"/>
 
     <exercises xml:id="exercises-stelsels">
         <xi:include href="./rechten-vlakken/bundel-waaier-oef.ptx"/>
+        <xi:include href="./stelsels/oplossen-stelsel-oef.ptx"/>
     </exercises>
 </chapter>

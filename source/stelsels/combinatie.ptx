@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection>
+    <title>De combinatiemethode toepassen op het stelsel zelf</title>
+    <p>
+      We illustreren de methode door het stelsel uit <xref ref="oef-stelsel-1"/> op te lossen:
+     <me>
+       \begin{cases}a+b+c=105\\-a+b+c=-9\\a-2b+c=-3 \end{cases}
+     </me>
+     Elke vergelijking stelt een vlak voor en de oplossing is het snijpunt van deze drie vlakken (<url href="https://www.geogebra.org/3d/yfpmvqab">Geogebra link</url>):
+    </p>
+  
+    <sage>
+      <input>
+        var('x y z t')
+        vlak1 = implicit_plot3d(x+y+z==105,(x,-100,100),(y,-100,100),(z,-100,100),color='blue',opacity=0.3)
+        vlak2 = implicit_plot3d(-x+y+z==-9,(x,-100,100),(y,-100,100),(z,-100,100),color='orange',opacity=0.3)
+        vlak3 = implicit_plot3d(x-2*y+z==-3,(x,-100,100),(y,-100,100),(z,-100,100),color='green',opacity=0.3)
+        snijlijn12 = parametric_plot3d([57,24-2*t,24+2*t],(t,-25,20),color='blue',thickness="5")
+        snijlijn13 = parametric_plot3d([33+3*t,36,36-3*t],(t,-30,20),color='red',thickness="5")
+        show(vlak1+vlak2+vlak3+snijlijn12+snijlijn13)
+      </input>
+    </sage>
+    <p>
+     We elimineren eerst de variabele <m>a</m> uit de tweede en de derde vergelijking. Dit doen we door de tweede en de derde vergelijking te vervangen door een lineaire combinatie van zichzelf en de eerste vergelijking.
+     <md>
+       <mrow>\amp \begin{cases}a+b+c=105\\-a+b+c=-9\\a-2b+c=-3 \end{cases} \begin{vmatrix}  1  \amp  1 \\  1 \amp \phantom{1}\\  \phantom{1} \amp -1\end{vmatrix} </mrow>
+       <mrow>\Leftrightarrow \; \amp  \begin{cases}a+b+c=105\\2b+2c=96\\ 3b=108 \end{cases}</mrow>
+     </md>
+     Dat we op deze manier een equivalent stelsel krijgen, kan ook meetkundig verklaard worden:
+     <ul>
+      <li>
+        <p>
+          Het eerste en het tweede vlak snijden volgens de blauwe rechte en het eerste en derde vlak volgens de rode rechte.
+        </p>
+      </li>
+      <li>
+        <p>
+          De oplossing van het stelsel is dan het snijpunt van de blauwe rechte en de rode rechte.
+        </p>
+      </li>
+      <li>
+        <p>
+          Het vlak met vergelijking <m>2b+2c=96</m> behoort echter tot de vlakkenwaaier door de blauwe rechte en het vlak met vergelijking <m>3b=108</m> behoort tot de vlakkenwaaier door de rode rechte.
+        </p>
+      </li>
+      <li>
+        <p>
+          De snijlijnen die de oplossing bepalen zijn dus niet veranderd in deze eerste stap. 
+        </p>
+      </li>
+     </ul>
+     Uit de derde vergelijking volgt nu al onmiddellijk de waarde van <m>b</m>. Om het stelsel verder op te lossen, verwisselen we eerst de tweede en de derde vergelijking.
+     <me>
+       \begin{cases} a+b+c=105 \\ b=36 \\ 2b+2c=96  \end{cases}
+     </me>
+     We elimineren vervolgens de variabele <m>b</m> uit de eerste en de derde vergelijking door elke vergelijking opnieuw te vervangen door een lineaire combinatie van zichzelf en de tweede vergelijking.
+     <md>
+       <mrow> \amp \begin{cases} a+b+c=105 \\ b=36 \\ 2b+2c=96  \end{cases} \begin{vmatrix}  1  \amp  \phantom{1} \\  -1 \amp -2 \\  \phantom{1} \amp 1\end{vmatrix} </mrow>
+       <mrow> \Leftrightarrow \; \amp \begin{cases} a+c=69 \\b=36\\2c=24\end{cases}</mrow>
+       <mrow> \Leftrightarrow \; \amp \begin{cases} a+c=69 \\b=36\\c=12\end{cases}</mrow>
+     </md>
+     De oplossing van het stelsel is nu het snijpunt van de rode en de groene rechte en we hebben opnieuw een ander vlak uit elke
+     vlakkenwaaier gekozen door de lineaire combinatie te maken.
+    </p>
+    <sage>
+      <input>
+        var('x y z t')
+        vlak1 = implicit_plot3d(x+y+z==105,(x,-100,100),(y,-100,100),(z,-100,100),color='blue',opacity=0.3)
+        vlak2 = implicit_plot3d(y==36,(x,-100,100),(y,-100,100),(z,-100,100),color='green',opacity=0.3)
+        vlak3 = implicit_plot3d(2*y+2*z==96,(x,-100,100),(y,-100,100),(z,-100,100),color='orange',opacity=0.3)
+        snijlijn23 = parametric_plot3d([-6*t,36,12],(t,-20,20),color='green',thickness="5")
+        snijlijn13 = parametric_plot3d([33+3*t,36,36-3*t],(t,-30,20),color='red',thickness="5")
+        show(vlak1+vlak2+vlak3+snijlijn23+snijlijn13)
+      </input>
+    </sage>
+    
+    <p>
+     Tenslotte elimineren we <m>c</m> uit de eerste vergelijking door deze te vervangen door een lineaire combinatie van zichzelf en de derde.
+     <md>
+       <mrow>\amp \begin{cases} a+c=96 \\b=36\\c=12\end{cases} \begin{vmatrix} 1 \\ \\ -1 \end{vmatrix}</mrow>
+       <mrow>\Leftrightarrow \; \amp \begin{cases} a=57 \\b=36\\c=12\end{cases}</mrow>
+       <mrow> \Leftrightarrow \amp V=\lbrace (57,36,12) \rbrace </mrow>
+     </md>
+      
+    </p>
+
+  </subsection>

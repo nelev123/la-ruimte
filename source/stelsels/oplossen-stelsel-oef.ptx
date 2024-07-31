@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Oplossingenverzameling van een <m>m \times n</m> stelsel </title>
+
+          <exercise>
+        <statement>
+          <p>
+            Bepaal de oplossingenverzameling van onderstaande stelsels:
+            <ol>
+              <li>
+                <p>
+                  <m>
+                    \begin{cases}
+                    6x-13y+2z=0\\ 21x+15y-z=0
+                    \end{cases}
+                  </m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>
+                    \begin{cases}
+                    x+y+2z+2w=10\\
+                    3x+4y+11z+10w=36\\
+                    17x+13y+14z+18w=146\\
+                    \end{cases}
+                  </m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>
+                    \begin{cases}
+                    x_1-2x_2+x_3-x_4=1\\
+                    -3x_1+3x_2-x_3+2x_4=0
+                    \end{cases}
+                  </m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <sage>
+            <input>
+              A = matrix(2,4,[6,-13,2,0,
+                              21,15,-1,0])
+              B = A.rref()
+              show(A,"~",B)
+            </input>
+          </sage>
+          <p>
+            <m>r(A)=r(A_b)=2</m> en <m>n = 3</m>, dus we moeten een parameter invoeren om de oplossingenverzameling te beschrijven: <m>V= \lbrace (-17k,48k,363k) | k \in \mathbb{R} \rbrace </m>
+          </p>
+          <sage>
+            <input>
+              A = matrix(3,5,[1,1,2,2,10,
+                              3,4,11,10,36,
+                              17,13,14,18,146])
+              B = A.rref()
+              show(A,"~",B)
+            </input>
+          </sage>
+          <p>
+            <m>r(A)=r(A_b)=2</m> en <m>n = 4</m>, dus we moeten twee parameters invoeren om de oplossingenverzameling te beschrijven: <m>V=\lbrace (4+3k+2m,6-5k-4m,k,m) | k,m \in \mathbb{R} \rbrace</m>
+          </p>
+          <sage>
+            <input>
+              A = matrix(2,5,[1,-2,1,-1,1,
+                              -3,3,-1,2,0])
+              B = A.rref()
+              show(A,"~",B)
+            </input>
+          </sage>
+          <p>
+            <m>r(A)=r(A_b)=2</m> en <m>n = 4</m>, dus we moeten twee parameters invoeren om de oplossingenverzameling te beschrijven: <m>V=\lbrace (-1+k+m,-1+2k-m,3k,3m) | k,m \in \mathbb{R} \rbrace</m>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Keer terug naar de oefeningen van <xref ref="stelsels-mathematiseren"/> en bepaal de oplossingen van oefening 6 en 7.
+          </p>
+        </statement>
+      </exercise>
+</subexercises>
