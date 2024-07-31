@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Mathematiseren</title>
+    <introduction>
+      <p>
+        In dit hoofdstuk starten we de studie van stelsels lineaire vergelijkingen. Dergelijke stelsels komen in allerlei contexten voor zoals onderstaande oefeningen duidelijk maken.
+      </p>
+    </introduction>
+    <exercises>
+      <introduction>
+        <p>
+           Elk van onderstaande problemen leidt tot een stelsel van lineaire vergelijkingen. Stel telkens dit stelsel op. De oplossing bepalen doen we pas later.
+        </p>
+      </introduction>
+      <exercise>
+        <statement>
+          <p>
+            Op een zomerdag verkocht een pretpark 732 toegangstickets. De prijs van een ticket is 22 euro voor een volwassene en 15 euro voor een kind. Het park ontving   12912 euro in totaal. Hoeveel volwassenen en hoeveel kinderen bezochten het pretpark?
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Stel <m>x</m> gelijk aan het aantal volwassenen. De gegevens leiden dan tot het stelsel
+            <me>
+              \begin{cases}
+              x+y=732 \\
+              22x+15y=12912
+              \end{cases}
+            </me>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Anna, Brigitte en Charlotte vormen een driegeslacht. Samen zijn ze 105 jaar oud. Anna is negen jaar ouder dan Brigitte en Charlotte samen. Jammer genoeg komen Anna en Charlotte samen nog drie jaartjes te kort om dubbel zo oud als Brigitte te zijn. Hoe oud zijn deze
+            drie dames?
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Stel dat <m>a</m> de leeftijd van Anna is, <m>b</m> de leeftijd van Brigitte en <m>c</m> de leeftijd van Charlotte. De gegevens leiden dan tot het stelsel
+            <me>
+              \begin{cases}a+b+c=105\\b+c+9=a\\a+c+3=2b \end{cases} \Leftrightarrow   \begin{cases}a+b+c=105\\-a+b+c=-9\\a-2b+c=-3 \end{cases}
+            </me>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Thomas heeft een bedrag van 6 euro in 35 muntstukjes van 5, 10, 20 en 50 cent. De helft van het bedrag bestaat uit stukken van 10 en 20 cent. Indien de stukken van 5 cent er 50 waard waren en die van 50 cent slechts 5, zou Thomas 2,25 euro meer hebben. Hoeveel
+             muntstukken van 5, 10, 20 en 50 cent heeft Thomas?
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Stel dat <m>x_i</m> het aantal muntstukken van <m>i</m> cent is met <m>i=5,10,20,50</m>. De gegevens leiden dan tot het stelsel
+            <me>
+              \begin{cases} x_5+x_{10}+x_{20}+x_{50}=35 \\ 5x_5+10x_{10}+20x_{20}+50x_{50}=600 \\ 10x_{10}+20x_{20}=300 \\ 50x_5+10x_{10}+20x_{20}+5x_{50}=825  \end{cases}
+            </me>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Een getal bestaat uit 3 cijfers. De som van de cijfers is 15. De som van de buitenste cijfers is het dubbel van het middelste. Het verschil van het getal met het getal omgekeerd gelezen is 396. Bepaal het getal. </p>
+        </statement>
+        <solution>
+          <p>
+            Stel dat <m>x</m> het eerste cijfer is, <m>y</m> het tweede en <m>z</m> het derde. De gegevens leiden dan tot het stelsel
+            <me>
+              \begin{cases} x+y+z=15 \\x+z=2y\\100(x-z)+z-x=396  \end{cases} \Leftrightarrow \begin{cases} x+y+z=15 \\x-2y+z=0\\99x-99z=396  \end{cases}
+            </me>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Bepaal t.o.v. een orthonormaal assenstelsel de vergelijking van de parabool met as evenwijdig aan de <m>y</m>-as die gaat door de punten <m>A(-1,-5)</m>, <m>B(1,-6)</m> en <m>C(3,-3)</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            De algemene vergelijking van een parabool is <m>y=ax^2+bx+c</m>. Invullen van de drie gegeven punten leidt tot het stelsel
+            <me>
+              \begin{cases} a-b+c=-5 \\a+b+c=-6 \\ 9a+3b+c=-3 \end{cases}
+            </me>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Een fietser haalt gemiddeld 24 km/h op vlakke weggedeelten tussen A en B. In de gedeelten bergop daalt zijn snelheid tot gemiddeld 12 km/h. In de gedeelten bergaf loopt de gemiddelde snelheid op tot 30 km/h. De weg van A naar B wordt afgelegd in 4 uur en 33 minuten. De terugweg neemt 5 uur in beslag. De totale afgelegde afstand is 198 km. Bepaal het aantal vlakke kilometers, het aantal kilometers bergop en het aantal kilometers bergaf van A naar B.
+         </p>
+        </statement>
+        <solution>
+          <p>
+            Stel dat <m>d_1</m> de vlakke afstand is, <m>d_2</m> de afstand bergop en <m>d_3</m> de afstand bergaf. De gegevens leiden dan tot het stelsel
+            <me>
+              \begin{cases} \frac{d_1}{24} +\frac{d_2}{12}+\frac{d_3}{30}=4,55 \\ \frac{d_1}{24} +\frac{d_2}{30}+\frac{d_3}{12}=5 \\ d_1+d_2+d_3=99\end{cases}
+            </me>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Breng de volgende chemische reactievergelijking in evenwicht:
+            <me>
+                \text{MnS}+\text{As}_2\text{Cr}_{10}\text{O}_{35} +\text{H}_2\text{SO}_4 \rightarrow \text{HMnO}_4 + \text{AsH}_3 + \text{CrS}_3\text{O}_{12} + \text{H}_2\text{O}
+            </me>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            De onbekenden zijn de voorgetallen:
+            <me>
+                n_1\text{MnS}+n_2\text{As}_2\text{Cr}_{10}\text{O}_{35} +n_3\text{H}_2\text{SO}_4 \rightarrow n_4\text{HMnO}_4 + n_5\text{AsH}_3 + n_6\text{CrS}_3\text{O}_{12} +n_7 \text{H}_2\text{O}
+            </me>
+            Het stelsel volgt door uit te drukken dat het aantal atomen per soort niet verandert:
+            <me>
+              \begin{cases} n_1-n_4=0 \\n_1+n_3-3n_6=0 \\2n_2-n_5=0\\10n_2-n_6=0 \\ 35n_2 + 4n_3-4n_4-12n_6-n_7=0\\2n_3-n_4-3n_5-2n_7=0\end{cases}
+            </me>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Beschouw onderstaande tekening die het waterdebiet in een netwerk van leidingen weergeeft.
+          </p>
+          <sidebyside width="60%">
+            <image source="stroming.png"/>
+          </sidebyside>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  Bepaal de algemene oplossing, d.w.z. alle mogelijk waarden voor <m>x_1</m> t.e.m.<m>x_6</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Bepaal de minimale stroming in de takken <m>x_2</m>, <m>x_3</m>, <m>x_4</m> en <m>x_5</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Opstellen van het stelsel door uit te drukken dat in elk knooppunt al het toegestroomde water ook opnieuw moet wegstromen.
+            <me>
+              \begin{cases} 30+x_2=80+x_1 \\ 60+x_1=20+x_3\\x_3+x_5=x_2+x_4\\100+x_6=40+x_5\\40+x_4=90+x_6 \end{cases} \Leftrightarrow \begin{cases} x_1-x_2 = -50 \\ x_1-x_3=-40\\x_2-x_3+x_4-x_5=0 \\x_5-x_6=60\\x_4-x_6=50 \end{cases}
+            </me>
+          </p>
+        </solution>
+      </exercise>
+    </exercises>
+</section>

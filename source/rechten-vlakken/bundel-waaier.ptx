@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+
+<section>
+  <title>Rechtenbundels en vlakkenwaaiers</title>
+
+  <introduction>
+    <p>
+      Het oplossen van stelsels in 2 of 3 onbekenden kan meetkundig geïnterpreteerd worden. Deze paragraaf vormt daarvoor de basis. 
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>Rechtenbundels in het vlak</title>
+    <p>
+      <q>Wat is het snijpunt van de rechten <m>2x+y=1</m> en <m>10x-2y=-6</m>?</q> Om deze vraag te beantwoorden los je het stelsel <m>\begin{cases} 2x+y=1\\10x-2y=-6\end{cases}</m>op.  We gebruiken de combinatiemethode
+    </p>
+
+    <sidebyside widths="45% 50%" margins="0% 0%" valign="middle">
+      <p>
+        <md>
+          <mrow>\amp \begin{cases} 2x+y=1\\10x-2y=-6\end{cases}\Bigg\rvert\begin{matrix} 5 \\ -1\end{matrix}\Bigg\rvert\begin{matrix} 2 \\ 1\end{matrix} </mrow>
+          <mrow>\Leftrightarrow \; \amp \begin{cases} -7y=-11 \\14x=-4\end{cases}</mrow>
+          <mrow>\Leftrightarrow \; \amp \begin{cases} y=\dfrac{11}{7} \\x=-\dfrac{2}{7}\end{cases}</mrow>
+          <mrow>\Leftrightarrow \; \amp V=\left\lbrace \left(-\dfrac{2}{7},\dfrac{11}{7} \right) \right\rbrace</mrow>
+        </md>
+        en besluiten dat het antwoord <m>\left (-\dfrac{2}{7}, \dfrac{11}{7} \right )</m> is.
+      </p>
+      <image source="stelsel-2bij2.png"/>
+    </sidebyside>
+
+    <p>
+      Het punt  <m>\left (-\dfrac{2}{7},\dfrac{11}{7} \right )</m> kunnen we dus evengoed beschrijven als
+        <ul>
+          <li>
+            <p>
+              het punt bepaald door het stelsel cartesische vergelijkingen <m>\begin{cases} x=-\dfrac{2}{7} \\ y=\dfrac{11}{7} \end{cases}</m> of
+            </p>
+          </li>
+          <li>
+            <p>
+             het punt bepaald door het stelsel cartesische vergelijkingen <m>\begin{cases} 2x+y=1\\10x-2y=-6\end{cases} </m>
+            </p>
+          </li>
+        </ul>
+        Er gaan een oneindig aantal rechten door het punt <m>\left(-\dfrac{2}{7},\dfrac{11}{7} \right)</m> en die kan je allemaal bepalen door een <term>lineaire combinatie</term> te nemen van de vergelijkingen <m>x+\dfrac{2}{7}=0</m> en <m>y-\dfrac{11}{7}=0</m>:
+        <me>
+            k \left (x+\frac{2}{7} \right) + m \left (y - \frac{11}{7} \right) = 0 \qquad (k,m \in \mathbb{R})
+        </me>
+        Voor <m>k=10</m> en <m>m=-2</m> krijgen we de vergelijking
+        <md>
+          <mrow>\amp   10 \left (x+\frac{2}{7} \right) -2 \left (y - \frac{11}{7} \right) = 0 </mrow>
+          <mrow>\Leftrightarrow \; \amp  10 x+\frac{20}{7} -2 y + \frac{22}{7} = 0 </mrow>
+          <mrow>\Leftrightarrow \; \amp  10 x -2 y + 6 = 0 </mrow>
+        </md>
+        en voor <m>k=m=7</m> de vergelijking <m>7x+7y-9=0</m>.
+    </p>
+
+    <figure>
+      <caption>Rechtenbundel door het punt <m>\left(-\dfrac{2}{7},\dfrac{11}{7} \right)</m> <url href="https://www.desmos.com/calculator/shkbdn6bmq">(Desmos link)</url></caption>
+      <interactive xml:id="desmos-rechtenbundel" desmos="shkbdn6bmq" width="100%" aspect="4:3" preview="desmos-rechtenbundel-preview.png"/>
+    </figure>
+
+    <activity>
+      <statement>
+        <p>
+          Herleid de vergelijking <m>k \left (x+\dfrac{2}{7} \right) + m \left (y - \dfrac{11}{7} \right) = 0</m> tot de standaardvorm <m>y=a(x-x_1)+y_1</m>. Wat kan je hieruit besluiten i.v.m. <m>k</m> en <m>m</m>?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <md>
+            <mrow> \amp k \left (x+\dfrac{2}{7} \right) + m \left (y - \dfrac{11}{7} \right) = 0</mrow>
+            <mrow> \Leftrightarrow \; \amp y - \dfrac{11}{7} = -\dfrac{k}{m} \left (x+\dfrac{2}{7} \right) \qquad (m \neq 0)  </mrow>
+            <mrow> \Leftrightarrow \; \amp y  = -\dfrac{k}{m} \left (x+\dfrac{2}{7} \right) + \dfrac{11}{7} \qquad (m \neq 0) </mrow>
+          </md>
+          Hieruit besluiten we dat <m>-\dfrac{k}{m}</m> gelijk is aan de richtingscoëfficiënt <m>a</m> van de rechte. 
+        </p>
+      </solution>
+    </activity>
+
+    <p>
+        De vergelijkingen <m>x+\dfrac{2}{7}=0</m> en <m>y-\dfrac{11}{7}=0</m> zijn de gemakkelijkste keuze om de vergelijking van een nieuwe rechte door <m>\left(-\dfrac{2}{7},\dfrac{11}{7} \right)</m> te genereren, maar elk willekeurig paar vergelijkingen is bruikbaar. Nemen we bijvoorbeeld opnieuw de vergelijkingen <m>2x+y=1</m> en <m>10x-2y=-6</m>, dan kunnen we met behulp van de lineaire combinatie
+        <me>
+          k(2x+y-1)+m(10x-2y+6)=0 \qquad (k,m \in \mathbb{R})
+        </me>
+        eveneens de vergelijking van elke rechte door het punt <m>\left(-\dfrac{2}{7},\dfrac{11}{7} \right)</m> genereren.
+    </p>
+
+    <activity>
+      <statement>
+        <p>
+          Bepaal <m>k</m> en <m>m</m> zodat <m>k(2x+y-1)+m(10x-2y+6)=0</m> zich herleidt tot <m>7x+7y-9=0</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <md>
+            <mrow> \amp k(2x+y-1)+m(10x-2y+6)=0</mrow>
+            <mrow> \Leftrightarrow \; \amp (2k+10m)x + (k-2m)y -k + 6m =0  </mrow>
+            <mrow> \Leftrightarrow \; \amp \begin{cases} 2k+10m = 7 \\ k-2m =7 \\ -k + 6m = -9 \end{cases}  </mrow>
+            <mrow> \Leftrightarrow \; \amp \begin{cases} k=6 \\ m=-\dfrac{1}{2} \end{cases}  </mrow>
+
+          </md>
+        </p>
+      </solution>
+    </activity>
+
+    <assemblage>
+      <title>Rechtenbundel</title>
+      <p>
+        Gegeven de rechten <m>u_1x+v_1y+w_1=0</m> en <m>u_2x+v_2y+w_2=0</m> met snijpunt <m>(x_1,y_1)</m>. De vergelijking <me>k(u_1x+v_1y+w_1)+m(u_2x+v_2y+w_2)=0 \qquad (k,m \in \mathbb{R}) </me> stelt alle rechten voor door het punt <m>(x_1,y_1)</m> en noemen we de rechtenbundel door dit punt. <m>k</m> en <m>m</m> mogen natuurlijk niet allebei gelijk zijn aan nul.
+      </p>
+    </assemblage>
+
+    <p>
+      De combinatiemethode om een stelsel op te lossen steunt dus op het feit dat een lineaire combinatie van de gegeven vergelijkingen eveneens een rechte door het snijpunt van de twee gegeven rechten voorstelt. Als je vervolgens de waarden van <m>k</m> en <m>m</m> zo kiest dat er telkens één onbekende uit een vergelijking verdwijnt, dan heb je de oplossing van het stelsel gevonden. Voor het stelsel <me>\begin{cases} 2x+y=1\\10x-2y=-6\end{cases}</me> maak je de lineaire combinatie <m>k(2x+y-1)+m(10x-2y+6)=0</m> en kies je
+      <ul>
+        <li>
+          <p>
+            <m>k=-5</m> en <m>m=1</m> wat leidt tot <m>-7y+11=0</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>k=2</m> en <m>m=1</m> wat leidt tot <m>14x+4=0</m>
+          </p>
+        </li>
+      </ul>
+    </p>
+
+  </subsection>
+
+
+  <subsection>
+    <title>Vlakkenwaaiers in de ruimte</title>
+
+    <assemblage xml:id="assemblage-vergelijking-vlak">
+      <title>Cartesische vergelijking van een vlak</title>
+      <p>
+        De cartesische vergelijking van een vlak in de ruimte heeft de algemene vorm<fn>We leiden dit later nog wel af; voorlopig moet je dit even aannemen.</fn>
+        <me>
+          ux+vy+wz+t=0 \qquad \neg(u=v=w=0)
+        </me>
+      </p>
+    </assemblage>
+
+    <p>
+        De snijlijn van twee niet-evenwijdige vlakken is een rechte, dus onderstaand <m>2 \times 3</m>-stelsel <mdash/> 2 vergelijkingen en 3 onbekenden<mdash/> beschrijft dus eigenlijk een rechte. 
+        <me>
+          \begin{cases} x+y-z=4 \\ x-3z=2 \end{cases}
+        </me>
+        Stel dat we deze rechte <m>a</m> noemen, dan noemen we dit een <term>stelsel cartesische vergelijkingen</term> van de rechte <m>a</m>. Als we een lineaire combinatie nemen van de vergelijkingen van de twee gegeven vlakken dan krijgen we de vergelijking van een derde vlak dat eveneens door de rechte <m>a</m> gaat. We spreken nu van een vlakkenwaaier door de rechte <m>a</m> en noteren die als volgt
+        <me>
+          k(x+y-z-4)+m(x-3z-2)=0
+        </me>
+    </p>
+    <figure>
+       <caption>
+           Vlakkenwaaier door een rechte (<url href="https://www.geogebra.org/3d/abf3ad7f"/>).
+       </caption>
+      <image source="Vlakkenwaaier.png" width="50%"/>
+    </figure>
+
+    <assemblage>
+      <title>Vlakkenwaaier</title>
+      <p>
+        Gegeven de vlakken <m>u_1x+v_1y+w_1z+t_1=0</m> en <m>u_2x+v_2y+w_2z+t_2=0</m> met snijlijn <m>a</m>. De vergelijking <me>k(u_1x+v_1y+w_1z+t_1)+m(u_2x+v_2y+w_2z+t_2)=0 \qquad (k,m \in \mathbb{R}) </me> stelt alle vlakken voor door de rechte <m>a</m> en noemen we de vlakkenwaaier door <m>a</m>. <m>k</m> en <m>m</m> mogen niet allebei gelijk zijn aan nul.
+      </p>
+    </assemblage>
+
+    <example>
+      <p>
+        <q>Bepaal het vlak door de rechte <m>a</m> dat ook door de oorsprong gaat.</q> We vertrekken van de vlakkenwaaier <m>k(x+y-z-4)+m(x-3z-2)=0</m> en stellen <m>x=y=z=0</m>. Dit geeft de vergelijking <m>-4k-2m=0</m>. Een mogelijke oplossing is <m>k=1</m> en <m>m=-2</m>. Invullen in de vlakkenwaaier:
+        <me>
+          (x+y-z-4)-2(x-3z-2)=0 \Leftrightarrow -x+y+5z=0
+        </me>
+      </p>
+    </example>
+
+    <p>
+      Om het snijpunt van twee rechten te bepalen los je het corresponderende stelsel cartesische vergelijkingen op. De snijlijn van twee vlakken kan je op dezelfde manier bepalen. We hebben nu drie variabelen en slechts twee vergelijkingen, dus het stelsel is opgelost van zodra elke vergelijking maximaal twee variabelen bevat. De tweede vergelijking staat al in de juiste vorm en het volstaat om bijvoorbeeld <m>x</m> te elimineren uit de eerste vergelijking:
+      <md>
+        <mrow>\amp \begin{cases} x+y-z=4 \\ x-3z=2 \end{cases} \Bigg \rvert \begin{matrix} 1 \\ -1 \end{matrix}</mrow>
+        <mrow>\Leftrightarrow \; \amp \begin{cases} y+2z=2 \\ x-3z=2 \end{cases}</mrow>
+      </md>
+      Er zijn een oneindig aantal oplossingen en om de oplossingenverzameling te kunnen noteren, moeten we een parameter invoeren. Stellen we <m>z=k</m>, dan krijgen we dat
+      <me>
+        \begin{cases}
+        x = 2 + 3 k \\ y=2-2k \\ z =k 
+        \end{cases} \qquad ( k \in \mathbb{R})
+      </me>
+      We noemen dit een <term>parametervoorstelling</term> van de rechte; voor elke waarde van <m>k</m> krijgen we een ander punt van de rechte <m>a</m>. De oplossingenverzameling zelf noteren we dan als
+      <me>
+        V=\lbrace (2+3k,2-2k,k) | k \in \mathbb{R} \rbrace
+      </me>
+    </p>
+    <exercises>
+      <exercise>
+        <statement>
+          <p>
+            Bepaal een parametervoorstelling van de snijlijn van de vlakken <m>\alpha \leftrightarrow 2x+y+3z-1=0</m> en <m>\beta \leftrightarrow x+3z-5=0</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Stelsel vereenvoudigen met de combinatiemethode: <m>\begin{cases}y-3z+9=0 \\ x+3z-5=0\end{cases}</m>. Een mogelijke parametervoorstelling krijgen we door te stellen dat <m>z=k \Rightarrow \begin{cases}x=5-3k\\y=-9+3k\\z=k\end{cases}</m>. Er zijn een oneindig aantal mogelijkheden, dus controleer je resultaat met Geogebra.
+          </p>
+          <p>
+            <url href="https://www.geogebra.org/3d/strj7kev" />
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Gegeven twee vlakken <m>\alpha \leftrightarrow x+y+z+2=0</m> en <m>\beta \leftrightarrow x-y+2z+1=0</m> met snijlijn <m>d</m>. Bepaal een cartesische vergelijking van het vlak door <m>P(1,0,1)</m> en <m>d</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Vlakkenwaaier door <m>d</m>: <m>k(x+y+z+2)+m(x-y+2z+1)=0</m>. Coördinaten van punt <m>P</m> invullen geeft <m>4k+4m=0 \Rightarrow k=1 \text{ en } m=-1</m>; waarden van <m>k</m> en <m>m</m> invullen in de vlakkenwaaier <m>\Rightarrow 2y-z+1=0</m>.
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Gegeven de rechte <m>f \leftrightarrow x-5=\dfrac{y+b-3}{3}=\dfrac{z-6}{5}</m> en het vlak <m>\alpha \leftrightarrow ax+3y+bz-8=0</m>. Bepaal <m>a</m> en <m>b</m> zodat de rechte in het vlak ligt.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Vlakkenwaaier door <m>f</m>: <m>k(3x-y-12-b)+m(5x-z-19)=0</m>. <m>k</m> en <m>m</m> bepalen waarvoor vlakkenwaaier zich herleidt tot het vlak <m>\alpha</m>:
+            <md>
+              <mrow>\amp k(3x-y-12-b)+m(5x-z-19)=ax+3y+bz-8</mrow>
+              <mrow>\Rightarrow \; \amp (3k+5m)x-ky-mz-12k-kb-19m=ax+3y+bz-8</mrow>
+            </md>
+            Uit de coëfficiënten van <m>y</m> en <m>z</m> volgt onmiddellijk dat <m>k=-3</m> en <m>m=-b</m>. De constante term leidt tot de vergelijking <m>-12k-kb-19m=-8</m> en na invullen van <m>k</m> en <m>m</m> leidt dit tot <m>b=-2</m> en bijgevolg ook <m>m=2</m>. Uit de coëfficiënt van <m>x</m> volgt dat <m>a=3k+5m=-9+10=1</m>.
+          </p>
+        </solution>
+      </exercise>
+    </exercises>
+  </subsection>
+</section>
+

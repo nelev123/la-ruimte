@@ -1,0 +1,783 @@
+<?xml version="1.0"?>
+
+<section>
+  <title>Stelsels oplossen met de methode van Gauss-Jordan</title>
+  <introduction>
+    <p>
+      In deze paragraaf lossen we stelsels op met de methode van Gauss-Jordan. Dit is eigenlijk gewoon de combinatiemethode die je al kent, maar waarbij er iets systematischer te werk wordt gegaan.
+    </p>
+  </introduction>
+  <subsection>
+    <title>De combinatiemethode toepassen op het stelsel zelf</title>
+    <p>
+      We illustreren de methode door het stelsel uit <xref ref="oef-stelsel-1"/> op te lossen:
+     <me>
+       \begin{cases}a+b+c=105\\-a+b+c=-9\\a-2b+c=-3 \end{cases}
+     </me>
+     Elke vergelijking stelt een vlak voor en de oplossing is het snijpunt van deze drie vlakken (<url href="https://www.geogebra.org/3d/yfpmvqab">Geogebra link</url>):
+    </p>
+    <!-- <image source="3x3stelsel.png" width="50%">
+    </image> -->
+    <sage>
+      <input>
+        var('x y z t')
+        vlak1 = implicit_plot3d(x+y+z==105,(x,-100,100),(y,-100,100),(z,-100,100),color='blue',opacity=0.3)
+        vlak2 = implicit_plot3d(-x+y+z==-9,(x,-100,100),(y,-100,100),(z,-100,100),color='orange',opacity=0.3)
+        vlak3 = implicit_plot3d(x-2*y+z==-3,(x,-100,100),(y,-100,100),(z,-100,100),color='green',opacity=0.3)
+        snijlijn12 = parametric_plot3d([57,24-2*t,24+2*t],(t,-25,20),color='blue',thickness="5")
+        snijlijn13 = parametric_plot3d([33+3*t,36,36-3*t],(t,-30,20),color='red',thickness="5")
+        show(vlak1+vlak2+vlak3+snijlijn12+snijlijn13)
+      </input>
+    </sage>
+    <p>
+     We elimineren eerst de variabele <m>a</m> uit de tweede en de derde vergelijking. Dit doen we door de tweede en de derde vergelijking te vervangen door een lineaire combinatie van zichzelf en de eerste vergelijking.
+     <md>
+       <mrow>\amp \begin{cases}a+b+c=105\\-a+b+c=-9\\a-2b+c=-3 \end{cases} \begin{vmatrix}  1  \amp  1 \\  1 \amp \phantom{1}\\  \phantom{1} \amp -1\end{vmatrix} </mrow>
+       <mrow>\Leftrightarrow \; \amp  \begin{cases}a+b+c=105\\2b+2c=96\\ 3b=108 \end{cases}</mrow>
+     </md>
+     Dat we op deze manier een equivalent stelsel krijgen, kan ook meetkundig verklaard worden:
+     <ul>
+      <li>
+        <p>
+          Het eerste en het tweede vlak snijden volgens de blauwe rechte en het eerste en derde vlak volgens de rode rechte.
+        </p>
+      </li>
+      <li>
+        <p>
+          De oplossing van het stelsel is dan het snijpunt van de blauwe rechte en de rode rechte.
+        </p>
+      </li>
+      <li>
+        <p>
+          Het vlak met vergelijking <m>2b+2c=96</m> behoort echter tot de vlakkenwaaier door de blauwe rechte en het vlak met vergelijking <m>3b=108</m> behoort tot de vlakkenwaaier door de rode rechte.
+        </p>
+      </li>
+      <li>
+        <p>
+          De snijlijnen die de oplossing bepalen zijn dus niet veranderd in deze eerste stap. 
+        </p>
+      </li>
+     </ul>
+     Uit de derde vergelijking volgt nu al onmiddellijk de waarde van <m>b</m>. Om het stelsel verder op te lossen, verwisselen we eerst de tweede en de derde vergelijking.
+     <me>
+       \begin{cases} a+b+c=105 \\ b=36 \\ 2b+2c=96  \end{cases}
+     </me>
+     We elimineren vervolgens de variabele <m>b</m> uit de eerste en de derde vergelijking door elke vergelijking opnieuw te vervangen door een lineaire combinatie van zichzelf en de tweede vergelijking.
+     <md>
+       <mrow> \amp \begin{cases} a+b+c=105 \\ b=36 \\ 2b+2c=96  \end{cases} \begin{vmatrix}  1  \amp  \phantom{1} \\  -1 \amp -2 \\  \phantom{1} \amp 1\end{vmatrix} </mrow>
+       <mrow> \Leftrightarrow \; \amp \begin{cases} a+c=69 \\b=36\\2c=24\end{cases}</mrow>
+       <mrow> \Leftrightarrow \; \amp \begin{cases} a+c=69 \\b=36\\c=12\end{cases}</mrow>
+     </md>
+     De oplossing van het stelsel is nu het snijpunt van de rode en de groene rechte en we hebben opnieuw een ander vlak uit elke
+     vlakkenwaaier gekozen door de lineaire combinatie te maken.
+    </p>
+    <sage>
+      <input>
+        var('x y z t')
+        vlak1 = implicit_plot3d(x+y+z==105,(x,-100,100),(y,-100,100),(z,-100,100),color='blue',opacity=0.3)
+        vlak2 = implicit_plot3d(y==36,(x,-100,100),(y,-100,100),(z,-100,100),color='green',opacity=0.3)
+        vlak3 = implicit_plot3d(2*y+2*z==96,(x,-100,100),(y,-100,100),(z,-100,100),color='orange',opacity=0.3)
+        snijlijn23 = parametric_plot3d([-6*t,36,12],(t,-20,20),color='green',thickness="5")
+        snijlijn13 = parametric_plot3d([33+3*t,36,36-3*t],(t,-30,20),color='red',thickness="5")
+        show(vlak1+vlak2+vlak3+snijlijn23+snijlijn13)
+      </input>
+    </sage>
+    
+    <!-- <image source="3x3stelsel-2.png" width="50%">
+    </image> -->
+    <p>
+     Tenslotte elimineren we <m>c</m> uit de eerste vergelijking door deze te vervangen door een lineaire combinatie van zichzelf en de derde.
+     <md>
+       <mrow>\amp \begin{cases} a+c=96 \\b=36\\c=12\end{cases} \begin{vmatrix} 1 \\ \\ -1 \end{vmatrix}</mrow>
+       <mrow>\Leftrightarrow \; \amp \begin{cases} a=57 \\b=36\\c=12\end{cases}</mrow>
+       <mrow> \Leftrightarrow \amp V=\lbrace (57,36,12) \rbrace </mrow>
+     </md>
+      
+    </p>
+
+  </subsection>
+  <subsection>
+    <title>Elementaire rij-operaties op de uitgebreide matrix</title>
+    <p>
+      Het schrijfwerk kan verminderd worden door de variabelen niet expliciet op te schrijven. Bij het bovenstaande stelsel hoort de volgende <term>uitgebreide matrix</term>:
+      <me>
+        \begin{bmatrix} 1 \amp 1 \amp 1 \amp 105\\-1 \amp 1 \amp 1 \amp -9 \\ 1 \amp -2 \amp 1 \amp -3 \end{bmatrix}
+      </me>
+      De laatste kolom wordt gevormd door het rechterlid en de andere kolommen door de coëfficiënten van elke variabele.
+    </p>
+    <p>
+      Om de oplossing van het stelsel te bepalen herleiden we deze matrix tot de <term>rij-canonieke matrix</term>
+      <me>
+        \begin{bmatrix} 1 \amp 0 \amp 0 \amp 57\\ 0 \amp 1 \amp 0 \amp 36 \\ 0 \amp 0 \amp 1 \amp 12 \end{bmatrix}
+      </me>
+       waaruit de oplossing onmiddellijk kan afgelezen worden. Dit gebeurt via de volgende <term>elementaire rij-operaties</term>
+      <md>
+        <mrow>\amp \begin{bmatrix} 1 \amp 1 \amp 1 \amp 105\\-1 \amp 1 \amp 1 \amp -9 \\ 1 \amp -2 \amp 1 \amp -3 \end{bmatrix}\overset{R_2 \to R_2+R_1}{\underset{R_3 \to R_3-R_1}{\sim}} \begin{bmatrix} 1 \amp 1 \amp 1 \amp 105\\ 0 \amp 2 \amp 2 \amp 96 \\ 0 \amp -3 \amp 0 \amp -108 \end{bmatrix}</mrow>
+         <mrow>\overset{R_3 \to \frac{R_3}{-3}}{\sim} \; \amp \begin{bmatrix} 1 \amp 1 \amp 1 \amp 105\\ 0 \amp 2 \amp 2 \amp 96 \\ 0 \amp 1 \amp 0 \amp 36 \end{bmatrix} \overset{R_2 \leftrightarrow R_3 }{\sim} \begin{bmatrix} 1 \amp 1 \amp 1 \amp 105\\ 0 \amp 1 \amp 0 \amp 36  \\ 0 \amp 2 \amp 2 \amp 96  \end{bmatrix}</mrow>
+         <mrow>\overset{R_1 \to R_1-R_2}{\underset{R_3 \to R_3-2R_2}{\sim}} \; \amp \begin{bmatrix} 1 \amp 0 \amp 1 \amp 69\\ 0 \amp 1 \amp 0 \amp 36  \\ 0 \amp 0 \amp 2 \amp 24  \end{bmatrix} \overset{R_3 \to \frac{R_3}{2}}{\sim} \begin{bmatrix} 1 \amp 0 \amp 1 \amp 69\\ 0 \amp 1 \amp 0 \amp 36  \\ 0 \amp 0 \amp 1 \amp 12  \end{bmatrix}</mrow>
+         <mrow>\overset{R_1 \to R_1-R_3}{\sim} \; \amp  \begin{bmatrix} 1 \amp 0 \amp 0 \amp 57\\ 0 \amp 1 \amp 0 \amp 36  \\ 0 \amp 0 \amp 1 \amp 12  \end{bmatrix}</mrow>
+      </md>
+    </p>
+
+    <assemblage>
+      <title>De uitgebreide matrix en de rij-canonieke matrix</title>
+      <p>
+        Gegeven het <m>m \times n</m>-stelsel
+        <me>
+          \begin{cases}
+          a_{11}x_1+a_{12}x_2+\ldots+a_{1j}x_j+\ldots+a_{1n}x_n=b_1 \\
+          a_{21}x_1+a_{22}x_2+\ldots+a_{2j}x_j+\ldots+a_{2n}x_n=b_2 \\
+          \vdots \\
+          a_{i1}x_1+a_{i2}x_2+\ldots+a_{ij}x_j+\ldots+a_{in}x_n=b_i \\
+          \vdots \\
+          a_{m1}x_1+a_{m2}x_2+\ldots+a_{mj}x_j+\ldots+a_{mn}x_n=b_m
+          \end{cases}
+        </me>
+        We noemen
+        <me>
+          A = \begin{bmatrix}
+          a_{11} \amp a_{12} \amp a_{13} \amp\ldots \amp a_{1j} \ldots \amp a_{1n}\\
+          a_{21} \amp a_{22} \amp a_{23} \amp\ldots \amp a_{2j} \ldots \amp a_{2n}\\
+          \vdots \amp\vdots \amp\vdots \amp\ldots \amp\vdots \amp\vdots \\
+          a_{i1} \amp a_{i2} \amp a_{i3} \amp\ldots \amp a_{ij} \ldots \amp a_{in}\\
+          \vdots \amp\vdots \amp\vdots \amp\ldots \amp\vdots \amp\vdots \\
+          a_{m1} \amp a_{m2} \amp a_{m3} \amp\ldots \amp a_{mj} \ldots \amp a_{mn}\\
+          \end{bmatrix}
+        </me>
+        de coëfficiëntenmatrix en
+        <me>
+          A_b = \begin{bmatrix}
+          a_{11} \amp a_{12} \amp a_{13} \amp\ldots \amp a_{1j} \ldots \amp a_{1n} \amp b_1\\
+          a_{21} \amp a_{22} \amp a_{23} \amp\ldots \amp a_{2j} \ldots \amp a_{2n} \amp b_2\\
+          \vdots \amp\vdots \amp\vdots \amp\ldots \amp\vdots \amp\vdots \amp \vdots \\
+          a_{i1} \amp a_{i2} \amp a_{i3} \amp\ldots \amp a_{ij} \ldots \amp a_{in}\\
+          \vdots \amp\vdots \amp\vdots \amp\ldots \amp\vdots \amp\vdots \amp b_i\\
+          a_{m1} \amp a_{m2} \amp a_{m3} \amp\ldots \amp a_{mj} \ldots \amp a_{mn} \amp b_m\\
+          \end{bmatrix}
+        </me>
+        de uitgebreide matrix. 
+      </p>
+      <p>
+        Bij de methode van Gauss-Jordan wordt de uitgebreide matrix herleid tot de rij-canonieke matrix. Deze matrix heeft de volgende eigenschappen:
+        <ul>
+          <li>
+            <p>
+              Eventuele nulrijen staan altijd onderaan.
+            </p>
+          </li>
+          <li>
+            <p>
+              In de niet-nulrijen is het eerste van 0 verschillende element altijd gelijk aan 1. Dit noemen we de spillen. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Boven en onder de spillen staan enkel nullen.
+            </p>
+          </li>
+          <li>
+            <p>
+              Elke rij begin met meer nullen dan de vorige. De spillen staan dus in trapvorm.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <!--gelijkwaardige stelsels hebben dezelfde oplossingenverzameling-->
+    </assemblage>
+    <assemblage>
+      <!--beter uitleggen cfr. p. 128-->
+      <title>Methode van Gauss-Jordan</title>
+      <p>
+        Bij de methode van Gauss-Jordan wordt de uitgebreide matrix van het stelsel herleid tot de rij-canonieke matrix via de volgende elementaire rij-operaties:
+        <ul>
+          <li>
+            <p>
+              Het verwisselen van twee rijen.
+            </p>
+          </li>
+          <li>
+            <p>
+              Een rij vermenigvuldigen met een van nul verschillend getal.
+            </p>
+          </li>
+          <li>
+            <p>
+              Bij een rij een veelvoud van een andere rij optellen.
+            </p>
+          </li>
+          <li>
+            Bij een veelvoud van een rij een veelvoud van een andere rij optellen.
+          </li>
+        </ul>
+        De oplossing van het stelsel kan gemakkelijk uit de rij-canonieke matrix afgelezen worden.
+      </p>
+      <p>
+        Praktisch ga je als volgt te werk:
+        <ol>
+          <li>
+            <p>
+              Zorg ervoor dat het eerste getal in de eerste rij verschillend is van nul (<m>=</m> de spil) door eventueel rijen te verwisselen.
+            </p>
+          </li>
+          <li>
+            <p>
+              Pas elementaire rij-operaties toe om de getallen onder deze spil nul te maken. Als je een nulrij krijgt, dan plaats je die onderaan.
+            </p>
+          </li>
+          <li>
+            <p>
+              Ga nu een rij naar beneden en herhaal de volgende stappen: het tweede getal in de tweede rij wordt de spil en de getallen  erboven en eronder moeten nul worden.
+            </p>
+          </li>
+          <li>
+            <p>
+              Herhaal tot je geen spil meer kan vinden.
+            </p>
+          </li>
+          <li>
+            <p>
+              Herleid alle spillen tot 1.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </assemblage>
+    <activity>
+      <statement>
+        <p>
+          Los een tweetal stelsels (maar niet oefening 7 of 8) uit <xref ref="stelsels-mathematiseren"/>  op met de methode van Gauss-Jordan. De oplossingen staan bij de oefeningen van de vorige paragraaf.
+        </p>
+      </statement>
+    </activity>
+  </subsection>
+
+  <subsection>
+    <title>Aantal oplossingen van een <m>m \times n</m> stelsel</title>
+    <p>
+      Een stelsel van <m>m</m> lineaire vergelijkingen in <m>n</m> onbekenden noemen we een <m>m \times n</m> stelsel. Zo een stelsel kan een unieke oplossing hebben; een oneindig aantal oplossingen of geen oplossingen. In deze paragraaf bespreken we elk van deze mogelijkheden. We starten bij stelsels die evenveel vergelijkingen als onbekenden hebben.
+    </p>
+    <dl width="narrow">
+      <li>
+        <title><m>n \times n </m> stelsel</title>
+        <p>
+          <ul>
+            <li>
+              <p>
+                Als de diagonaalelementen van de rij-canonieke matrix allemaal gelijk zijn aan één en alle andere elementen gelijk aan nul, dan heeft het stelsel een unieke oplossing.
+              </p>
+            </li>
+            <li>
+              <p>
+                Als de rij-canonieke matrix een rij bevat van de vorm
+                <me>
+                  \begin{bmatrix} 0 \amp 0 \amp \ldots \amp 0 \amp g \end{bmatrix}
+                </me>
+                met <m>g</m> een reëel getal verschillend van nul, dan is het stelsel strijdig en heeft het bijgevolg geen oplossing. Een dergelijke rij correspondeert immers met de valse vergelijking <m>0=g</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Als de rij-canonieke matrix een rij bevat met allemaal nullen
+                <me>
+                  \begin{bmatrix} 0 \amp 0 \amp \ldots \amp 0 \amp 0 \end{bmatrix}
+                </me>
+                dan heeft het stelsel een oneindig aantal oplossingen. Een nulrij betekent dat één van de vergelijkingen een lineaire combinatie is van de andere vergelijkingen en geen extra informatie over de oplossing bevat.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </li>
+    </dl>
+    <activity xml:id="activity-2x2-opl">
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Schrijf een <m>2 \times 2 </m> stelsel op dat een unieke oplossing heeft.
+              </p>
+            </li>
+            <li>
+              <p>
+                Pas het stelsel aan zodat het geen oplossing heeft.
+              </p>
+            </li>
+            <li>
+              <p>
+                Pas het stelsel aan zodat het een oneindig aantal oplossingen heeft. Schrijf ook de oplossingenverzameling op.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Beschouw de twee rechten <m>y=2x-3</m> en <m>y=-\frac{5}{2}x+1</m> die elkaar snijden in het punt <m>\left ( \frac{8}{9}, -\frac{11}{9} \right )</m>. Het stelsel <m>\begin{cases} 2x-y=3 \\ 5x+2y=2 \end{cases}</m> heeft dus een unieke oplossing.
+        </p>
+        <sage>
+          <input>
+            rechten = plot([2*x-3,-2.5*x+1],(x,-1,3))
+            A = matrix(2,3,[2,-1,3,5,2,2])
+            B = A.rref()
+            show(A,"~",B)
+            opl = (B[0,2],B[1,2])
+            snijpunt = point(opl,color='black',pointsize=20,zorder=3)
+            show(snijpunt + rechten)
+          </input>
+        </sage>
+        <p>
+          Het stelsel heeft geen oplossing als beide vergelijkingen een paar evenwijdige rechten voorstellen. Dit geldt bijvoorbeeld voor <me>\begin{cases} 2x-y=3 \\ 2x-y =-1 \end{cases}</me>.
+        </p>
+        <sage>
+          <input>
+            rechten = plot([2*x-3,2*x+1],(x,-1,3))
+            A = matrix(2,3,[2,-1,3,2,-1,-1])
+            B = A.rref()
+            show(A,"~",B)
+            show(rechten)
+          </input>
+        </sage>
+        <p>
+          Een oneindig aantal oplossingen krijgen we als beide vergelijkingen dezelfde rechte beschrijven. Bijvoorbeeld: <me>\begin{cases} 2x-y=3 \\ -4x+2y =-6 \end{cases}</me>
+        </p>
+        <sage>
+          <input>
+            A = matrix(2,3,[2,-1,3,-4,2,-6])
+            B = A.rref()
+            show(A,"~",B)
+          </input>
+        </sage>
+      </solution>
+    </activity>
+
+    <activity xml:id="activity-3x3-opl">
+      <statement>
+        <p>
+          Het probleem
+          <blockquote>
+            Bepaal t.o.v. een orthonormaal assenstelsel de vergelijking van de parabool met as evenwijdig aan de <m>y</m>-as die gaat door de punten <m>A(-1,-5)</m>, <m>B(1,-6)</m> en <m>C(3,-3)</m>.
+          </blockquote>
+          leidt tot het stelsel
+          <me>
+            \begin{cases} a-b+c=-5 \\a+b+c=-6 \\ 9a+3b+c=-3 \end{cases}
+          </me>
+          <ol>
+            <li>
+              <p>
+                Teken dit stelsel en de oplossing ervan in Geogebra. Denk eraan dat elke vergelijking een vlak voorstelt en teken ook alle onderlinge snijlijnen.
+              </p>
+            </li>
+            <li>
+              <p>
+                Stel de uitgebreide matrix op die bij dit stelsel hoort en herleid de eerste kolom tot <m>\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}</m> met behulp van de methode van Gauss-Jordan. Schrijf het stelsel op dat bij deze nieuwe uitgebreide matrix hoort.
+              </p>
+            </li>
+            <li>
+              <p>
+                Beschouw nu dit tweede stelsel en teken opnieuw alle vlakken, de onderlinge snijlijnen en de oplossing.
+              </p>
+            </li>
+            <li>
+              <p>
+                Pas het tweede stelsel aan zodat het stelsel geen oplossing heeft.
+              </p>
+            </li>
+            <li>
+              <p>
+                Pas het tweede stelsel aan zodat het stelsel een oneindig aantal oplossingen heeft.  Schrijf ook de oplossingenverzameling op.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We visualiseren het oorspronkelijke stelsel:
+        </p>
+        <sage>
+          <input>
+            var('x y z t')
+            vlak1 = implicit_plot3d(x-y+z==-5,(x,-10,10),(y,-10,10),(z,-10,10),opacity=0.5)
+            vlak2 = implicit_plot3d(x+y+z==-6,(x,-10,10),(y,-10,10),(z,-10,10),color='red',opacity=0.5)
+            vlak3 = implicit_plot3d(9*x+3*y+z==-3,(x,-10,10),(y,-10,10),(z,-10,10),color='green',opacity=0.5)
+            snijlijn12 = parametric_plot3d([-5.5-t,-0.5,t],(t,-8,8),color='blue',thickness="5")
+            snijlijn13 = parametric_plot3d([-1.5-t,3.5+2*t,3*t],(t,-4,4),color='green',thickness="5")
+            snijlijn23 = parametric_plot3d([2.5+t,-8.5-4*t,3*t],(t,-3,3),color='red',thickness="5")
+            show(vlak1+vlak2+vlak3+snijlijn12+snijlijn13+snijlijn23)
+          </input>
+        </sage>
+        <p>
+          We herleiden de eerste kolom met Gauss-Jordan tot <m>\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}</m> en visualiseren opnieuw. De nieuwe vlakken zijn iets donker van kleur getekend. Merk op dat de snijlijn met het blauwe vlak niet verandert is.
+        </p>
+        <sage>
+          <input>
+            A = matrix(3,4,[1,-1,1,-5,
+                            1,1,1,-6,
+                            9,3,1,-3])
+            B = matrix(3,4,[1,-1,1,-5,
+                            0,2,0,-1,
+                            0,12,-8,42])
+            show(A,"~",B)
+            var('x y z t')
+            vlak1 = implicit_plot3d(x-y+z==-5,(x,-10,10),(y,-10,10),(z,-10,10),opacity=0.7)
+            vlak2 = implicit_plot3d(x+y+z==-6,(x,-10,10),(y,-10,10),(z,-10,10),color='red',opacity=0.3)
+            vlak3 = implicit_plot3d(9*x+3*y+z==-3,(x,-10,10),(y,-10,10),(z,-10,10),color='green',opacity=0.3)
+            vlak2b = implicit_plot3d(2*y==-1,(x,-10,10),(y,-10,10),(z,-10,10),color='red',opacity=0.7)
+            vlak3b = implicit_plot3d(6*y-4*z==21,(x,-10,10),(y,-10,10),(z,-10,10),color='green',opacity=0.7)
+            snijlijn12 = parametric_plot3d([-5.5-t,-0.5,t],(t,-8,8),color='blue',thickness="5")
+            snijlijn13 = parametric_plot3d([-1.5-t,3.5+2*t,3*t],(t,-4,4),color='green',thickness="5")
+            snijlijn23 = parametric_plot3d([t,-0.5,-6],(t,-5,5),color='red',thickness="5")
+            show(vlak1+vlak2+vlak3+vlak2b+vlak3b+snijlijn12+snijlijn13+snijlijn23)
+          </input>
+        </sage>
+        <p>
+          Het stelsel heeft geen oplossing van zodra twee vlakken evenwijdig zijn. Bijvoorbeeld <m>
+                      \begin{cases} a-b+c=-5 \\ a+b+c=-6 \\ a+b+c=-3 \end{cases} </m>
+        </p>
+        <sage>
+          <input>
+            A = matrix(3,4,[1,-1,1,-5,
+                            1,1,1,-6,
+                            1,1,1,-3])
+            B = A.rref()
+            show(A,"~",B)
+            var('x y z t')
+            vlak1 = implicit_plot3d(x-y+z==-5,(x,-10,10),(y,-10,10),(z,-10,10),opacity=0.7)
+            vlak2 = implicit_plot3d(x+y+z==-6,(x,-10,10),(y,-10,10),(z,-10,10),color='red',opacity=0.3)
+            vlak3 = implicit_plot3d(x+y+z==-3,(x,-10,10),(y,-10,10),(z,-10,10),color='green',opacity=0.3)
+            show(vlak1+vlak2+vlak3)
+          </input>
+        </sage>
+        <p>
+          Het stelsel heeft een oneindig aantal oplossingen als het derde vlak behoort tot de vlakkenwaaier door de snijlijn van de eerste twee vlakken. Algebraïsch geformuleerd betekent dit dat de laatste vergelijking een lineaire combinatie is van de eerste twee vergelijkingen. Bijvoorbeeld <m>\begin{cases} a-b+c=-5 \\ a+b+c=-6 \\ 2a+2c=-11 \end{cases} </m>
+        </p>
+        <sage>
+          <input>
+            A = matrix(3,4,[1,-1,1,-5,
+                            1,1,1,-6,
+                            2,0,2,-11])
+            B = A.rref()
+            show(A,"~",B)
+            var('x y z t')
+            vlak1 = implicit_plot3d(x-y+z==-5,(x,-10,10),(y,-10,10),(z,-10,10),opacity=0.7)
+            vlak2 = implicit_plot3d(x+y+z==-6,(x,-10,10),(y,-10,10),(z,-10,10),color='red',opacity=0.3)
+            vlak3 = implicit_plot3d(2*x+2*z==-11,(x,-10,10),(y,-10,10),(z,-10,10),color='green',opacity=0.3)
+            snijlijn12 = parametric_plot3d([-5.5-t,-0.5,t],(t,-8,8),color='blue',thickness="5")
+            show(vlak1+vlak2+vlak3+snijlijn12)
+          </input>
+        </sage>
+        <p>
+          De oplossingenverzameling bestaat in dit geval uit alle punten van de snijlijn van de eerste twee vlakken<!--, i.e. de rechte door het punt <m>\left (-\frac{11}{2},-\frac{1}{2},0 \right)</m> en met richtingsgetallen <m>(-1,0,1)</m>.-->
+          <me>
+            V=\left \lbrace \left (-\frac{11}{2}-t,-\frac{1}{2},t \right) | t \in \mathbb{R} \right \rbrace
+          </me>
+        </p>
+        <p>
+          De oplossingen kunnen ook gevormd worden door alle punten van een vlak. Nemen we bijvoorbeeld het eerste vlak, dan betekent dit dat de tweede en de derde vergelijking een veelvoud moeten zijn van de eerste vergelijking: <m>\begin{cases} a-b+c=-5 \\ 2a-2b+2c=-10 \\ -3a+3b-3c=15 \end{cases} </m>
+        </p>
+        <sage>
+          <input>
+            A = matrix(3,4,[1,-1,1,-5,
+                            2,-2,2,-10,
+                            -3,3,-3,15])
+            B = A.rref()
+            show(A,"~",B)
+          </input>
+        </sage>
+        <p>
+          De oplossingenverzameling is
+          <me>
+            V=\left \lbrace  (k,m,-5-k+m) | k,m \in \mathbb{R} \right \rbrace
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <dl width="narrow">
+      <li>
+        <title><m>m \times n </m> stelsel <m>(m \lt n)</m></title>
+        <p>
+          Er zijn minder vergelijkingen dan onbekenden en het stelsel heeft een oneindig aantal oplossingen; of geen als het strijdig is. Een dergelijk stelsel is eigenlijk gewoon hetzelfde als een  <m>n \times n</m> stelsel met één of meerdere nulrijen.
+        </p>
+      </li>
+    </dl>
+    <dl width="narrow">
+      <li>
+        <title><m>m \times n </m> stelsel <m>(m \gt n)</m></title>
+        <p>
+          We veronderstellen dat er minstens <m>n</m> lineair onafhankelijke vergelijkingen zijn (anders is dit equivalent met een <m>m \times n</m> stelsel met <m>m \lt n</m>).
+          <ul>
+            <li>
+              Beschouw het stelsel gevormd door de <m>n</m> lineair onafhankelijke vergelijkingen en de <m>m-n</m> <q>extra</q> vergelijkingen. Als alle extra vergelijkingen lineaire combinaties zijn van de <m>n</m> lineair onafhankelijke vergelijkingen dan bevat de rij-canonieke matrix <m>m-n</m> nulrijen en heeft het stelsel een unieke oplossing.
+            </li>
+            <li>
+              <p>
+                Van zodra één van de extra vergelijkingen geen lineaire combinatie is van de <m>n</m> lineair onafhankelijke vergelijkingen is het stelsels sowieso strijdig.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </li>
+    </dl>
+    <activity>
+      <statement>
+        <p>
+          Herneem <xref ref="activity-2x2-opl"/> en <xref ref="activity-3x3-opl"/> en voeg telkens een extra vergelijking aan het stelsel toe zodat
+          <ol>
+            <li>
+              <p>
+                de oplossingenverzameling niet verandert;
+              </p>
+            </li>
+            <li>
+              <p>
+                het stelsel strijdig wordt.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Voor <xref ref="activity-3x3-opl"/>: toevoegen van <m>3a-b+3c=-16</m> verandert de oplossingenverzameling niet (dit is een lineaire combinatie van de eerste twee vergelijkingen); toevoegen van <m>9a+3b+c=2</m> leidt tot een strijdig stelsel (dit stelt een vlak voor evenwijdig met het derde vlak). Voor <xref ref="activity-2x2-opl"/>: zelfde redenering (lineaire combinatie verandert niets; de vergelijking van een evenwijdige rechte toevoegen leidt tot een strijdig stelsel).
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Bepaal <m>b</m> zodat onderstaande rechten elkaar snijden in één punt door uit te drukken dat de eerste vergelijking een lineaire combinatie van de andere twee moet zijn.
+          <me>
+            \begin{cases}
+            y=2x+b \\
+            y=3x-5 \\
+            y= -4x +6 \\
+            \end{cases}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <md>
+            <mrow>2x-y+b \amp =k(3x-y-5)+m(-4x-y+6)</mrow>
+            <mrow> \amp = (3k-4m)x -(k+m)y+6m-5k</mrow>
+          </md>
+          <md>
+            <mrow> \Rightarrow \; \amp \begin{cases} 3k-4m=2 \\ k+m=1 \end{cases} \Leftrightarrow \begin{cases} m=\frac{1}{7} \\ k = \frac{6}{7} \end{cases} </mrow>
+            <mrow> \Rightarrow \; \amp b=6m-5k =-\frac{24}{7}</mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Bepaal de oplossingenverzameling van onderstaande stelsels:
+          <ol>
+            <li>
+              <p>
+                <m>
+                  \begin{cases}
+                  2x+3y+5z=9 \\
+                  x+2y+3z=4 \\
+                  x+z=5
+                  \end{cases}
+                </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>
+                  \begin{cases}
+                    2x+y-2z=-2 \\
+                    3x+2y-z=4 \\
+                    x+y+z=6
+                  \end{cases}
+                </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>
+                  \begin{cases}
+                  x-2y+3z=0 \\
+                  3x-6y+9z=0 \\
+                  \end{cases}
+                </m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <sage>
+          <input>
+            A = matrix(3,4,[2,3,5,9,
+                            1,2,3,4,
+                            1,0,1,5])
+            B = A.rref()
+            show(A,"~",B)
+          </input>
+        </sage>
+        <p>
+          <m>V=\emptyset</m>
+        </p>
+        <sage>
+          <input>
+            A = matrix(3,4,[2,1,-2,-2,
+                            3,2,-1,4,
+                            1,1,1,6])
+            B = A.rref()
+            show(A,"~",B)
+          </input>
+        </sage>
+        <p>
+          <m>V=\lbrace (-8+3t,14-4t,t) | t \in \mathbb{R} \rbrace</m>
+        </p>
+        <sage>
+          <input>
+            A = matrix(2,4,[1,-2,3,0,
+                            3,-6,9,0])
+            B = A.rref()
+            show(A,"~",B)
+          </input>
+        </sage>
+        <p>
+          <m>V=\lbrace (k,m,3-k+2m) | k,m \in \mathbb{R} \rbrace</m>
+        </p>
+      </solution>
+    </activity>
+    <assemblage>
+      <title>De rang van een matrix</title>
+      <p>
+      Het aantal niet-nulrijen van de rij-canonieke matrix van bepaalde matrix <m>B</m> noemen we de <term>rang</term> van die matrix en noteren we als <m>r(B)</m>. Het aantal oplossingen van een stelsel kan dan bepaald worden door de rang van de uitgebreide matrix <m>A_b</m> te vergelijkingen met de rang van de coëfficiëntenmatrix <m>A</m>:
+      <ul>
+        <li>
+          <p>
+            <m>r(A_b) > r(A) \Leftrightarrow</m> het stelsel is strijdig (er zijn geen oplossingen)
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>r(A_b) = r(A) = n \Leftrightarrow</m> het stelsel heeft precies één oplossing
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>r(A_b) = r(A) \lt n \Leftrightarrow</m> het stelsel een oneindig aantal oplossingen. De oplossingenverzameling kan beschreven worden met behulp van <m>n-r(A)</m> parameters en we zeggen dat het stelsel <m>n-r(A)</m> vrijheidsgraden heeft.
+          </p>
+        </li>
+      </ul>
+      </p>
+    </assemblage>
+    <example>
+      <p>
+        Voor het stelsel
+        <me>
+          \begin{cases} x-3y-z=2 \\-2x+5y+3z=4 \\ 4x-11y-5z=5 \end{cases}
+        </me>
+        is
+        <me>
+          A_b=\begin{bmatrix} 1 \amp 0 \amp -4 \amp 0 \\ 0 \amp 1 \amp -1 \amp 0 \\ 0 \amp 0 \amp 0 \amp 1 \end{bmatrix}
+        </me>
+        Dit stelsel is strijdig omdat <m>r(A)=2</m> en <m>r(A_b)=3</m>.
+      </p>
+    </example>
+    <example>
+      <p>
+        Voor het stelsel
+        <me>
+          \begin{cases} 3x-7y+2z=2 \\-x+3y=-2 \\ x-2y+z=0 \end{cases}
+        </me>
+        is
+        <me>
+          A_b=\begin{bmatrix} 1 \amp 0 \amp 3 \amp -4 \\ 0 \amp 1 \amp 1 \amp -2 \\ 0 \amp 0 \amp 0 \amp 0 \end{bmatrix}
+        </me>
+        <m>r(A_b)=r(A)=2</m> en het stelsel heeft een oneindig aantal oplossingen met 1 vrijheidsgraad. We stellen <m>z=t</m> en kunnen dan de oplossingenverzameling schrijven als <m>V=\lbrace (-4-3t,-2-t,t) | t \in \mathbb{R} \rbrace</m>.
+      </p>
+    </example>
+    <exercises>
+      <exercise>
+        <statement>
+          <p>
+            Bepaal de oplossingenverzameling van onderstaande stelsels:
+            <ol>
+              <li>
+                <p>
+                  <m>
+                    \begin{cases}
+                    6x-13y+2z=0\\ 21x+15y-z=0
+                    \end{cases}
+                  </m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>
+                    \begin{cases}
+                    x+y+2z+2w=10\\
+                    3x+4y+11z+10w=36\\
+                    17x+13y+14z+18w=146\\
+                    \end{cases}
+                  </m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>
+                    \begin{cases}
+                    x_1-2x_2+x_3-x_4=1\\
+                    -3x_1+3x_2-x_3+2x_4=0
+                    \end{cases}
+                  </m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <sage>
+            <input>
+              A = matrix(2,4,[6,-13,2,0,
+                              21,15,-1,0])
+              B = A.rref()
+              show(A,"~",B)
+            </input>
+          </sage>
+          <p>
+            <m>r(A)=r(A_b)=2</m> en <m>n = 3</m>, dus we moeten een parameter invoeren om de oplossingenverzameling te beschrijven: <m>V= \lbrace (-17k,48k,363k) | k \in \mathbb{R} \rbrace </m>
+          </p>
+          <sage>
+            <input>
+              A = matrix(3,5,[1,1,2,2,10,
+                              3,4,11,10,36,
+                              17,13,14,18,146])
+              B = A.rref()
+              show(A,"~",B)
+            </input>
+          </sage>
+          <p>
+            <m>r(A)=r(A_b)=2</m> en <m>n = 4</m>, dus we moeten twee parameters invoeren om de oplossingenverzameling te beschrijven: <m>V=\lbrace (4+3k+2m,6-5k-4m,k,m) | k,m \in \mathbb{R} \rbrace</m>
+          </p>
+          <sage>
+            <input>
+              A = matrix(2,5,[1,-2,1,-1,1,
+                              -3,3,-1,2,0])
+              B = A.rref()
+              show(A,"~",B)
+            </input>
+          </sage>
+          <p>
+            <m>r(A)=r(A_b)=2</m> en <m>n = 4</m>, dus we moeten twee parameters invoeren om de oplossingenverzameling te beschrijven: <m>V=\lbrace (-1+k+m,-1+2k-m,3k,3m) | k,m \in \mathbb{R} \rbrace</m>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Keer terug naar de oefeningen van <xref ref="stelsels-mathematiseren"/> en bepaal de oplossingen van oefening 6 en 7.
+          </p>
+        </statement>
+      </exercise>
+    </exercises>
+  </subsection>
+</section>

@@ -1,22 +1,131 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 
-<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <!-- we first include a file which contains the docinfo element: -->
-  <xi:include href="./docinfo.ptx" />
+<pretext xml:lang="nl-NL" xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
+  <docinfo>
+    <macros>
+      \newcommand{\N}{\mathbb N}
+      \newcommand{\Z}{\mathbb Z}
+      \newcommand{\Q}{\mathbb Q}
+      \newcommand{\R}{\mathbb R}
+      \newcommand{\g}{^{\circ}}
+      \newcommand{\identity}{\mathrm{id}}
+      \newcommand{\vv}{\overrightarrow}
+      \newcommand{\verteq}{\rotatebox{90}{$=$}}
+      \newcommand{\equalto}[2]{\underset{\scriptstyle\overset{\mkern4mu\verteq}{#2}}{#1}}
+      \usepackage[makeroom]{cancel}
+    </macros>
+    <latex-image-preamble>
+      \usepackage{tikz}
+      \usetikzlibrary{positioning,arrows,matrix}
+      \usetikzlibrary{backgrounds}
+      \usetikzlibrary{intersections}
+      \usetikzlibrary{snakes}
+      \usetikzlibrary{decorations.markings}
+      \usetikzlibrary{decorations.pathmorphing,patterns}
+      \usetikzlibrary{calc}
+      \usepackage{pgfplots}
+      \usepackage{tkz-tab}
+      \tikzstyle{functie klein}=[fill=none, draw=black, shape=rectangle, thick, minimum width=2 cm, minimum height=0.9 cm]
+      \tikzstyle{pijl}=[fill=none, draw=black, {->-},thick]
+      \tikzstyle{invpijl}=[fill=none, draw=black, {-&lt;-},thick]
+    </latex-image-preamble>
 
-    <!-- Include frontmatter -->
-    <xi:include href="./frontmatter.ptx" />
+    <rename element="frontmatter" xml:lang="nl-NL">Vooraf</rename>
+    <rename element="backmatter" xml:lang="nl-NL">Achteraf</rename>
+    <rename element="activity" xml:lang="nl-NL">Opdracht</rename>
+    <rename element="figure" xml:lang="nl-NL">Figuur</rename>
 
-    <!-- Include chapters -->
-    <xi:include href="./ch-chapter-title.ptx" />
+  </docinfo>
 
+  <book xml:id="laruimte">
+    <title>Analytische vlakke meetkunde en kegelsneden</title>
+    <subtitle>3de graad ASO met 7 lesuren per week </subtitle>
 
-    <!-- Include backmatter -->
-    <xi:include href="./backmatter.ptx" />
+    <frontmatter xml:id="frontmatter">
+      <titlepage>
+        <author>
+          <personname>Nele Vermeulen</personname>
+          <!-- <department>Your department</department> -->
+          <institution>Scholen Da Vinci</institution>
+        </author>
+        <date>
+          <today />
+        </date>
+      </titlepage>
+
+      <colophon>
+
+        <website>
+          <url href="http://neledavinci.classy.be/laruimte">neledavinci.classy.be</url>
+        </website>
+
+        <copyright>
+          <year>2020<ndash />2024</year>
+          <holder>Nele Vermeulen</holder>
+          <shortlicense> 
+            Tenzij anders vermeld is alles in dit werk gelicentieerd onder een Creative Commons Naamsvermelding-NietCommerieel-GelijkDelen 4.0-licentie. De volledige licentie kan je nalezen op 
+            <url 
+              href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.nl"
+              visual="creativecommons.org/licenses/by-nc-sa/4.0">
+              CreativeCommons.org</url>
+          </shortlicense>
+        </copyright>
+      </colophon>
+
+      <preface>
+        <p>
+          Deze cursus bevat heel wat structuurelementen <mdash/> wiskundige termen zijn vetgedrukt; formules en stappenplannen staan in kadertjes, uitgewerkte voorbeelden en opmerkingen zijn duidelijk aangegeven, <ellipsis/> <mdash/> zodat je gemakkelijk het overzicht kan bewaren. Maak echter niet de fout om te denken dat eventuele bindteksten optioneel zijn. Je hebt ook deze uitgeschreven redeneringen nodig om alles goed te begrijpen! 
+        </p>
+        <p>
+          Doorheen de tekst vind je ook opdrachten, verkenningen en onderzoeken. Er zijn grofweg twee soorten opdrachten
+          <ul>
+            <li>
+              <p>
+                 oefeningen om te controleren of je de theorie kan toepassen;
+              </p>
+            </li>
+            <li>
+              <p>
+                het zelf uitwerken van een stukje theorie.
+              </p>
+            </li>
+          </ul> 
+          Opdrachten behoren dus eigenlijk altijd tot de leerstof. Zoals de naam al doet vermoeden, zijn verkenningen gewoon bedoeld om kennis te maken met een stukje theorie. En tijdens onderzoeken tenslotte ga je wat dieper in op een bepaald aspect van de leerstof.
+        </p>
+        <p>
+          In de papieren versie van de cursus vind je QR-codes die je kan inscannen met je smartphone. Deze leiden naar interactieve tekeningen of filmpjes. 
+        </p>
+        <p>
+           Paragrafen of oefeningen met een <m>(\star)</m> als aanduiding zijn bedoeld als verdieping.
+        </p>
+      </preface>
+    </frontmatter>
+
+    <xi:include href="./stelsels.ptx"/>
+    <!-- <xi:include href="./rechten-vlakken.ptx"/> -->
+    <!-- <xi:include href="./matrices.ptx"/> -->
+    <!-- <xi:include href="./vectorruimte-afbeelding.ptx"/> -->
+    <!-- <xi:include href="./rechten-vlakken/orthonormaal.ptx"/> -->
+
+    <backmatter xml:id="backmatter">
+      <title>Achteraf</title>
+
+      <appendix>
+        <title>Lijst van symbolen</title>
+        <notation-list/>
+      </appendix>
+
+      <index>
+        <title>Index</title>
+        <index-list/>
+      </index>
+
+      <colophon>
+        <p> This book was authored in <pretext />. </p>
+      </colophon>
+
+    </backmatter>
 
   </book>
 </pretext>

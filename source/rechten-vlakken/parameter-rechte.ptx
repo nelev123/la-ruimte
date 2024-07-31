@@ -1,0 +1,902 @@
+<section xml:id="sec-parameter-rechte">
+  <title>Parametervoorstelling en cartesische vergelijkingen van een rechte</title>
+  <subsection>
+    <title>Coördinaten in de ruimte</title>
+    <p>
+      We beschouwen door <m>O</m> drie rechten die niet in hetzelfde vlak liggen en ijken elke rechte. Het geordend puntenviertal <m>(O,E1,E2,E3)</m> noemen we een ijk van de ruimte. De geijkte rechten zijn de coördinaatsassen: de <m>x</m>-as, <m>y</m>-as en <m>z</m>-as. Deze drie assen vormen een willekeurig assenstelsel met oorsprong <m>O</m>: een <term>affien</term> assenstelsel. Bij een affien assenstelsel kan de hoek tussen twee assen dus verschillend zijn van <m>90^{\circ}</m> en kan ook de eenheid per as verschillen. Als de assen paarsgewijs loodrecht op elkaar staan dan spreken we over een <term>orthogonaal</term> assenstelsel. Als bovendien ook <m>|OE_1|=|OE_2|=|OE_3|</m> dan spreken we van een <term>orthonormaal</term> of <term>cartesisch</term> assenstelsel.
+    </p>
+
+    <sidebyside widths="80%">
+      <image source="affien.png"/>
+    </sidebyside>    
+
+    <p>
+      Van zodra het assenstelsel gekozen is, kan de ligging van een willekeurig punt <m>P</m> ondubbelzinnig worden vastgelegd door middel van een geordend drietal: de <term>coördinaat</term>. We noteren <m>P(x,y,z)</m> of <m>co(P)=(x,y,z)</m>. <m>x,y</m> en <m>z</m> zijn de <term>coördinaatsgetallen</term> en bepaal je als volgt
+    <dl>
+      <li>
+        <title><m>P'</m></title>
+        <p>
+          is de projectie van <m>P</m> op het <m>xy</m>-vlak volgens de richting van de <m>z</m>-as.
+        </p>
+      </li>
+      <li>
+        <title><m>x</m></title>
+        <p>
+           Het punt <m>P_1(x,0,0)</m> is de projectie van <m>P'</m> op de <m>x</m>-as volgens de richting van de <m>y</m>-as.
+        </p>
+      </li>
+      <li>
+        <title><m>y</m></title>
+        <p>
+          Het punt <m>P_2(0,y,0)</m> is de projectie van <m>P'</m> op de <m>y</m>-as volgens de richting van de <m>x</m>-as.
+        </p>
+      </li>
+      <li>
+        <title><m>z</m></title>
+        <p>
+          Het punt <m>P_3(0,0,z)</m> is de projectie van <m>P</m> op de <m>z</m>-as volgens de richting van <m>OP'</m>.
+        </p>
+      </li>
+    </dl>
+    </p>
+
+    <sidebyside widths="80%">
+      <image source="coordinaten.png"/>
+    </sidebyside>
+
+    <p>
+      Aangezien elk punt <m>P</m> een puntvector <m>\vv{P}</m> bepaalt kunnen we evengoed stellen dat <m>(x,y,z)</m> de coördinaat van de vector <m>\vv{P}</m> is. Notatie: <m>\vv{P}(x,y,z)</m> of <m>co(\vv{P})=(x,y,z)</m>. We kunnen de vector <m>\vv{P}</m> echter ook schrijven als de som van de drie vectoren <m>\vv{P}_1</m>, <m>\vv{P}_2</m> en <m>\vv{P}_3</m>:
+      <mdn>
+        <mrow number="no">\vv{P} = \amp \vv{P'}+\vv{P}_3 \nonumber </mrow>
+        <mrow number="no">= \amp \vv{P}_1+\vv{P}_2+\vv{P}_3 \nonumber </mrow>
+        <mrow>= \amp x \vv{E}_1+y\vv{E}_2+z\vv{E}_3</mrow>
+      </mdn>
+      We noemen dit de <term>ontbinding</term> van <m>\vv{P}</m> volgens de coördinaatsassen. <m>\vv{E}_1</m>, <m>\vv{E}_2</m> en <m>\vv{E}_3</m> noemen we <term>basisvectoren</term> en we zeggen dat <m>\vv{P}</m> een <term>lineaire</term> combinatie is van deze basisvectoren.
+    </p>
+    <!--oefeningen op grafisch bepalen van coordinaten?-->
+
+    <assemblage xml:id="assemblage-rekenen-co">
+      <title>Rekenen met coördinaten</title>
+          <p>
+      Voor de punten <m>P(x_1,y_1,z_1)</m> en <m>Q(x_2,y_2,z_2)</m> en een reëel getal <m>k \in \mathbb{R}_0</m> geldt er:
+        <mdn>
+          <mrow xml:id="vgl-som-coordinaten">\amp co(k\vv{P})=k \cdot co(\vv{P})=(kx_1,ky_1,kz_1)</mrow>
+          <mrow xml:id="vgl-scalairv-coordinaten">\amp co(\vv{P}+\vv{Q})= co(\vv{P})+co(\vv{Q})=(x_1+x_2,y_1+y_2,z_1+z_2)</mrow>
+        </mdn>
+    </p>
+    <p>
+      Uit <xref ref="vgl-som-coordinaten"/> en <xref ref="vgl-scalairv-coordinaten"/> volgt dat
+      <me>
+      co(k\vv{P}+m\vv{Q})=k \cdot co(\vv{P})+m \cdot co(\vv{Q})
+      </me>
+      De coördinaat van de vector <m>\vv{PQ}</m> tenslotte is gelijk aan:
+      <me>
+        co(\vv{PQ})=co(\vv{Q})-co(\vv{P})
+      </me>
+    </p>
+    </assemblage>
+
+    <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Gegeven <m>A(5,-1,1)</m>, <m>B(-1,5,2)</m> en <m>C(-7,2,0)</m>.
+          <ol>
+            <li>
+              <p>
+                Bepaal de coördinaten van het midden van <m>[AB]</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Bepaal de coördinaten van het zwaartepunt van de driehoek <m>ABC</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>co\left ( \dfrac{\vv{A}+\vv{B}}{2}\right)= \left ( 2,2,\dfrac{3}{2} \right )</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>co\left ( \dfrac{\vv{A}+\vv{B}+\vv{C}}{3}\right)= \left ( -1,2,1 \right )</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Gegeven de ijk <m>(O,E_1,E_2,E_3)</m>.
+          <ol>
+            <li>
+              Bepaal de coördinaten van de punten <m>A, B</m> en <m>C</m> als
+              <md>
+                <mrow>\amp \vv{A}=2\vv{E_1}-3\vv{E_2}+7\vv{E_3}</mrow>
+                <mrow>\amp \vv{B}=-3\vv{E_2}+5\vv{E_3}</mrow>
+                <mrow>\amp \vv{OC}=3\vv{OE_1}-2\vv{OE_2}-\vv{OE_3}</mrow>
+              </md>
+            </li>
+            <li>
+              Noteer <m>\vv{D}</m> als een lineaire combinatie van <m>\vv{E_1}</m>, <m>\vv{E_2}</m> en <m>\vv{E_3}</m> als <m>\vv{D}\left(3,-5,\frac{1}{2} \right)</m>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>A(2,-3,7)</m>, <m>B(0,-3,5)</m> en <m>C(3,-2,-1)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vv{D}=3\vv{E_1}-5\vv{E_2}+\dfrac{1}{2}\vv{E_3}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Gegeven de punten <m>A(2,0,-1)</m>; <m>B(1,2,1)</m> en <m>C(0,0,7)</m>. Bepaal de coördinaten van <m>P</m>, <m>Q</m> en <m>R</m> waarvoor geldt:
+          <ol>
+            <li>
+              <p>
+                <m>\vv{PA}=3\vv{PB}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vv{AQ}-3\vv{QB}=\vv{O}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vv{AR}+\vv{BR}+2\vv{CR}=\vv{O}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>\vv{PA}=3\vv{PB} \Leftrightarrow \vv{P}=\dfrac{3 \vv{B} - \vv{A}}{2} \Rightarrow P(0,5;3;2)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vv{AQ}-3\vv{QB}=\vv{O} \Leftrightarrow \vv{Q}=\dfrac{\vv{A} + 3\vv{B}}{4} \Rightarrow Q(1,25;1,5;0,5)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vv{AR}+\vv{BR}+2\vv{CR}=\vv{O} \Leftrightarrow \vv{R}=\dfrac{\vv{A} + \vv{B}+2\vv{C}}{4} \Rightarrow R(0,75;0,5;3,5)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          T.o.v. de ijk <m>(O,E_1,E_2,E_3)</m> geldt: <m>co(A)=(-2,3,4)</m>. Bepaal <m>co(A)</m> t.o.v. de ijk <m>(O,E_1',E_2',E_3')</m> als
+          <md>
+            <mrow> \amp \vv{E'_1}=\vv{E_1}+\vv{E_2}+\vv{E_3}</mrow>
+            <mrow> \amp \vv{E'_2}=-\vv{E_1}+2\vv{E_2}</mrow>
+            <mrow>\amp \vv{E'_3}=-\vv{E_3}</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Gebruik de combinatiemethode om de basisvectoren van de oude ijk te schrijven in functie van de basisvectoren van de nieuwe ijk:
+          <md>
+            <mrow> \amp \vv{E_1} = \dfrac{2\vv{E'_1}-\vv{E'_2}+2\vv{E'_3}}{3}</mrow>
+            <mrow> \amp \vv{E_2} = \dfrac{\vv{E'_1}+\vv{E'_2}+\vv{E'_3}}{3}</mrow>
+            <mrow> \amp \vv{E_3} = -\vv{E'_3}</mrow>
+          </md>
+          We kunnen <m>\vv{A}</m> daarmee schrijven als 
+          <me>
+            \vv{A}=-2\vv{E_1}+3\vv{E_2}+4\vv{E_3}=-\dfrac{1}{3}\vv{E'_1}+\dfrac{5}{3}\vv{E'_2}-\dfrac{13}{3}\vv{E'_3}
+          </me>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          T.o.v. een affien assenstelsel heeft men de punten <m>A(4,2,6)</m>; <m>B(-2,-2,4)</m>; <m>C(4,-2,2)</m> en <m>D(-4,-6,8)</m>.
+          <ol>
+            <li>
+              <p>
+                Bepaal de coördinaten van de zwaartepunten <m>Z_1,Z_2,Z_3,Z_4</m> van de zijvlakken van het viervlak <m>ABCD</m>. Bereken de coördinaat van het zwaartepunt <m>Z</m> van het viervlak ABCD<fn>Het zwaartepunt van een viervlak <m>ABCD</m> is <m>\vv{Z}=\dfrac{\vv{A}+\vv{B}+\vv{C}+\vv{D}}{4}</m></fn> en ga na dat <m>Z</m> ook het zwaartepunt is van het viervlak <m>Z_1Z_2Z_3Z_4</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>M</m> en <m>N</m> zijn de middens van de overstaande ribben <m>AB</m> en <m>CD</m>. Toon aan dat het midden van <m>[MN]</m> het zwaartepunt van het viervlak is.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Zie <url href="https://www.geogebra.org/3d/mvhx8y6h" />
+        </p>
+      </solution>
+    </exercise>    
+    </exercises>
+  </subsection>
+
+  <subsection>
+    <title>Van vectoriële vergelijking naar parametervoorstelling</title>
+    <p>
+      We kiezen nu een affien assenstelsel. De richtingsvector <m>\vv{R}</m> is ondubbelzinnig bepaald door zijn coördinaat t.o.v. dit assenstelsel:
+        <me>co(\vv{R})=(a,b,c) \qquad \neg(a=b=c=0)</me>
+       We noemen deze coördinaat een stel <term>richtingsgetallen</term> van de rechte met vectoriële vergelijking
+      <m>
+        \vv{P}=\vv{P_1}+k\vv{R}
+      </m>. Deze rechte heeft oneindig veel richtingsgetallen aangezien elke vector die een veelvoud is van <m>\vv{R}</m> eveneens een richtingsvector is van de rechte.
+    </p>
+
+    <aside>
+      <title>Notatie</title>
+      <p>
+          <m>\neg</m> is het symbool voor niet
+      </p>
+      <p>
+          <m>\wedge</m> is het symbool voor en
+      </p>
+    </aside>
+
+    <assemblage>
+      <title>Evenwijdige rechten</title>
+      <p>
+        De rechte <m>r</m> met richtingsvector <m>\vv{R}(a_1,b_1,c_1)</m> en de rechte <m>s</m> met richtingsvector <m>\vv{S}(a_2,b_2,c_2)</m> zijn evenwijdig als en slechts als hun stellen richtingsgetallen evenredig zijn:
+        <me>r \parallel s \Leftrightarrow \vv{S}=k\vv{R} \Leftrightarrow a_2=k a_1 \wedge b_2 = k b_1  \wedge c_2 = k c_1 \quad (k \in \mathbb{R}_0)</me>
+      </p>
+    </assemblage>
+
+    <p>
+      We beschouwen de rechte <m>r</m> die gaat door het punt <m>P_1(x_1,y_1,z_1)</m> en evenwijdig is met de vector <m>\vv{R}(a,b,c)</m>. De coördinaat van een willekeurig punt <m>P(x,y,z)</m> van deze rechte is dan
+      <md>
+        <mrow>\amp co(\vv{P})=co(\vv{P_1})+k \cdot co(\vv{R}) </mrow>
+        <mrow>\Leftrightarrow \amp (x,y,z)=(x_1,y_1,z_1)+k(a,b,c)</mrow>
+        <mrow>\Leftrightarrow \amp \boxed{\begin{cases} x = x_1+k \cdot a \\ y=y_1+k \cdot b \\ z=z_1+k \cdot c  \end{cases} }\qquad (k \in \mathbb{R})</mrow>
+      </md>
+      We noemen dit stelsel een stelsel parametervergelijkingen of een parametervoorstelling van de rechte <m>r</m>. Elke waarde van de parameter <m>k</m> correspondeert met een punt van de rechte en
+      omgekeerd. De parametervoorstelling definieert dus een functie van <m>\mathbb{R} \rightarrow \mathbb{R}^2</m>.
+    </p>
+
+    <p>
+      Voor een rechte door twee gegeven punten <m>P_1(x_1,y_1,z_1)</m> en <m>P_1(x_2,y_2,z_2)</m> is <m>\vv{R}=\vv{P_2}-\vv{P_1}</m> en wordt de parametervoorstelling<fn>Dit volgt ook onmiddelijk uit de vectoriële vergelijking van een rechte door twee punten.</fn>
+      <me>
+        \begin{cases} x = x_1+k (x_2-x_1) \\ y=y_1+k (y_2-y_1)  \\ z=z_1+k (z_2-z_1)  \end{cases}  \Leftrightarrow \boxed{\begin{cases} x = (1-k)x_1 +k  x_2\\ y= (1-k) y_1+k y_2 \\ z= (1-k) z_1+k  z_2 \end{cases}} \qquad (k \in \mathbb{R})
+      </me>    
+    </p>
+         <example>
+      <p>
+        We beschouwen de rechte door het punt <m>P_1(-2,5,-1)</m> en met richtingsgetallen <m>(6,-6,2)</m>. Een parametervoorstelling van deze rechte is
+        <me>
+          \begin{cases}
+          x=-2+6k \\
+          y=5-6k \\
+          z= -1 + 2k
+          \end{cases} \qquad (k \in \mathbb{R})
+        </me>
+        Een ander stel richtingsgetallen is <m>(-3,3,-1)</m> en een tweede parametervoorstelling is bijgevolg
+        <me>
+          \begin{cases}
+          x=-2-3k \\
+          y=5+3k \\
+          z= -1 -k
+          \end{cases} \qquad (k \in \mathbb{R})
+        </me>
+        Er zijn ook een oneindig aantal mogelijkheden voor <m>P_1</m>; dit is immers gewoon een willekeurig punt van de rechte. Stellen we in de tweede parametervoorstelling <m>k=-2</m> dan krijgen we
+        <me>
+          \begin{cases}
+          x=-2-3(-2)=4 \\
+          y=5+3(-2)=-1 \\
+          z= -1 -(-2)=1
+          \end{cases} 
+        </me> 
+        en een derde mogelijke parametervoorstelling van deze rechte is
+        <me>
+          \begin{cases}
+          x=4-3k \\
+          y=-1+3k \\
+          z= 1 -k
+          \end{cases} \qquad (k \in \mathbb{R})
+        </me>       
+      </p>
+      <p>
+        Met behulp van de parametervoorstelling kan je snel controleren of een gegeven punt op de rechte ligt. Het punt <m>(1,2,3)</m>, bijvoorbeeld, ligt niet op de rechte omdat
+        <me>
+          \begin{cases}
+          1=4-3k \\
+          2=-1+3k \\
+          3= 1 -k
+          \end{cases}  \Leftrightarrow
+          \begin{cases}
+          k=1 \\
+          k=1 \\
+          k= -2
+          \end{cases}
+        </me>  
+      </p>
+      <p>
+        We bepalen tenslotte het snijpunt van deze rechte met het <m>xy</m>-vlak. De <m>z</m>-coördinaat van dit snijpunt is nul en hieruit volgt de waarde van de parameter
+        <me>
+          0=1-k \Leftrightarrow k=1
+        </me>
+        Invullen in de parametervoorstelling geeft het punt <m>(1,2,0)</m>
+        <me>
+          \begin{cases}
+          x=4-3=1 \\
+          y=-1+3=2 \\
+          z= 0
+          \end{cases} \qquad (k \in \mathbb{R})
+        </me> 
+      </p>
+      <!--intermezzo: elke parametervergelijking bepaald een functie. x y of x in functie van k. Lineaire functies, dus x(k) grafiek stelt een rechte voor. Drie lineaire functie, samen een functie van R naar R^3. Rechte in de ruimte. Rechte. Grafische weergave van rechtlijnige beweging met constante snelheid-->
+    </example> 
+  </subsection>
+
+  <subsection xml:id="subsec-cartesisch-rechte">
+    <title>Van parametervoorstelling naar cartesische vergelijkingen</title>
+    <example>
+    <p>
+        Het stelsel cartesische vergelijkingen van de rechte vinden we door een parametervoorstelling te beschouwen als een stelsel in <m>k</m> en de voorwaarde op te stellen waarvoor dit stelsel een unieke oplossing heeft <mdash/> we noemen dit het elimineren van de parameter. We lossen dus elke parametervergelijking eerst op naar <m>k</m> en drukken vervolgens uit dat de oplossing uniek moet zijn. Voor de rechte met parametervoorstelling
+        <me>
+          \begin{cases}
+          x=-2+6k \\
+          y=5-6k \\
+          z= -1 + 2k
+          \end{cases} \qquad (k \in \mathbb{R})
+        </me>
+        geeft dit
+        <me>
+          \begin{cases}
+            k=\dfrac{x+2}{6}\\
+            k=\dfrac{y-5}{-6}\\
+            k=\dfrac{z+1}{2}
+          \end{cases} \Leftrightarrow \frac{x+2}{6}=\frac{y-5}{-6}=\frac{z+1}{2}
+        </me>
+        Merk op dat dit een stelsel is van twee lineaire vergelijkingen in <m>x</m>, <m>y</m> en <m>z</m>. We kunnen dit stelsel bijvoorbeeld ook als volgt noteren:
+        <me>
+          \begin{cases}
+           x+y=3 \\
+           y+3z=2
+          \end{cases}
+        </me>
+        en we kunnen stellen dat deze rechte de snijlijn is van de vlakken <m>x+y=3</m> en <m>y+3z=2</m>. 
+        <!--geogebra stukje toevoegen-->
+    </p>
+    </example>
+    <p>
+      We beschouwen de rechte door het punt <m>P_1(x_1,y_1,z_1)</m> met richtingsvector <m>\vv{R}(a,b,c)</m>. De parametervoorstelling is:
+      <me>
+         \begin{cases} x = x_1+k \cdot a \\ y=y_1+k \cdot b \\ z=z_1+k \cdot c \end{cases} \quad (k \in \mathbb{R})
+      </me> 
+      Om de cartesische vergelijking te bepalen elimineren we de parameter <m>k</m>.
+      <me>
+        \begin{cases} k = \dfrac{x-x_1}{a} \\ k = \dfrac{y-y_1}{b} \\ k = \dfrac{z-z_1}{c} \end{cases} \Leftrightarrow \boxed{\frac{x-x_1}{a}=\frac{y-y_1}{b}=\frac{z-z_1}{c}}
+      </me>
+       We krijgen nu de zogenaamde <term>standaardvorm</term> van het stelsel cartesische vergelijkingen.
+    </p>
+    <remark>
+      <p>
+        Let op! Als één van de richtingsgetallen nul is, betekent dat niet dat het stelsel cartesische vergelijkingen niet bestaat. Je grijpt dan terug naar de parametervoorstelling om dit stelsel te bepalen.
+      </p>
+    </remark>
+    <example>
+      <p>
+        We beschouwen de rechte door het punt <m>P_1(5,1,6)</m> en met richtingsgetallen <m>(2,0,0)</m>. Een parametervoorstelling van deze rechte is
+        <me>
+          \begin{cases}
+          x=5+2k \\
+          y=1 \\
+          z= 6
+          \end{cases} \qquad (k \in \mathbb{R})
+        </me>
+        Het stelsel cartesische vergelijkingen is bijgevolg
+        <me>
+          \begin{cases}
+           y=1\\
+           z=6
+          \end{cases}
+        </me>
+      </p>
+    </example>
+
+    <p>
+      De parametervoorstelling <m> \begin{cases} x = x_1+k \cdot a \\ y=y_1+k \cdot b \\ z=z_1+k \cdot c \end{cases} \quad (k \in \mathbb{R})
+      </m> kan beschouwd worden als een <m>3 \times 1</m> stelsel in de onbekende <m>k</m> met als uitgebreide matrix <m>\begin{bmatrix} a \amp  x-x_1 \\ b \amp  y-y_1 \\ c \amp z-z_1 \end{bmatrix}</m>. We bepalen de rij-canonieke vorm 
+      <me>
+        \begin{bmatrix} a \amp  x-x_1 \\ b \amp  y-y_1 \\ c \amp z-z_1 \end{bmatrix} \sim \begin{bmatrix} 1 \amp  \frac{x-x_1}{a} \\ 0 \amp  y-y_1-\frac{b}{a}(x-x_1) \\ 0 \amp z-z_1-\frac{c}{a}(x-x_1) \end{bmatrix}
+      </me>
+      Het stelsel heeft precies één oplossing als <m>r(A)=r(A_b)=1</m> en dus moet er gelden dat
+      <me>
+        \begin{cases}
+         y-y_1-\frac{b}{a}(x-x_1) = 0 \\ z-z_1-\frac{c}{a}(x-x_1) = 0 
+        \end{cases}   \Leftrightarrow \begin{cases} \dfrac{x-x_1}{a}=\dfrac{y-y_1}{b}\\   \dfrac{x-x_1}{a}=\dfrac{z-z_1}{c} \end{cases}
+      </me>
+      en we krijgen opnieuw de standaardvorm van het stelsel cartesische vergelijkingen van een rechte. We noemen het stelsel cartesische vergelijkingen de <term>coëxistentievoorwaarde</term> van het stelsel parametervergelijkingen, d.w.z. dat het stelsel parametervergelijkingen slechts een oplossing heeft als aan deze voorwaarde voldaan is. 
+      <!-- verband tussen x,y en z -->
+    </p>
+    <example>
+      <p>
+        Gegeven de rechte met parametervoorstelling
+         <me>
+           \begin{cases}
+            x = 1 + 2k  \\ y = 2 + 3k \\ z = k
+          \end{cases}
+         </me>
+         We beschouwen dit als een <m>3 \times 1</m> stelsel in de onbekende <m>k</m> en bepalen de rij-canonieke vorm van de uitgebreide matrix
+        <md>
+          <mrow> \begin{bmatrix} 2 \amp x-1 \\ 3 \amp y-2 \\ 1 \amp z \end{bmatrix} \overset{R_1 \leftrightarrow R_3}{\sim} \begin{bmatrix} 1 \amp z \\ 3 \amp y-2 \\ 2 \amp x-1 \end{bmatrix} \overset{R_2 \to R_2-3R_1}{\underset{R_3 \to R_3-2R_1}{\sim}}   \begin{bmatrix} 1 \amp z \\ 0 \amp y-2-3z \\ 0 \amp x-1-2z \end{bmatrix}</mrow>
+       </md>
+        Het stelsel heeft precies één oplossing als <m>r(A)=r(A_b)=1</m> en dus moet er gelden dat
+       <me>
+        \begin{cases}
+         y-2-3z=0 \\ x-1-2z=0
+        \end{cases}   \Leftrightarrow \begin{cases} y-3z=2 \\ x-2z=1  \end{cases}
+       </me>
+       <!-- slechts 1 onafhankelijke vergelijking, andere twee zijn lineaire combinaties-->
+      </p>
+    </example>
+  </subsection>
+
+  <subsection>
+    <title>Van cartesische vergelijkingen naar parametervoorstelling</title>
+    <example>
+      <p>
+        Gegeven de rechte met stelsel cartesische vergelijkingen
+        <me>
+          \begin{cases}
+           x+y=3 \\
+           y+3z=2
+          \end{cases}
+        </me>
+        Een parametervoorstelling kan dan bepaald worden door één van de variabelen gelijk te stellen aan een lineaire functie in <m>k</m>. 
+        Kiezen we bijvoorbeeld <m>z=k</m>, dan wordt de parametervoorstelling
+        <me>
+          \begin{cases}
+          x=1+3k \\
+          y=2-3k \\
+          z=k
+          \end{cases} \qquad (k \in \mathbb{R})
+        </me>
+        Stellen we <m>y=-4+5k</m>, dan wordt de parametervoorstelling
+        <me>
+          \begin{cases}
+          x=7-5k \\
+          y=-4+5k \\
+          z=2-\dfrac{5}{3}k
+          \end{cases} \qquad (k \in \mathbb{R})
+        </me>
+      </p>
+    </example>
+
+    <example>
+      <p>
+        Beschouw de rechte beschreven door de cartesische vergelijkingen
+        <me>
+          \begin{cases} x-y+z+1=0 \\ 2x-3y+5z+4=0 \end{cases}
+        </me>
+        Om hieruit een parametervoorstelling af te leiden los je dit stelsel gewoon op. De uitgebreide matrix <m>A_b</m> is
+        <me>
+          \begin{bmatrix} 1 \amp -1 \amp 1 \amp -1 \\ 2 \amp -3 \amp 5 \amp -4 \end{bmatrix}
+        </me>
+        We bepalen de rij-canonieke vorm:
+        <me>
+          A_b \sim \begin{bmatrix} 1 \amp 0 \amp -2 \amp 1 \\ 0 \amp 1 \amp -3 \amp 2 \end{bmatrix}
+        </me>
+        Het stelsel dat hiermee correspondeert is
+        <me>
+          \begin{cases} x-2z=1 \\ y-3z=2 \end{cases}
+        </me>
+        Hieruit kan nu snel de standaardvorm<fn><m>\frac{x-x_1}{a}=\frac{y-y_1}{b}=\frac{z-z_1}{c} </m></fn> van de rechte afgeleid worden:
+        <me>
+          \begin{cases} x-1=2z \\ y-2=3z \end{cases} \Leftrightarrow \frac{x-1}{2}=\frac{y-2}{3}=z
+        </me>
+        en ook een parametervoorstelling
+        <me>
+          \begin{cases} x=1+2k \\ y= 2+3k \\z = k \end{cases} \qquad (k \in \mathbb{R})
+        </me>
+      </p> 
+    </example>
+
+    <assemblage>
+      <title>Parametervoorstelling van een rechte</title>
+      <p>
+        De rechte door het punt <m>P_1(x_1,y_1)</m> en evenwijdig met de vector <m>\vv{R}(a,b,c)</m> heeft als parametervoorstelling
+        <me>
+          \begin{cases} x = x_1+k \cdot a \\ y=y_1+k \cdot b \\ z=z_1+k \cdot c  \end{cases} \qquad (k \in \mathbb{R})
+        </me>
+        <m>(a,b,c)</m> noemen we een stel richtingsgetallen van de rechte.
+      </p>
+      <p>
+        De rechte door de punten <m>P_1(x_1,y_1,z_1)</m> en <m>P_2(x_2,y_2,z_2)</m>  heeft als parametervoorstelling
+        <me>
+          \begin{cases} x = x_1+k (x_2-x_1) = (1-k)x_1 +k  x_2\\ y=y_1+k (y_2-y_1) = (1-k) y_1+k y_2 \\ z=z_1+k (z_2-z_1) = (1-k) z_1+k  z_2 \end{cases} \qquad (k \in \mathbb{R})
+        </me>
+      </p>  
+    </assemblage>
+
+    <assemblage>
+      <title>Cartesische vergelijkingen van een rechte</title>
+      <p>
+        De rechte <m>r</m> door het punt <m>P_1(x_1,y_1,z_1)</m> en evenwijdig met de vector <m>\vv{R}(a,b,c)</m> heeft als stelsel cartesische vergelijkingen
+        <me>
+        \frac{x-x_1}{a}=\frac{y-y_1}{b}=\frac{z-z_1}{c} \quad (a,b,c \neq 0)
+        </me>
+      </p>
+    </assemblage>
+
+    <assemblage>
+      <title>Stelsels en vergelijkingen van rechten</title>
+      <sidebyside width="80%">
+        <image xml:id="fig-stelsel-parameter-1">
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}
+            \node[text width=4cm] at (-2,0) {parametervoorstelling ($3 \times 1$ stelsel)};
+            \draw[>=latex,->,shorten >= 5pt,thick] (0,0) to [out=40,in=140] node[pos=0.5,above,text width=4cm]{parameters elimineren of coëxistentievoorwaarde opstellen} (4,0);
+            \draw[>=latex,->,shorten >= 5pt,thick] (4,0) to [out=-140,in=-40] node[pos=0.5,below,text width=4cm]{stelsel oplossen en parameter invoeren} (0,0);
+            \node[text width=5cm] at (6.5,0) {cartesische vergelijkingen ($2 \times 3$ stelsel)};
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </sidebyside>
+      <p>
+        Een parametervoorstelling van een rechte in de ruimte bepaal je door een <m>2 \times 3</m> stelsel cartesische vergelijkingen op te lossen. Omgekeerd is het <m>2 \times 3</m> stelsel cartesische vergelijkingen de coëxistentievoorwaarde voor het stelsel parametervergelijkingen.
+      </p>
+    </assemblage>
+  </subsection>
+
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Onderzoek of de rechten <m>AB</m> en <m>CD</m> evenwijdig zijn als <m>A(2,1,-1)</m>, <m>B(-1,2,-5)</m>, <m>C(4,-1,-3)</m> en <m>D(7,-2,1)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Ze zijn evenwijdig omdat de richtingsvectoren tegengesteld zijn: <m>\vv{AB}(-3,1,-4)</m> en <m>\vv{CD}(3,-1,4)</m>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bepaal een parametervoorstelling en een stelsel cartesische vergelijkingen van
+          <ol>
+            <li>
+              <p>
+                de <m>x</m>-as;
+              </p>
+            </li>
+            <li>
+              <p>
+                de <m>y</m>-as;
+              </p>
+            </li>
+            <li>
+              <p>
+                de <m>z</m>-as;
+              </p>
+            </li>
+            <li>
+              <p>
+                de rechte door <m>(2,1,3)</m> evenwijdig met de <m>x</m>-as;
+              </p>
+            </li>
+            <li>
+              <p>
+                de rechte door <m>(2,1,3)</m> evenwijdig met het <m>yz</m>-vlak;
+              </p>
+            </li>
+            <li>
+              <p>
+                de rechte door de punten <m>P_1(-2,5,2)</m> en <m>P_2(4,-1,1)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>\begin{cases} x = k \\ y=0 \\ z=0 \end{cases}</m> en <m>\begin{cases} y=0 \\ z=0 \end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{cases} x = 0 \\ y=k \\ z=0 \end{cases}</m> en <m>\begin{cases} x=0 \\ z=0 \end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{cases} x = 0 \\ y=0 \\ z=k \end{cases}</m> en <m>\begin{cases} x=0 \\ y=0 \end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{cases} x = 2+k \\ y=1 \\ z=3 \end{cases}</m> en <m>\begin{cases} y=1 \\ z=3 \end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{cases} x = 2 \\ y=1+k \\ z=3+k \end{cases}</m> en <m>\begin{cases} x=2 \\ y-1=z-3 \end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+               
+                <m>co(\vv{R})=co(\vv{P_2}-\vv{P_1})=(6,-6,-1) \Rightarrow \begin{cases} x = -2+6k \\ y=5-6k \\ z=2-k \end{cases} </m> en <m>\dfrac{x+2}{6} = \dfrac{y-5}{-6} = \dfrac{z-2}{-1}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <!-- <exercise>
+      <statement>
+        <p>
+          Bepaal een parametervoorstelling van de rechte <m>e \leftrightarrow \begin{cases} 3x+2y-z=6 \\ 2x-2y+z=4 \end{cases}</m>.
+        </p>
+      </statement>
+      <solution>
+        <sage>
+          <input>
+            A = matrix(2,4,[3,2,-1,6,
+                            2,-2,1,4])
+            B = A.rref()
+            show(A,"~",B)
+            var('x y z t')
+            vlak1 = implicit_plot3d(3*x+2*y-z==6,(x,-10,10),(y,-10,10),(z,-10,10),opacity=0.7)
+            vlak2 = implicit_plot3d(2*x-2*y+z==4,(x,-10,10),(y,-10,10),(z,-10,10),color='red',opacity=0.3)
+            snijlijn = parametric_plot3d([2,t,2*t],(t,-5,5),color='black',thickness="5")
+            show(vlak1+vlak2+snijlijn)
+          </input>
+        </sage>
+        <p>
+          Een parametervoorstelling is <m>\begin{cases} x=2 \\ y=t \\ z=2t \end{cases} \quad t \in \mathbb{R}</m>
+        </p>
+      </solution>
+    </exercise>-->
+    
+    <exercise>
+      <statement>
+        <p>
+          In een geijkte ruimte is de rechte <m>k \leftrightarrow \dfrac{x}{2}=\dfrac{y-3}{-2}=z+1</m> gegeven. <ol>
+          <li>
+            <p>
+              Bepaal de coördinaat van het punt van <m>k</m> met als eerste coördinaatgetal 2.
+            </p>
+          </li>
+          <li>
+            <p>
+              Bepaal de coördinaat van het snijpunt van <m>k</m> en het <m>xz</m>-vlak.
+            </p>
+          </li>
+          <li>
+            <p>
+              Bepaal twee verschillende parametervoorstellingen van <m>k</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Ligt het punt <m>D\left(-5,8,\dfrac{-7}{2} \right)</m> op de rechte <m>k</m>?
+            </p>
+          </li>
+        </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Stel <m>x=2</m> en los de cartesische vergelijkingen op naar de andere variabelen <m>\Rightarrow (2,1,0)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Stel <m>y=0</m> en los de cartesische vergelijkingen op naar de andere variabelen <m>\Rightarrow (3;0;0,5)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{cases} x=2k \\ y=3-2k \\ z=-1+k\end{cases}</m> en <m>\begin{cases} x=2+2k \\ y=1-2k \\ z=k\end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Ja: <m>\begin{cases} -5=2k \\ 8=3-2k \\ -3,5=-1+k\end{cases} \Rightarrow k=-2,5</m> 
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+        <statement>
+          <p>
+            Een raket wordt gevolgd op een radarscherm dat op elk moment de positie van de raket weergeeft. Op het tijdstip <m>t=0</m> bevindt de raket zich in het punt <m>A(5,10,15)</m>. Per tijdseenheid verplaatst de raket zich volgens de vector <m>(1,1,2)</m>. <ol>
+            <li>
+              <p>
+                Bepaal een parametervoorstelling van de baan van de raket.
+              </p>
+            </li>
+            <li>
+              <p>
+                Wat is de positie van de raket als <m>t=5</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Waar was de raket op <m>t=-5</m>?
+              </p>
+            </li>
+            <li>
+              Geef een stelsel cartesische vergelijkingen van de baan van de raket.
+            </li>
+            <li>
+              <p>
+                Bereikt de raket de positie <m>(25,30,53)</m>?
+              </p>
+            </li>
+          </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+           <ol>
+            <li>
+              <p>
+                <m>\begin{cases} x=5+t \\ y=10+t \\ z=15+2t\end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(10,15,25)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(0,5,5)</m>
+              </p>
+            </li>
+            <li>
+              <m>\begin{cases} x-5 = y-10 \\ 2y-20 = z-15\end{cases}  </m>
+            </li>
+            <li>
+              <p>
+                Neen, maar wel de positie <m>(25,30,55)</m> als <m>t=20</m>.
+              </p>
+            </li>
+          </ol>
+          </p>
+        </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bepaal een stel richtingsgetallen van onderstaande rechten
+          <ol>
+            <li>
+              <p>
+                <me>
+                  \dfrac{x-1}{2}=\dfrac{2-y}{3}=z
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \begin{cases}
+                    x+y+z=6\\
+                    3x-y=9
+                  \end{cases}
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>(2,-3,1)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(1,3,-4)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+        <sage>
+          <input>
+            A = matrix(2,4,[1,1,1,6,
+                            3,-1,0,9])
+            B = A.rref()
+            show(A,"~",B)
+          </input>
+        </sage>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bepaal een parametervoorstelling van
+          <ol>
+            <li>
+              <p>
+                de rechte door <m>(-1,3,1)</m> en evenwijdig met <m>r \leftrightarrow \dfrac{x-3}{3}=\dfrac{2-y}{2}=-z</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                de rechte door <m>(1,4,-2)</m> evenwijdig met <m>r \leftrightarrow \begin{cases} x+y-z=4 \\x-3z=2 \end{cases}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>\begin{cases} x=-1+3k \\ y=3-2k \\ z=1-k\end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{cases} x=1+3k \\ y=4-2k \\ z=-2+k\end{cases}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+        <sage>
+          <input>
+            A = matrix(2,4,[1,1,-1,4,
+                            1,0,-3,2])
+            B = A.rref()
+            show(A,"~",B)
+          </input>
+        </sage>
+      </solution>
+    </exercise>
+  </exercises>
+
+</section>

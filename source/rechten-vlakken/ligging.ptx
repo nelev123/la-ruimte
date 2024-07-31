@@ -1,0 +1,528 @@
+<section>
+  <title>Onderlinge ligging van rechten en vlakken</title>
+  <paragraphs>
+    <title>Twee rechten</title>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Om de gemeenschappelijke punten van twee rechten te bepalen los je het <m>4 \times 3 </m> stelsel van hun cartesische vergelijkingen op.
+            <ul>
+              <li>
+                <p>
+                  <m>r(A_b)=r(A)=3 \Rightarrow</m> de rechten snijden
+                </p>
+              </li>
+              <li>
+                <m>r(A_b) \gt r(A) \Rightarrow</m> de rechten snijden niet en zijn evenwijdig of kruisend. Om het onderscheid te maken, kan je controleren of de richtingsvectoren een veelvoud van elkaar zijn. 
+              </li>
+            </ul>
+          </p>
+        </li>
+        <li>
+          <p>
+            Je kan ook de parametervoorstelling van de ene rechte substitueren in de cartesische vergelijkingen van de andere rechte. Je krijgt dan een <m>2 \times 1</m> stelsel dat je vervolgens kan oplossen om de waarde van de parameter te bepalen die correspondeert met het snijpunt.
+            <ul>
+              <li>
+                <p>
+                  <m>r(A_b)=r(A)=1 \Rightarrow</m> de rechten snijden
+                </p>
+              </li>
+              <li>
+                <m>r(A_b) \gt r(A) \Rightarrow</m> de rechten snijden niet en zijn evenwijdig of kruisend. Om het onderscheid te maken, kan je controleren of de richtingsvectoren een veelvoud van elkaar zijn. 
+              </li>
+            </ul>
+          </p>
+        </li>
+        <li>
+          <p>
+            De derde optie is de parametervoorstellingen van beide rechten aan elkaar gelijk stellen en het zo bekomen <m>3 \times 2</m> stelsel oplossen naar de parameters.
+            <ul>
+              <li>
+                <p>
+                  <m>r(A_b)=r(A)=2 \Rightarrow</m> de rechten snijden
+                </p>
+              </li>
+              <li>
+                <m>r(A_b) \gt r(A) \Rightarrow</m> de rechten snijden niet en zijn evenwijdig of kruisend. Om het onderscheid te maken, kan je controleren of de richtingsvectoren een veelvoud van elkaar zijn. 
+              </li>
+            </ul>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </paragraphs>
+
+  <example>
+    <p>
+      Gegeven de rechte <m>a \leftrightarrow \begin{cases} x-y-7=0 \\ y-2z+10 = 0\end{cases}</m>, de rechte <m>b \leftrightarrow \begin{cases} x-y+1=0 \\ y-2z-3 = 0\end{cases}</m> en de rechte <m>c \leftrightarrow \begin{cases} 7x+3y-29=0 \\ 5y+7z-18 =
+      0\end{cases}</m>. We onderzoeken paarsgewijs de onderlinge ligging. De parametervoorstellingen van <m>a</m> en <m>b</m> zijn:
+      <me>
+        a \leftrightarrow \begin{cases} x = 7 + k\\ y= k \\ z= 5+\dfrac{k}{2} \end{cases} \quad b \leftrightarrow \begin{cases} x = -1 + k\\ y= k \\ z= -\dfrac{3}{2}+\dfrac{k}{2} \end{cases}
+      </me>
+      De richtingsgetallen van <m>a</m> en <m>b</m> zijn <m>(1,1,1/2)</m>, dus <m>a</m> en <m>b</m> zijn evenwijdig. Om uit te sluiten dat <m>a</m> en <m>b</m> samenvallend zijn is het voldoende om te controleren dat het punt <m>(7,0,5)</m> niet op de rechte <m>b</m> ligt. Een parametervoorstelling van de rechte <m>c</m> is <m>\begin{cases} x = \dfrac{29}{7} - \dfrac{3}{7} k \\ y= k \\ z= \dfrac{18}{7}-\dfrac{5}{7}k \end{cases}</m>. De richtingsgetallen <m>(1,1,1/2)</m> en <m>(-3/7,1,-5/7)</m> zijn geen veelvoud van elkaar, dus <m>a</m> en <m>c</m> zijn snijdende of kruisende rechten. We passen de drie verschillende manieren toe om de gemeenschappelijke punten van <m>a</m> en <m>c</m> te bepalen. 
+    </p>
+    <p>
+      We bepalen de gemeenschappelijke punten rechtstreeks door het stelsel 
+      <me>
+        \begin{cases} x-y-7=0 \\ y-2z+10 = 0 \\ 7x+3y-29=0 \\ 5y+7z-18 = 0\end{cases}
+      </me>
+      op te lossen. 
+      <me>
+        \begin{bmatrix} 1 \amp -1 \amp 0 \amp 7 \\ 0 \amp 1 \amp -2 \amp -10 \\ 7 \amp 3 \amp 0 \amp 29 \\ 0 \amp 5 \amp 7 \amp 18\end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 0 \amp 5 \\ 0 \amp 1 \amp 0 \amp -2 \\ 0 \amp 0 \amp 1 \amp 4 \\ 0 \amp 0 \amp 0 \amp 0\end{bmatrix}
+      </me>
+      Hieruit volgt dat <m>r(A_b)=r(A)=3</m> en <m>a \cap c = \lbrace (5,-2,4 )\rbrace</m>.
+    </p>
+    <p>
+      Hetzelfde snijpunt krijgen we door de parametervoorstelling <m>a \leftrightarrow \begin{cases} x = 7 + k\\ y= k \\ z= 5+\dfrac{k}{2} \end{cases}</m> in de cartesische vergelijkingen <m>c \leftrightarrow \begin{cases} 7x+3y-29=0 \\ 5y+7z-18 =
+        0\end{cases}</m> in te vullen:
+      <me>
+        \begin{cases}
+          7(7+k)+3k-29 = 0  \\ 5k+7(5+\dfrac{k}{2})-18 = 0\end{cases} \Leftrightarrow  \begin{cases} 10k+20=0  \\ \dfrac{17}{2}k+17=0  \end{cases} \Leftrightarrow \begin{cases} k = -2 \\ k =-2 \end{cases} \Rightarrow \begin{cases} x = 5\\ y= -2 \\ z= 4 \end{cases}
+      </me>
+    </p>
+    <p>
+      Tenslotte bepalen we het snijpunt door twee parametervoorstellingen aan elkaar gelijk te stellen:
+      <me>
+        \begin{cases} 7+k_1= \dfrac{29}{7} - \dfrac{3}{7} k_2 \\ k_1 = k_2 \\ 5 +\dfrac{k_1}{2}=\dfrac{18}{7}-\dfrac{5}{7}k_2 \end{cases}  \Leftrightarrow  \begin{cases} 49+7k_1=29-3k_2\\70+7k_1=36-10k_2 \end{cases}  \Leftrightarrow  \begin{cases} k_1=-2 \\ k_2=-2 \end{cases} </me>
+      en we krijgen dezelfde waarde voor de parameter en bijgevolg opnieuw hetzelfde snijpunt. 
+    </p>
+    <p>
+      Aangezien de rechten <m>a</m> en <m>c</m> elkaar snijden en <m>a</m> evenwijdig is met <m>b</m>, zijn <m>b</m> en <m>c</m> kruisende rechten. Invullen van de parametervoorstelling van <m>b</m> in het stelsel cartesische vergelijkingen van <m>c</m> leidt nu tot: 
+      <me>
+        \begin{cases} 7(-1+k)+3k-29 = 0 \\ 5k+7(-\dfrac{3}{2}+\dfrac{k}{2})-18 = 0 \\ \end{cases}  \Leftrightarrow  \begin{cases} 10k-36=0 \\ \dfrac{17}{2}k-29=0 \end{cases}  
+      </me>
+      en dit stelsel is inderdaad strijdig.
+    </p>
+  </example>
+
+  <paragraphs>
+    <title>Twee vlakken</title>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Om de gemeenschappelijke punten van twee vlakken te bepalen los je het <m>2 \times 3 </m> stelsel van hun cartesische vergelijkingen op.
+            <ul>
+              <li>
+                <p>
+                  <m>r(A_b)=r(A)=2 \Rightarrow</m> de vlakken snijden
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>r(A_b)=r(A)=1 \Rightarrow</m> de vlakken vallen samen
+                </p>
+              </li>
+              <li>
+                <m>r(A_b) \gt r(A) \Rightarrow</m> de vlakken zijn evenwijdig
+              </li>
+            </ul>
+            Eigenlijk is het oplossen van het stelsel niet nodig. Evenwijdige en samenvallende vlakken kan je immers gemakkelijk herkennen. Gegeven een vlak <m>\alpha \leftrightarrow u_1x+v_1y+w_1z+t_1 = 0 </m> en een vlak <m>\beta \leftrightarrow u_2x+v_2y+w_2z+t_2 = 0 </m>,  dan geldt 
+            <me>\boxed{\alpha \parallel \beta \Leftrightarrow \exists k \in \mathbb{R}_0: u_2 = k u_1 \: \wedge \:  v_2 = k v_1 \: \wedge \:  w_2 = k w_1}</me>
+            Als de vlakken samenvallen geldt er bovendien ook dat <m>t_2 = k t_1</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Je kan eveneens een parametervoorstelling van het ene vlak substitueren in de cartesische vergelijking van het andere vlak en uit deze vergelijking vervolgens een verband tussen beide parameters afleiden. Dit verband invullen in de parametervoorstelling van eerste vlak geeft je dan een parametervoorstelling van de snijlijn.
+          </p>
+        </li>
+        <li>
+          <p>
+            De twee parametervoorstellingen aan elkaar gelijk stellen leidt opnieuw tot een verband tussen de parameters dat je kan gebruiken om de snijlijn te bepalen.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </paragraphs>
+
+  <example>
+    <p>
+      De vlakken <m>\alpha \leftrightarrow x-3y-z-2 = 0 </m> en <m>\beta \leftrightarrow 3x-9y-3z+6=0</m> zijn duidelijk evenwijdig. 
+    </p>
+    <p>
+      We gaan na dat de vlakken <m>\alpha \leftrightarrow 2x+y+z-3 = 0 </m> en <m>\beta \leftrightarrow x-y-2z+1=0</m> snijdend zijn:
+      <me>
+        \begin{bmatrix} 2 \amp 1 \amp 1 \amp 3 \\ 1 \amp -1 \amp -2 \amp 1 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp -\dfrac{1}{3} \amp \dfrac{4}{3} \\ 0 \amp 1 \amp \dfrac{5}{3} \amp \dfrac{1}{3} \end{bmatrix} 
+      </me>
+      Er geldt dat <m>r(A_b)=r(A)=2</m> en we kunnen ook onmiddellijk een parametervoorstelling van de snijlijn opschrijven:
+      <me>
+        \begin{cases} x = \dfrac{4}{3} + k \\ y =\dfrac{1}{3}-5k \\ z = 3k \end{cases}
+      </me>
+      Hetzelfde resultaat krijgen we door een parametervoorstelling van het vlak <m>\alpha \leftrightarrow \begin{cases} x=k \\ y=m \\ z=3-2k-m \end{cases}</m> te substitueren in de cartesische vergelijking van het vlak <m>\beta</m> en hieruit het verband tussen de parameters af te leiden:
+      <me>
+        k-m-2(3-2k-m)+1=0 \Leftrightarrow m=5-5k
+      </me>
+      Dit verband kunnen we vervolgens gebruiken om de parametervoorstelling van <m>\alpha</m> te herleiden tot deze van de snijlijn van <m>\alpha</m> en <m>\beta</m>:
+      <me>
+        \begin{cases} x=k \\ y=5-5k \\ z=3-2k-5+5k \end{cases} \Rightarrow \begin{cases} x=k \\ y=5-5k \\ z=-2+3k \end{cases} 
+      </me>
+      (<url href="https://www.geogebra.org/3d/pentx2up">Geogebra link</url>) De twee parametervoorstellingen aan elkaar gelijk stellen leidt <mdash/> met meer rekenwerk <mdash/> tot hetzelfde resultaat. 
+    </p>
+  </example>
+
+  <paragraphs>
+    <title>Rechte en vlak</title>
+    <p>
+      Om de gemeenschappelijke punten van een rechte en een vlak te bepalen los je het stelsel van hun cartesische vergelijkingen op. Als dit stelsel strijdig is, dan is de rechte evenwijdig met het vlak. Er geldt dan dat <m>\boxed{ua+vb+wc=0}</m> met <m>(a,b,c)</m> de richtingsgetallen van de rechte en <m>ux+vy+wz+t=0</m> de cartesische vergelijking van het vlak.
+    </p>
+    <p>
+      Je kan ook een parametervoorstelling van de rechte substitueren in de cartesische vergelijking van het vlak en de bekomen vergelijking oplossen.  
+    </p>
+  </paragraphs>
+
+  <exercises>
+
+    <exercise>
+      <statement>
+        <p>
+          Onderzoek of onderstaande rechten evenwijdig, snijdend of kruisend zijn:
+          <md>
+            <mrow> \amp a \leftrightarrow \frac{x-1}{4}=\frac{y-5}{6}=\frac{z+5}{-2}</mrow>
+            <mrow>\amp b \leftrightarrow \begin{cases} -3x+2y+6=0 \\ y + 3z +6 = 0 \end{cases}</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We controleren eerst of de rechten evenwijdig zijn. Indien ja, dan moeten we geen extra berekeningen meer uitvoeren. Een stel richtingsgetallen van de rechte <m>a</m> is <m>(4,6,-2)</m> en een stel richtingsgetallen van de rechte <m>b</m> is <m>(2,3,-1)</m>.
+        </p>
+        <sage>
+          <input>
+            A = matrix(2,4,[-3,2,0,-6,
+                            0,1,3,-6])
+            B = A.rref()
+            show(A,"~",B)
+          </input>
+        </sage>
+        <p>
+          Deze zijn evenredig, dus de twee rechten zijn evenwijdig. Grafische controle:
+        </p>
+        <sage>
+          <input>
+            var('x y z t')
+            rechte1 = parametric_plot3d([1+4*t,5+6*t,-5-2*t],(t,-5,5),color='black',thickness="5")
+            rechte2 = parametric_plot3d([-2-2*t,-6-3*t,t],(t,-10,10),color='red',thickness="5")
+            show(rechte1 + rechte2)
+          </input>
+        </sage>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Onderzoek of onderstaande rechten evenwijdig, snijdend of kruisend zijn:
+          <md>
+            <mrow> \amp a \leftrightarrow \begin{cases} x+2y=4 \\ z=2 \end{cases} </mrow>
+            <mrow>\amp b \leftrightarrow \begin{cases} x+4y=8 \\ z=x \end{cases}</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We controleren eerst of de rechten evenwijdig zijn. Indien ja, dan moeten we geen extra berekeningen meer uitvoeren. Een stel richtingsgetallen van de rechte <m>a</m> is <m>(-2,1,0)</m>  en een stel richtingsgetallen van de rechte <m>b</m> is <m>(1,-4,1)</m> (herschrijf het stelsel als <m>x = \dfrac{y-2}{-4}=z</m>). De rechten zijn dus duidelijk niet evenwijdig. We bepalen of ze snijden door het stelsel van de cartesische vergelijkingen op te lossen. 
+        </p>
+        <sage>
+          <input>
+            A = matrix(4,4,[1,2,0,4,
+                            0,0,1,2,
+                            1,4,0,8,
+                            1,0,-1,0])
+            B = A.rref()
+            show(A,"~",B)
+          </input>
+        </sage>
+        <p>
+          Het stelsel is strijdig en de rechten zijn kruisende rechten.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Onderzoek of onderstaande rechten evenwijdig, snijdend of kruisend zijn:
+          <md>
+            <mrow> \amp a \leftrightarrow \begin{cases} x+y+6=0 \\ z+10=0 \end{cases} </mrow>
+            <mrow>\amp b \leftrightarrow \dfrac{x}{2}=\dfrac{y+16}{8}=\dfrac{z+3}{-7}</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We controleren eerst of de rechten evenwijdig zijn. Indien ja, dan moeten we geen extra berekeningen meer uitvoeren. Een stel richtingsgetallen van de rechte <m>a</m> is <m>(1,-1,0)</m>  en een stel richtingsgetallen van de rechte <m>b</m> is <m>(2,8,-7)</m>. De rechten zijn dus duidelijk niet evenwijdig. We bepalen of ze snijden door een parametervoorstelling van <m>b</m> te bepalen
+          <me>
+            \begin{cases} x=2k \\ y= -16+8k \\ z = -3-7k \end{cases}
+          </me>
+          en deze te substitueren in de cartesische vergelijkingen van <m>a</m>
+          <me>
+            \begin{cases} 2k-16+8k+6=0  \\ -3-7k+10=0 \end{cases} \Leftrightarrow  \begin{cases} k=1  \\ k=1 \end{cases}
+          </me>
+          De rechten snijden dus en het snijpunt is <m>(2,-8,-10)</m>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Bepaal een parametervoorstelling en een stelsel cartesische vergelijkingen van de rechte door <m>A(0,-1,2)</m> en evenwijdig met <m>\alpha \leftrightarrow x+y-z+3=0</m> en <m>\beta \leftrightarrow -x+y+2z-4=0</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          De gevraagde rechte moet evenwijdig zijn met beide vlakken  en is dus evenwijdig met hun snijlijn. We bepalen een richtingsvector van deze snijlijn door het stelsel cartesische vergelijkingen op te lossen
+        </p>
+        <sage>
+          <input>
+            A = matrix(2,4,[1,1,-1,-3,
+                            -1,1,2,4])
+            B = A.rref()
+            show(A,"~",B)
+          </input>
+        </sage>
+        <p>
+          Een stel richtingsgetallen is bijgevolg <m>(3,-1,2)</m> en een parametervoorstelling van de gevraagde rechte is
+          <me>
+            \begin{cases} x = 3k \\ y=-1-k \\ z = 2+2k \end{cases}
+          </me>
+          Hieruit volgt ook onmiddellijk het stelsel cartesische vergelijkingen
+          <me>
+            \dfrac{x}{3}=\dfrac{y+1}{-1}=\dfrac{z-2}{2}
+          </me>
+          
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Onderzoek de onderlinge ligging van onderstaande vlakken
+          <ol>
+            <li>
+              <p>
+                <md>
+                  <mrow> \amp \alpha \leftrightarrow x-y+z+3=0</mrow>
+                  <mrow>\amp \beta \leftrightarrow -2x+2y-2z-3=0 </mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                <md>
+                  <mrow> \amp \alpha \leftrightarrow 2x+y-z+2=0</mrow>
+                  <mrow>\amp \beta \leftrightarrow 4x-2y-2z+4=0 </mrow>
+                </md>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          (a) evenwijdig en (b) snijdend; dit volgt onmiddellijk uit de cartesische vergelijkingen
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Onderzoek de onderlinge ligging van de rechte <m>a</m> en het vlak <m>\alpha</m>. Bepaal eventueel hun snijpunt:
+          <md>
+            <mrow> \amp \alpha \leftrightarrow x-3y+z+1=0</mrow>
+            <mrow>\amp a \leftrightarrow \begin{cases} x+y-z-3=0 \\ x+2y-3z=0 \end{cases}</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We kunnen niet onmiddellijk de richtingsgetallen van de rechte aflezen, dus lossen we het stelsel van de cartesische vergelijkingen op om het snijpunt te bepalen:
+        </p>
+        <sage>
+          <input>
+            A = matrix(3,4,[1,-3,1,-1,
+                            1,1,-1,3,
+                            1,2,-3,0])
+            B = A.rref()
+            show(A,"~",B)
+          </input>
+        </sage>
+        <p>
+          Het snijpunt is dus <m>\left (\frac{10}{3},\frac{7}{3},\frac{8}{3} \right )</m>. Grafische controle:
+        </p>
+        <sidebyside>
+            <interactive xml:id="geogebra-334-oef4" geogebra="qtgxk5jv" width="100%" aspect="9:5"/>
+        </sidebyside>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Gegeven de rechte <m>f \leftrightarrow x-5=\dfrac{y+b-3}{3}=\dfrac{z-6}{5}</m> en het vlak <m>\alpha \leftrightarrow ax+3y+bz-8=0</m>. Bepaal <m>a</m> en <m>b</m> zodat de rechte in het vlak ligt.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Vlakkenwaaier door <m>f</m>: <m>k(3x-y-12-b)+m(5x-z-19)=0</m>. <m>k</m> en <m>m</m> bepalen waarvoor vlakkenwaaier zich herleidt tot het vlak <m>\alpha</m>:
+          <md>
+            <mrow>\amp k(3x-y-12-b)+m(5x-z-19)=ax+3y+bz-8</mrow>
+            <mrow>\Rightarrow \; \amp (3k+5m)x-ky-mz-12k-kb-19m=ax+3y+bz-8</mrow>
+          </md>
+          Uit de coëfficiënten van <m>y</m> en <m>z</m> volgt onmiddellijk dat <m>k=-3</m> en <m>m=-b</m>. De constante term leidt tot de vergelijking <m>-12k-kb-19m=-8</m> en na invullen van <m>k</m> en <m>m</m> leidt dit tot <m>b=-2</m> en bijgevolg ook <m>m=2</m>. Uit de coëfficiënt van <m>x</m> volgt dat <m>a=3k+5m=-9+10=1</m>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bepaal een parametervoorstelling en een cartesische vergelijking van het vlak door <m>P_1(1,2,1)</m> en evenwijdig met het vlak <m>x - 3 y + z +1 = 0</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          De gezochte cartesische vergelijking is van de vorm <m>x-3y+z+d=0</m>. Invullen van het punt <m>\Rightarrow 1-6+1+d=0 \Rightarrow d=4</m>. Een parametervoorstelling is <m>\begin{cases}   x=k \\ y=m \\ z= -4-k+3m \end{cases} \quad k,m \in \mathbb{R}</m>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bepaal een parametervoorstelling en een cartesische vergelijking van het vlak door de punten <m>P_1</m> en <m>P_2</m> en evenwijdig met de rechte <m>a</m>:
+          <md>
+            <mrow>\amp P_1(0,0,1) \qquad P_2(0,1,-1)  </mrow>
+            <mrow>\amp a \leftrightarrow \begin{cases} x + y -z -3 = 0 \\ x+2y-3z= 0 \end{cases}</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Een stel richtingsgetallen van de rechte <m>P_1P_2</m> is <m>(0,1,-2)</m> en een stel richtingsgetallen van de rechte <m>a</m> is <m>(-1,2,1)</m>.
+        </p>
+        <sage>
+          <input>
+            A = matrix(2,4,[1,1,-1,3,
+                            1,2,-3,0])
+            B = A.rref()
+            show(A,"~",B)
+          </input>
+        </sage>
+        <p>
+          Een parametervoorstelling van het vlak is <m>\begin{cases} x = -m \\ y =k+2m \\ z = 1-2k+m \end{cases}</m>. We bepalen de coëxistentievoorwaarde voor dit stelsel (reken dit zelf ook na met pen en papier!):
+        </p>
+        <sage>
+          <input>
+            R.&lt; x,y,z &gt; = QQ[]  # nodig om symbolisch met matrices te kunnen rekenen
+            A = matrix(3,3,[0,-1,x,
+                            1,2,y,
+                            -2,1,z-1])
+            B = A.echelon_form() # i.p.v rref als er parameters in de matrix staan
+            show(A,"~",B)
+          </input>
+        </sage>
+        <p>
+          De cartesische vergelijking is dus <m>5x+2y+z-1=0</m>. Grafische controle:
+        </p>
+        <sidebyside>
+            <interactive xml:id="geogebra-334-oef6" geogebra="qvkhkun3" width="100%" aspect="9:5"/>
+        </sidebyside>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Bepaal een parametervoorstelling en een cartesische vergelijking van het vlak door de rechte <m>a</m> en evenwijdig met de rechte <m>b</m>:
+          <md>
+            <mrow> \amp a \leftrightarrow \begin{cases} x + 4y = 8 \\ z = x \end{cases} </mrow>
+            <mrow>\amp b \leftrightarrow \begin{cases} x + 2y = 4 \\ z = 2 \end{cases}</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <m>a \leftrightarrow x=\frac{y-2}{-\sfrac{1}{4}}=z</m> en <m>b \leftrightarrow \begin{cases} x=\frac{y-2}{-\sfrac{1}{2}} \\ z=2 \end{cases}</m>. Een parametervoorstelling van het vlak is dus <m>\begin{cases} x=4k+2m \\ y=2-k-m \\ z=4k \end{cases}</m> en de cartesische vergelijking <m>2x+4y-z-8=0</m>.
+        </p>
+        <sage>
+          <input>
+            var('x y z t u v')
+            R.&lt; x,y,z &gt; = QQ[]  # nodig om symbolisch met matrices te kunnen rekenen
+            A = matrix(3,3,[4,2,x,
+                            -1,-1,y-2,
+                            4,0,z])
+            B = A.echelon_form() # i.p.v rref als er parameters in de matrix staan
+            show(A,"~",B)
+            vlak = parametric_plot3d([4*u+2*v,2-u-v,4*u],(u,-3,3),(v,-3,3),color='red',opacity=0.5)
+            ra = parametric_plot3d([4*t,2-t,4*t],(t,-5,5),color='black',thickness="5")
+            rb = parametric_plot3d([3*t,2-t,2],(t,-5,5),color='black',thickness="5")
+            show(ra + rb + vlak)
+          </input>
+        </sage>
+        <p>
+          Zonder computer kan je de cartesische vergelijking veel sneller bepalen via een vlakkenwaaier. Een vlak door <m>a</m> heeft de algemene vorm
+          <me>
+            k(x+4y-8) + m(z-x) = 0 \Leftrightarrow (k-m)x+4ky+mz-8k=0
+          </me>
+          Dit vlak is evenwijdig met <m>b</m> als <m>(2,-1,0) \in (k-m)x+4ky+mz = 0</m>:
+          <me>
+            2(k-m)-4k =0 \Leftrightarrow m = -k 
+          </me>
+          De vergelijking van het gezochte vlak is dus
+          <me>
+            2kx+4ky-kz-8k=0 \Leftrightarrow 2x+4y-z-8=0
+          </me>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Bepaal een parametervoorstelling en een cartesische vergelijking van het vlak door de rechten <m>a</m> en <m>b</m>:
+          <md>
+            <mrow> \amp a \leftrightarrow \frac{x}{2}=\frac{y+16}{8}=\frac{z+3}{-7}</mrow>
+            <mrow>\amp b \leftrightarrow \begin{cases} x + y +6 = 0 \\ z + 10 = 0 \end{cases}</mrow>
+          </md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          De vlakkenwaaier door <m>b</m> is
+          <me>
+            k(x+y+6)+m(z+10)=0
+          </me>
+          We zoeken een vlak dat ook door <m>a</m> gaat, dus het punt <m>(0,-16,-3)</m> moet in het gezochte vlak liggen:
+          <md>
+            <mrow> \amp-10k+7m=0 \Leftrightarrow m=\frac{10}{7}k </mrow>
+            <mrow>\Rightarrow \amp k(x+y+6)+\frac{10}{7}(z+10)=0 \Leftrightarrow 7x+7y+10z+142=0</mrow>
+          </md>
+        </p>
+        <p>
+          (zonder vlakkenwaaier). Een parametervoorstelling is <m>\begin{cases} x=2k+m \\ y=-16+8k-m \\ z=-3-7k \end{cases}</m> en de cartesische vergelijking <m>7x+7y+10z+142=0</m>
+        </p>
+        <sage>
+          <input>
+            R.&lt; x,y,z &gt; = QQ[]  # nodig om symbolisch met matrices te kunnen rekenen
+            A = matrix(3,3,[2,1,x,
+                            8,-1,y+16,
+                            -7,0,z+3])
+            B = A.echelon_form() # i.p.v rref als er parameters in de matrix staan
+            show(A,"~",B)
+          </input>
+        </sage>
+        <p>
+          Grafische controle:
+        </p>
+        <sidebyside>
+            <interactive xml:id="geogebra-334-oef7" geogebra="ghvvhswm" width="100%" aspect="9:5"/>
+        </sidebyside>
+      </solution>
+    </exercise>
+
+
+
+  </exercises>
+
+</section>

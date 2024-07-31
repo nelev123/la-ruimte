@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-rechten-vlakken" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Rechten en vlakken in de ruimte</title>
+    
+    <xi:include href="./vectoren/vectorvgl-rechte.ptx" />  
+
+    <xi:include href="./vectoren/vectorvgl-vlak.ptx" />
+
+    <xi:include href="./rechten-vlakken/parameter-rechte.ptx" />
+
+    <xi:include href="./rechten-vlakken/parameter-vlak.ptx" />
+
+    <!-- oef kubus met parameters hernemen, stukjes Geogebra toevoegen-->
+    <!-- stel parameter en cartesische vergelijkingen op van de rechten DH, GH, EC en DB, later ook snijpunt van de diagonalen berekenen-->
+
+    <xi:include href="./rechten-vlakken/ligging.ptx" />
+
+    <!-- Taak: alle eigenschappen van bewerkingen met vectoren laten tekenenen, zwaartepunt van een viervlak, zwaartepunt van n puntmassa's-->
+
+</chapter>

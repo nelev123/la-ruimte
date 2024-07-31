@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<chapter xml:id="vectorruimte" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<title>Vectorruimten en lineaire afbeeldingen</title>
+
+<xi:include href="./vectoren/vectorruimten.ptx" />
+<xi:include href="./matrices/linafbeelding.ptx" />
+
+</chapter>

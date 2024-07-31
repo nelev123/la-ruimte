@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Rechtenbundels en vlakkenwaaiers</title>
+
+    <exercise>
+        <statement>
+          <p>
+            Stel de rechtenbundel op door het punt <m>(2,3)</m> en bepaal de rechte van deze bundel die ook door het punt <m>(1,1)</m> gaat.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Bundel: <m>k(x-2)+m(y-3)=0</m>. Stel vervolgens <m>x=y=1 \Rightarrow -k-2m=0</m> en na een geschikte keuze voor <m>k</m> en <m>m</m> (bijvoorbeeld <m>k=2</m> en <m>m=-1</m>) in de vergelijking van de bundel in te vullen, krijg je de vergelijking <m>y=2x-1</m>.
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Bepaal de vergelijking van de rechte door het punt <m>(5,3)</m> en door het snijpunt van de rechten <m>e \leftrightarrow x+y=4</m> en <m>f \leftrightarrow 2x-y=5</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Bundel: <m>k(x+y-4)+m(2x-y-5)=0</m>. Stel vervolgens <m>x=5</m> en <m>y=3</m> om <m>k</m> en <m>m</m> te bepalen (<m>4k+2m=0</m>) en terug invullen in de vergelijking van de bundel geeft <m>x-y=2</m>.
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Gegeven het stelsel
+            <me>
+              \begin{cases}
+              4x-3y+15=0 \\
+              2y-x-10=0
+              \end{cases}
+            </me>
+            <ol>
+              <li>
+                <p>
+                  Los op met de combinatiemethode en controleer de oplossing grafisch.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Bepaal een equivalent stelsel. Controleer dit eveneens grafisch.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Oplossing stelsel is <m>V=\lbrace (0,5) \rbrace </m>. Een equivalent stelsel krijg je door twee verschillende lineare combinaties te maken van de vergelijkingen. Bijvoorbeeld <m>k=m=1 \Rightarrow 3x-y+5=0</m>; <m>k=1</m> en <m>m=-1 \Rightarrow x-y+5=0</m>.
+          </p>
+        </solution>
+      </exercise>
+    
+</subexercises>

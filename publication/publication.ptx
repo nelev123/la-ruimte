@@ -16,8 +16,12 @@
     <!-- There are four components (statement/hint/answer/solution) for each -->
     <!-- of five exercise types (inline/divisional/worksheet/reading/        -->
     <!-- project). Some examples:                                            -->
-    <exercise-inline statement="yes" hint="yes" answer="no" solution="no" />
-    <exercise-divisional statement="yes" hint="yes" />
+    <!-- <exercise-inline statement="yes" hint="yes" answer="no" solution="no" />
+    <exercise-divisional statement="yes" hint="yes" answer="no" solution="no"/>
+    <exercise-project statement="yes" hint="yes" answer="no" solution="no"/> -->
+    <exercise-inline statement="yes" hint="yes" answer="yes" solution="yes" />
+    <exercise-divisional statement="yes" hint="yes" answer="yes" solution="yes"/>
+    <exercise-project statement="yes" hint="yes" answer="yes" solution="yes"/>
     <!-- Style of fill-in-the-blanks: -->
     <fillin textstyle="underline" mathstyle="shade" />
     <!-- You can set a watermark: -->
@@ -60,11 +64,11 @@
   <!-- for printing; set @sides="two" if the printing woudl be two- -->
   <!-- sided.  @pageref="yes/no" controls whether page number are   -->
   <!-- included in cross-references                                 -->
-  <latex print="no" sides="one" font-size="10" draft="no">
+  <latex print="yes" sides="two" font-size="12" draft="no">
     <!-- Control text justification and bottom page behavior: -->
     <page right-alignment="flush" bottom-alignment="ragged" />
     <!-- Add content to \geometry{}: -->
-    <!-- <geometry></geometry> -->
+    <geometry>a4paper,top=2.5cm, bottom=2cm, left=3cm, right=3cm</geometry>
     <!-- The asymptote/@links set to "yes" would produce  -->
     <!-- links the html version of asymptote graphics.    -->
     <asymptote links="no" />
@@ -72,17 +76,16 @@
     <worksheets formatted="yes" />
   </latex>
 
-  <html>
-    <platform host="web"/>
-    <!-- The host above could also be "runestone" -->
-
+  <html platform="web">
+    <!-- The platform above could also be "runestone" -->
+    <baseurl href="https://neledavinci.classy.be/gonio-complexe/" />
     <!-- Whether to knowl a particular elements is set here    -->
     <!-- Lots of elements have this possibility; see the guide -->
     <knowl
       theorem="no"
-      proof="yes"
+      proof="no"
       definition="no"
-      example="yes"
+      example="no"
       example-solution="yes"
       project="no"
       task="no"
@@ -93,7 +96,7 @@
       table="no"
       listing="no"
       list="no"
-      exercise-inline="yes"
+      exercise-inline="no"
       exercise-divisional="no"
       exercise-worksheet="no"
       exercise-readingquestion="no"
@@ -101,16 +104,11 @@
     <!-- Specify the style of the html by giving names to      -->
     <!-- override defaults.  Ex: to use "style_oscarlevin.css" -->
     <!-- put <css style="oscarlevin"/>                         -->
-    <!-- See also                                              -->
-    <!-- https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options -->
-    <css
-        style="default"
-        colors="blue_red"
-        knowls="default"
-        toc="default"
-        banner="default"
-        navbar="default"
-    />
+    <!-- @colors now implemented                               -->
+    <!-- also @knowls, @toc, and @banner, although no          -->
+    <!-- alternative styles exist yet for those.               -->
+    <!-- <css style="default" colors="blue_red" /> -->
+    <css style="oscarlevin"/>
     <!-- Search can be default or none, or you can use a Google-cx number to use google's search
     feature (but then variant should be set to none to avoid conflict) -->
     <search variant="default" />

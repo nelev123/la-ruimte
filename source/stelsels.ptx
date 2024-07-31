@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-stelsels" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Stelsels van lineaire vergelijkingen</title>
+    
+    <xi:include href="./stelsels/mathematiseren.ptx" />
+    <!-- <xi:include href="./stelsels/mathematiseren-opl.ptx" /> vervangen van zodra oplossen van stelsels gezien is -->
+    <xi:include href="./rechten-vlakken/bundel-waaier.ptx" />  
+    <xi:include href="./stelsels/gauss-jordan.ptx" />
+
+    <exercises xml:id="exercises-stelsels">
+        <xi:include href="./stelsels/bundel-waaier-oef.ptx"/>
+    </exercises>
+</chapter>
