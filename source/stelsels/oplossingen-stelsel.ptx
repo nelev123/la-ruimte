@@ -157,7 +157,7 @@
           </input>
         </sage>
         <p>
-          We herleiden de eerste kolom met Gauss-Jordan tot <m>\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}</m> en visualiseren opnieuw. De nieuwe vlakken zijn iets donker van kleur getekend. Merk op dat de snijlijn met het blauwe vlak niet veranderd is.
+          We herleiden de eerste kolom met Gauss-Jordan tot <m>\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}</m> en visualiseren opnieuw. De nieuwe vlakken zijn iets donker van kleur getekend. Merk op dat de snijlijnen met het blauwe vlak niet veranderd zijn.
         </p>
         <sage>
           <input>
@@ -247,7 +247,7 @@
       <li>
         <title><m>m \times n </m> stelsel <m>(m \lt n)</m></title>
         <p>
-          Er zijn minder vergelijkingen dan onbekenden en het stelsel heeft een oneindig aantal oplossingen; of geen als het strijdig is. Een dergelijk stelsel is eigenlijk gewoon hetzelfde als een  <m>n \times n</m> stelsel met één of meerdere nulrijen.
+          Er zijn minder vergelijkingen dan onbekenden en het stelsel heeft een oneindig aantal oplossingen of geen als het strijdig is. Een dergelijk stelsel is eigenlijk gewoon hetzelfde als een  <m>n \times n</m> stelsel met één of meerdere nulrijen.
         </p>
       </li>
     </dl>
@@ -255,7 +255,7 @@
       <li>
         <title><m>m \times n </m> stelsel <m>(m \gt n)</m></title>
         <p>
-          We veronderstellen dat er minstens <m>n</m> lineair onafhankelijke vergelijkingen zijn (anders is dit equivalent met een <m>m \times n</m> stelsel met <m>m \lt n</m>).
+          We veronderstellen dat er minstens <m>n</m> lineair onafhankelijke vergelijkingen zijn.
           <ul>
             <li>
               Beschouw het stelsel gevormd door de <m>n</m> lineair onafhankelijke vergelijkingen en de <m>m-n</m> <q>extra</q> vergelijkingen. Als alle extra vergelijkingen lineaire combinaties zijn van de <m>n</m> lineair onafhankelijke vergelijkingen dan bevat de rij-canonieke matrix <m>m-n</m> nulrijen en heeft het stelsel een unieke oplossing.
@@ -401,10 +401,18 @@
       </solution>
     </activity>
 
+    <definition xml:id="def-rang-matrix">
+      <statement>
+        <p>
+          Gegeven een bepaalde matrix <m>B</m>. Het aantal niet-nulrijen van de rij-canonieke matrix van <m>B</m> noemen we de <term>rang</term> van die matrix en noteren we als <m>r(B)</m>.
+        </p>
+      </statement>
+    </definition>
+
     <assemblage>
       <title>De rang van een matrix</title>
       <p>
-      Het aantal niet-nulrijen van de rij-canonieke matrix van bepaalde matrix <m>B</m> noemen we de <term>rang</term> van die matrix en noteren we als <m>r(B)</m>. Het aantal oplossingen van een stelsel kan dan bepaald worden door de rang van de uitgebreide matrix <m>A_b</m> te vergelijkingen met de rang van de coëfficiëntenmatrix <m>A</m>:
+      Het aantal oplossingen van een stelsel kan bepaald worden door de rang van de uitgebreide matrix <m>A_b</m> te vergelijken met de rang van de coëfficiëntenmatrix <m>A</m>:
       <ul>
         <li>
           <p>
@@ -418,7 +426,7 @@
         </li>
         <li>
           <p>
-            <m>r(A_b) = r(A) \lt n \Leftrightarrow</m> het stelsel een oneindig aantal oplossingen. De oplossingenverzameling kan beschreven worden met behulp van <m>n-r(A)</m> parameters en we zeggen dat het stelsel <m>n-r(A)</m> vrijheidsgraden heeft.
+            <m>r(A_b) = r(A) \lt n \Leftrightarrow</m> het stelsel een oneindig aantal oplossingen. De oplossingenverzameling kan beschreven worden met behulp van <m>n-r(A)</m> parameters en we zeggen dat het stelsel <m>n-r(A)</m> <term>vrijheidsgraden</term> heeft.
           </p>
         </li>
       </ul>
@@ -431,9 +439,9 @@
         <me>
           \begin{cases} x-3y-z=2 \\-2x+5y+3z=4 \\ 4x-11y-5z=5 \end{cases}
         </me>
-        is
+        is de rij-canonieke matrix 
         <me>
-          A_b=\begin{bmatrix} 1 \amp 0 \amp -4 \amp 0 \\ 0 \amp 1 \amp -1 \amp 0 \\ 0 \amp 0 \amp 0 \amp 1 \end{bmatrix}
+          \begin{bmatrix} 1 \amp 0 \amp -4 \amp 0 \\ 0 \amp 1 \amp -1 \amp 0 \\ 0 \amp 0 \amp 0 \amp 1 \end{bmatrix}
         </me>
         Dit stelsel is strijdig omdat <m>r(A)=2</m> en <m>r(A_b)=3</m>.
       </p>
@@ -445,9 +453,9 @@
         <me>
           \begin{cases} 3x-7y+2z=2 \\-x+3y=-2 \\ x-2y+z=0 \end{cases}
         </me>
-        is
+        is de rij-canonieke matrix
         <me>
-          A_b=\begin{bmatrix} 1 \amp 0 \amp 3 \amp -4 \\ 0 \amp 1 \amp 1 \amp -2 \\ 0 \amp 0 \amp 0 \amp 0 \end{bmatrix}
+          \begin{bmatrix} 1 \amp 0 \amp 3 \amp -4 \\ 0 \amp 1 \amp 1 \amp -2 \\ 0 \amp 0 \amp 0 \amp 0 \end{bmatrix}
         </me>
         <m>r(A_b)=r(A)=2</m> en het stelsel heeft een oneindig aantal oplossingen met 1 vrijheidsgraad. We stellen <m>z=t</m> en kunnen dan de oplossingenverzameling schrijven als <m>V=\lbrace (-4-3t,-2-t,t) | t \in \mathbb{R} \rbrace</m>.
       </p>
