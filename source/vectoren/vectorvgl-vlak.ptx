@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <section>
   <title>De vectoriële vergelijking van een vlak</title>
     <assemblage>
@@ -53,7 +55,7 @@
   </sidebyside>
 
   <p>
-    De vector <m>\vv{P_1P}</m> ontbinden we volgens <m>\vv{P_1P_2}</m> en <m>\vv{P_1P_3}</m> en we kunnen dus schrijven dat 
+    Ontbinden we vervolgens <m>\vv{P_1P}</m> volgens <m>\vv{P_1P_2}</m> en <m>\vv{P_1P_3}</m>, dan kunnen we schrijven dat 
     <md>
       <mrow>\vv{P} \amp \; =\vv{P}_1+k\vv{P_1P_2}+m\vv{P_1P_3} </mrow>
       <mrow> \amp \; = \vv{P}_1+k (\vv{P_2} - \vv{P_1})+m (\vv{P_3} - \vv{P_1})</mrow>
@@ -139,7 +141,6 @@
           <sidebyside width="70%">
             <image source="vectorvgl-vlak-kubus-2.png"/>
           </sidebyside>
-          <!-- k tussen 0 en 1 en m tussen k/2 en 1-k/2-->
         </statement>
       </task>
     </statement>
@@ -153,10 +154,6 @@
     </md>
     Om een vlak te kunnen beschrijven hebben we dus twee niet-evenwijdige richtingsvectoren nodig. Voor elk vlak heb je daarvoor opnieuw een oneindig aantal mogelijke keuzes. 
   </p>  
-
-  <sidebyside width="70%">
-    <image source="vectorvgl-vlak-6.png"/>
-  </sidebyside>
   
   <p>
     Merk op dat de vergelijking 
@@ -220,96 +217,4 @@
       </p>
     </assemblage>
 
-    <exercises>
-      <exercise>
-        <statement>
-          <p>
-            Stel een vectoriële vergelijking op van het vlak
-            <ol>
-              <li>
-                <p>
-                  door <m>B</m> en evenwijdig met het vlak <m>OAC</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  door <m>O</m> en de middens van de lijnstukken <m>[AB]</m> en <m>[BC]</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  door de rechte <m>OA</m> en evenwijdig met de rechte <m>BC</m>
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <ol>
-              <li>
-                <p>
-                  <m>\vv{P}=\vv{B}+k\vv{A}+m\vv{C}</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>\vv{P}=k (\vv{A}+\vv{B}) + m (\vv{B}+\vv{C}) </m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>\vv{P}=k\vv{A}+m(\vv{C}-\vv{B})</m>
-                </p>
-              </li>
-            </ol>
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Beschouw de vectoriële vergelijking <m>\vv{P}=\vv{P_1}+k\vv{R}+m\vv{S}</m> met <m>\vv{R}</m> en <m>\vv{S}</m> niet-evenwijdige vectoren.  Welke verzameling punten wordt hierdoor beschreven als
-            <ol>
-              <li>
-                <p>
-                  <m>k=-1</m> en <m>m \in \mathbb{R}</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>\vv{P_1}=2\vv{R}</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>k+m=1</m>
-                </p>
-              </li>
-            </ol>
-          </p>  
-        </statement>
-        <solution>
-          <p>
-            <ol>
-              <li>
-                <p>
-                  De rechte door het punt <m>\vv{P}_1 - \vv{R}</m> en evenwijdig met <m>\vv{S}</m>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Het vlak door de oorsprong met richtingsvectoren <m>\vv{R}</m> en <m>\vv{S}</m>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  De rechte door het punt <m>\vv{P}_1 + \vv{S}</m> en evenwijdig met <m>\vv{R}-\vv{S}</m>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </solution>
-      </exercise>
-    </exercises>
 </section>

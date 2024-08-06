@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Coördinaten in de ruimte</title>
+    <p>
+      We beschouwen door <m>O</m> drie rechten die niet in hetzelfde vlak liggen en ijken elke rechte. Het geordend puntenviertal <m>(O,E1,E2,E3)</m> noemen we een ijk van de ruimte. De geijkte rechten zijn de coördinaatsassen: de <m>x</m>-as, <m>y</m>-as en <m>z</m>-as. Deze drie assen vormen een willekeurig assenstelsel met oorsprong <m>O</m>: een <term>affien</term> assenstelsel. Bij een affien assenstelsel kan de hoek tussen twee assen dus verschillend zijn van <m>90^{\circ}</m> en kan ook de eenheid per as verschillen. Als de assen paarsgewijs loodrecht op elkaar staan dan spreken we over een <term>orthogonaal</term> assenstelsel. Als bovendien ook <m>|OE_1|=|OE_2|=|OE_3|</m> dan spreken we van een <term>orthonormaal</term> of <term>cartesisch</term> assenstelsel.
+    </p>
+
+    <sidebyside widths="80%">
+      <image source="affien.png"/>
+    </sidebyside>    
+
+    <p>
+      Van zodra het assenstelsel gekozen is, kan de ligging van een willekeurig punt <m>P</m> ondubbelzinnig worden vastgelegd door middel van een geordend drietal: de <term>coördinaat</term>. We noteren <m>P(x,y,z)</m> of <m>co(P)=(x,y,z)</m>. <m>x,y</m> en <m>z</m> zijn de <term>coördinaatsgetallen</term> en bepaal je als volgt
+    <dl>
+      <li>
+        <title><m>P'</m></title>
+        <p>
+          is de projectie van <m>P</m> op het <m>xy</m>-vlak volgens de richting van de <m>z</m>-as.
+        </p>
+      </li>
+      <li>
+        <title><m>x</m></title>
+        <p>
+           Het punt <m>P_1(x,0,0)</m> is de projectie van <m>P'</m> op de <m>x</m>-as volgens de richting van de <m>y</m>-as.
+        </p>
+      </li>
+      <li>
+        <title><m>y</m></title>
+        <p>
+          Het punt <m>P_2(0,y,0)</m> is de projectie van <m>P'</m> op de <m>y</m>-as volgens de richting van de <m>x</m>-as.
+        </p>
+      </li>
+      <li>
+        <title><m>z</m></title>
+        <p>
+          Het punt <m>P_3(0,0,z)</m> is de projectie van <m>P</m> op de <m>z</m>-as volgens de richting van <m>OP'</m>.
+        </p>
+      </li>
+    </dl>
+    </p>
+
+    <sidebyside widths="80%">
+      <image source="coordinaten.png"/>
+    </sidebyside>
+
+    <p>
+      Aangezien elk punt <m>P</m> een puntvector <m>\vv{P}</m> bepaalt kunnen we evengoed stellen dat <m>(x,y,z)</m> de coördinaat van de vector <m>\vv{P}</m> is. Notatie: <m>\vv{P}(x,y,z)</m> of <m>co(\vv{P})=(x,y,z)</m>. We kunnen de vector <m>\vv{P}</m> echter ook schrijven als de som van de drie vectoren <m>\vv{P}_1</m>, <m>\vv{P}_2</m> en <m>\vv{P}_3</m>:
+      <mdn>
+        <mrow number="no">\vv{P} = \amp \vv{P'}+\vv{P}_3 \nonumber </mrow>
+        <mrow number="no">= \amp \vv{P}_1+\vv{P}_2+\vv{P}_3 \nonumber </mrow>
+        <mrow>= \amp x \vv{E}_1+y\vv{E}_2+z\vv{E}_3</mrow>
+      </mdn>
+      We noemen dit de <term>ontbinding</term> van <m>\vv{P}</m> volgens de coördinaatsassen. <m>\vv{E}_1</m>, <m>\vv{E}_2</m> en <m>\vv{E}_3</m> noemen we <term>basisvectoren</term> en we zeggen dat <m>\vv{P}</m> een <term>lineaire</term> combinatie is van deze basisvectoren.
+    </p>
+
+    <assemblage xml:id="assemblage-rekenen-co">
+      <title>Rekenen met coördinaten</title>
+          <p>
+      Voor de punten <m>P(x_1,y_1,z_1)</m> en <m>Q(x_2,y_2,z_2)</m> en een reëel getal <m>k \in \mathbb{R}_0</m> geldt er:
+        <mdn>
+          <mrow xml:id="vgl-som-coordinaten">\amp co(k\vv{P})=k \cdot co(\vv{P})=(kx_1,ky_1,kz_1)</mrow>
+          <mrow xml:id="vgl-scalairv-coordinaten">\amp co(\vv{P}+\vv{Q})= co(\vv{P})+co(\vv{Q})=(x_1+x_2,y_1+y_2,z_1+z_2)</mrow>
+        </mdn>
+    </p>
+    <p>
+      Uit <xref ref="vgl-som-coordinaten"/> en <xref ref="vgl-scalairv-coordinaten"/> volgt dat
+      <me>
+      co(k\vv{P}+m\vv{Q})=k \cdot co(\vv{P})+m \cdot co(\vv{Q})
+      </me>
+      De coördinaat van de vector <m>\vv{PQ}</m> tenslotte is gelijk aan:
+      <me>
+        co(\vv{PQ})=co(\vv{Q})-co(\vv{P})
+      </me>
+    </p>
+    </assemblage>
+
+</section>

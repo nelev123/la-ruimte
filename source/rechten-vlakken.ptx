@@ -3,7 +3,9 @@
 <chapter xml:id="ch-rechten-vlakken" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Rechten en vlakken in de ruimte</title>
     
+    <xi:include href="./vectoren/vectorvgl-rechte.ptx" />
     <xi:include href="./vectoren/vectorvgl-vlak.ptx" />
+    <xi:include href="./rechten-vlakken/coordinaten.ptx" />
     <xi:include href="./rechten-vlakken/parameter-rechte.ptx" />
     <xi:include href="./rechten-vlakken/parameter-vlak.ptx" />
 
@@ -13,7 +15,7 @@
     <xi:include href="./rechten-vlakken/ligging.ptx" />
 
     <exercises xml:id="exercises-rechten-vlakken">
-        
+      <xi:include href="./vectoren/vectorvgl-vlak-oef.ptx" />
     </exercises>
 
 </chapter>

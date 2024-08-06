@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Vectoriële vergelijking van een vlak</title>
+        <exercise>
+            <statement>
+            <p>
+                Stel een vectoriële vergelijking op van het vlak
+                <ol>
+                <li>
+                    <p>
+                    door <m>B</m> en evenwijdig met het vlak <m>OAC</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                    door <m>O</m> en de middens van de lijnstukken <m>[AB]</m> en <m>[BC]</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                    door de rechte <m>OA</m> en evenwijdig met de rechte <m>BC</m>
+                    </p>
+                </li>
+                </ol>
+            </p>
+            </statement>
+            <solution>
+            <p>
+                <ol>
+                <li>
+                    <p>
+                    <m>\vv{P}=\vv{B}+k\vv{A}+m\vv{C}</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                    <m>\vv{P}=k (\vv{A}+\vv{B}) + m (\vv{B}+\vv{C}) </m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                    <m>\vv{P}=k\vv{A}+m(\vv{C}-\vv{B})</m>
+                    </p>
+                </li>
+                </ol>
+            </p>
+            </solution>
+        </exercise>
+        
+        <exercise>
+            <statement>
+            <p>
+                Beschouw de vectoriële vergelijking <m>\vv{P}=\vv{P_1}+k\vv{R}+m\vv{S}</m> met <m>\vv{R}</m> en <m>\vv{S}</m> niet-evenwijdige vectoren.  Welke verzameling punten wordt hierdoor beschreven als
+                <ol>
+                <li>
+                    <p>
+                    <m>k=-1</m> en <m>m \in \mathbb{R}</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                    <m>\vv{P_1}=2\vv{R}</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                    <m>k+m=1</m>
+                    </p>
+                </li>
+                </ol>
+            </p>  
+            </statement>
+            <solution>
+            <p>
+                <ol>
+                <li>
+                    <p>
+                    De rechte door het punt <m>\vv{P}_1 - \vv{R}</m> en evenwijdig met <m>\vv{S}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                    Het vlak door de oorsprong met richtingsvectoren <m>\vv{R}</m> en <m>\vv{S}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                    De rechte door het punt <m>\vv{P}_1 + \vv{S}</m> en evenwijdig met <m>\vv{R}-\vv{S}</m>.
+                    </p>
+                </li>
+                </ol>
+            </p>
+            </solution>
+        </exercise>
+</subexercises>
