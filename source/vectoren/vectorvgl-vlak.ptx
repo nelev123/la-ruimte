@@ -1,0 +1,315 @@
+<section>
+  <title>De vectoriële vergelijking van een vlak</title>
+    <assemblage>
+    <title>Bepaling van een vlak</title>
+    <p>
+      Een vlak kan ondubbelzinnig bepaald worden door
+      <ol>
+        <li>
+          <p>
+            drie niet-collineaire punten;
+          </p>
+        </li>
+        <li>
+          <p>
+            twee snijdende rechten;
+          </p>
+        </li>
+        <li>
+          <p>
+            een rechte en een punt niet op die rechte gelegen;
+          </p>
+        </li>
+        <li>
+          <p>
+            twee evenwijdige rechten (niet-samenvallend).
+          </p>
+        </li>
+      </ol>
+    </p>
+  </assemblage>
+  <p>
+    Opties 2 t.e.m. 4 zijn telkens te herleiden tot optie 1:
+  </p>
+  <sidebyside widths="30% 32% 32%" margins="0%" valign="top">
+    <image source="vectorvgl-vlak.png"/>
+    <image source="vectorvgl-vlak-2.png"/>
+    <image source="vectorvgl-vlak-3.png"/>
+  </sidebyside>
+
+  <p>
+    We kunnen ons dus beperken tot het opstellen van de vectoriële vergelijking van een vlak door drie gegeven punten <m>P_1</m>, <m>P_2</m> en <m>P_3</m>. 
+  </p>
+
+  <p>
+    Stel dat <m>P</m> een willekeurig punt van het vlak door <m>P_1</m>, <m>P_2</m> en <m>P_3</m> is. Na het kiezen van de oorsprong <m>O</m>, kunnen we de puntvector <m>\vv{P}</m> ontbinden als
+    <me>
+      \vv{P}=\vv{P}_1+\vv{P_1P}
+    </me>
+  </p>
+
+  <sidebyside width="70%">
+    <image source="vectorvgl-vlak-4.png"/>
+  </sidebyside>
+
+  <p>
+    De vector <m>\vv{P_1P}</m> ontbinden we volgens <m>\vv{P_1P_2}</m> en <m>\vv{P_1P_3}</m> en we kunnen dus schrijven dat 
+    <md>
+      <mrow>\vv{P} \amp \; =\vv{P}_1+k\vv{P_1P_2}+m\vv{P_1P_3} </mrow>
+      <mrow> \amp \; = \vv{P}_1+k (\vv{P_2} - \vv{P_1})+m (\vv{P_3} - \vv{P_1})</mrow>
+      <mrow> \amp \; = (1-k-m) \vv{P_1} + k \vv{P}_2 + m \vv{P_3} \qquad (k,m \in \mathbb{R}) </mrow>
+    </md>
+    Elk koppel <m>(k,m)</m> bepaalt ondubbelzinnig een punt van het vlak en vice versa. 
+  </p>
+
+  <sidebyside width="70%">
+    <image source="vectorvgl-vlak-5.png"/>
+  </sidebyside>
+
+  <example>
+    <p>
+      Beschouw onderstaande kubus met de oorsprong in één van de hoekpunten. Een vectoriële vergelijking van het vlak <m>OAC</m> is
+      <me>
+        \vv{P} = (1-k-m)\vv{O} + k \vv{A} + m \vv{C} = k \vv{A} + m \vv{C}
+      </me>
+      en van het vlak <m>DEG</m>
+      <me>
+        \vv{P} = (1-k-m)\vv{D} + k \vv{E} + m \vv{G}
+      </me>
+    </p>
+
+    <sidebyside width="70%">
+      <image source="vectorvgl-vlak-kubus.png"/>
+    </sidebyside>
+
+    <p>
+      We tonen aan dat het punt <m>F</m> in het vlak <m>DEG</m> ligt. Er geldt dat <m>\vv{F}=\vv{A}+\vv{C}+\vv{D}</m> en we moeten dus waarden voor <m>k</m> en <m>m</m> vinden zodat
+      <me>
+        (1-k-m)\vv{D} + k \vv{E} + m \vv{G} = \vv{A}+\vv{C}+\vv{D}
+      </me>
+      Aangezien <m>\vv{E}=\vv{A}+\vv{D}</m> en <m>\vv{G}=\vv{C}+\vv{D}</m> kunnen we deze gelijkheid herschrijven als
+      <md>
+        <mrow> \amp (1-k-m)\vv{D} + k (\vv{A}+\vv{D}) + m (\vv{C}+\vv{D}) = \vv{A}+\vv{C}+\vv{D}</mrow>
+        <mrow> \Leftrightarrow \; \amp k\vv{A}+m\vv{C}+\vv{D} = \vv{A}+\vv{C}+\vv{D}</mrow>
+      </md>
+      En hieruit volgt dat <m>k=m=1</m> en dat <m>F</m> bijgevolg in het bovenvlak ligt. (<url href="https://www.geogebra.org/3d/ekrk32pt">Geogebra link</url>)
+    </p>
+  </example>
+
+  <activity>
+    <statement>
+      <introduction>
+        <p>
+          Deze opdracht gaat over het bovenstaande voorbeeld.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+          Toon aan dat <m>F</m> in het vlak door <m>B</m>, <m>C</m> en <m>G</m> ligt. 
+          </p>
+        </statement>
+      </task>  
+      <task>
+        <statement>
+          <p>
+            Beschouw het vlak met vergelijking <m>\vv{P} = (1-k-m)\vv{D} + k \vv{E} + m \vv{G}</m>. Beschrijf de verzameling punten van het vlak die voldoen aan <m>k=0</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Beschouw het vlak met vergelijking <m>\vv{P} = (1-k-m)\vv{D} + k \vv{E} + m \vv{G}</m>. Beschrijf de verzameling punten van het vlak die voldoen aan <m>k=1</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Beschouw het vlak met vergelijking <m>\vv{P} = (1-k-m)\vv{D} + k \vv{E} + m \vv{G}</m>. Voor welke waarden van <m>k</m> en <m>m</m> beschrijft deze vergelijking alle punten van het bovenvlak?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Beschouw het vlak met vergelijking <m>\vv{P} = (1-k-m)\vv{D} + k \vv{E} + m \vv{G}</m>. Voor welke waarden van <m>k</m> en <m>m</m> beschrijft deze vergelijking alle punten van het binnengebied van de driehoek <m>DGH</m>?
+          </p>    
+          <sidebyside width="70%">
+            <image source="vectorvgl-vlak-kubus-2.png"/>
+          </sidebyside>
+          <!-- k tussen 0 en 1 en m tussen k/2 en 1-k/2-->
+        </statement>
+      </task>
+    </statement>
+  </activity>
+
+  <p>
+    De vectoren <m>\vv{P_1P_2}</m> en <m>\vv{P_1P_3}</m> zijn twee richtingsvectoren van het vlak. Stellen we <m>\vv{R}= \vv{P_1P_2}</m> en <m>\vv{S}=\vv{P_1P_3}</m> dan kunnen we de vectoriële vergelijking van het vlak ook schrijven als 
+        <md>
+      <mrow>\vv{P} \amp \; =\vv{P}_1+k\vv{P_1P_2}+m\vv{P_1P_3} </mrow>
+      <mrow> \amp \; = \vv{P}_1+k \vv{R} + m \vv{S} \qquad (k,m \in \mathbb{R})</mrow>
+    </md>
+    Om een vlak te kunnen beschrijven hebben we dus twee niet-evenwijdige richtingsvectoren nodig. Voor elk vlak heb je daarvoor opnieuw een oneindig aantal mogelijke keuzes. 
+  </p>  
+
+  <sidebyside width="70%">
+    <image source="vectorvgl-vlak-6.png"/>
+  </sidebyside>
+  
+  <p>
+    Merk op dat de vergelijking 
+    <me>
+      \vv{P}= k \vv{R} + m \vv{S}
+    </me>
+    het vlak door de oorsprong voorstelt met richtingsvectoren <m>\vv{R}</m> en <m>\vv{S}</m>.
+  </p>
+
+    <example>
+    <p>
+      We beschouwen opnieuw onderstaande kubus.
+    </p>
+
+    <sidebyside width="70%">
+      <image source="vectorvgl-vlak-kubus.png"/>
+    </sidebyside>
+
+    <p>
+      <m>\vv{A}</m> en <m>\vv{C}</m> zijn twee richtingsvectoren van het vlak <m>DEG</m>, dus is een vectoriële vergelijking van dit vlak
+      <me>
+        \vv{P} = \vv{D} + k \vv{A} + m \vv{C}
+      </me>
+      De vector <m>\vv{B}</m> is echter ook een richtingsvector, dus 
+      <me>
+        \vv{P} = \vv{D} + k \vv{A} + m \vv{B}
+      </me>
+      is eveneens een vectoriële vergelijking van dit vlak. 
+    </p>
+  </example>
+
+  <activity>
+    <statement>
+      <p>
+        Stel nog vijf andere vectoriële vergelijkingen op van het vlak <m>DEG</m>.
+      </p>
+    </statement>
+  </activity>
+
+    <assemblage>
+      <title>Vectoriële vergelijking van een vlak</title>
+      <p>
+        De vectoriële vergelijking van het vlak bepaald door de drie niet-collineaire punten <m>P_1</m>, <m>P_2</m> en <m>P_3</m> is
+        <me>
+          \vv{P}=(1-k-m)\vv{P_1}+k\vv{P_2}+m\vv{P_3} \qquad k,m \in \mathbb{R}
+        </me>
+      </p>  
+      <p>
+        De vectoriële vergelijking van het vlak door <m>P_1</m> en met richtingsvectoren <m>\vv{R}</m> en <m>\vv{S}</m> is 
+        <me>
+          \vv{P}=\vv{P_1}+k\vv{R}+m\vv{S} \qquad k,m \in \mathbb{R}
+        </me>
+      </p>
+      <p>
+        Als drie niet-collineaire punten <m>P_1</m>, <m>P_2</m> en <m>P_3</m> van het vlak gegeven zijn, dan zijn 
+        <md>
+          <mrow> \amp \vv{R}=\vv{P_2}-\vv{P_1}</mrow>
+          <mrow> \amp \vv{S}=\vv{P_3}-\vv{P_1}</mrow>
+        </md>
+        twee niet-evenwijdige richingsvectoren. 
+      </p>
+    </assemblage>
+
+    <exercises>
+      <exercise>
+        <statement>
+          <p>
+            Stel een vectoriële vergelijking op van het vlak
+            <ol>
+              <li>
+                <p>
+                  door <m>B</m> en evenwijdig met het vlak <m>OAC</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  door <m>O</m> en de middens van de lijnstukken <m>[AB]</m> en <m>[BC]</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  door de rechte <m>OA</m> en evenwijdig met de rechte <m>BC</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  <m>\vv{P}=\vv{B}+k\vv{A}+m\vv{C}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\vv{P}=k (\vv{A}+\vv{B}) + m (\vv{B}+\vv{C}) </m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\vv{P}=k\vv{A}+m(\vv{C}-\vv{B})</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Beschouw de vectoriële vergelijking <m>\vv{P}=\vv{P_1}+k\vv{R}+m\vv{S}</m> met <m>\vv{R}</m> en <m>\vv{S}</m> niet-evenwijdige vectoren.  Welke verzameling punten wordt hierdoor beschreven als
+            <ol>
+              <li>
+                <p>
+                  <m>k=-1</m> en <m>m \in \mathbb{R}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\vv{P_1}=2\vv{R}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>k+m=1</m>
+                </p>
+              </li>
+            </ol>
+          </p>  
+        </statement>
+        <solution>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  De rechte door het punt <m>\vv{P}_1 - \vv{R}</m> en evenwijdig met <m>\vv{S}</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Het vlak door de oorsprong met richtingsvectoren <m>\vv{R}</m> en <m>\vv{S}</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  De rechte door het punt <m>\vv{P}_1 + \vv{S}</m> en evenwijdig met <m>\vv{R}-\vv{S}</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
+      </exercise>
+    </exercises>
+</section>
