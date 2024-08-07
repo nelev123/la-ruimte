@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Coördinaten in de ruimte</title>
+    <p>
+      We beschouwen door de oorsprong <m>O</m> drie rechten die niet in hetzelfde vlak liggen en ijken elke rechte. Het geordend puntenviertal <m>(O,E_x,E_y,E_z)</m> noemen we een ijk van de ruimte. De geijkte rechten zijn de coördinaatsassen: de <m>x</m>-as, <m>y</m>-as en <m>z</m>-as. Deze drie assen vormen een willekeurig assenstelsel met oorsprong <m>O</m>: een <term>affien</term> assenstelsel. Bij een affien assenstelsel kan de hoek tussen twee assen dus verschillend zijn van <m>90^{\circ}</m> en kan ook de eenheid per as verschillen. Als de assen paarsgewijs loodrecht op elkaar staan dan spreken we over een <term>orthogonaal</term> assenstelsel. Als bovendien ook <m>|OE_x|=|OE_y|=|OE_z|</m> dan spreken we van een <term>orthonormaal</term> of <term>cartesisch</term> assenstelsel.
+    </p>
+
+    <!--TODO: tekening assenstelsels toevoegen-->
+
+    <p>
+      Van zodra het assenstelsel gekozen is, kan de ligging van een willekeurig punt <m>P</m> ondubbelzinnig worden vastgelegd door middel van een geordend drietal: de <term>coördinaten</term>. We noteren <m>P(x,y,z)</m> of <m>co(P)=(x,y,z)</m> en bepalen die als volgt:
+    <dl>
+      <li>
+        <title><m>P'</m></title>
+        <p>
+          is de projectie van <m>P</m> op het <m>xy</m>-vlak volgens de richting van de <m>z</m>-as.
+        </p>
+      </li>
+      <li>
+        <title><m>x</m></title>
+        <p>
+           Het punt <m>P_1(x,0,0)</m> is de projectie van <m>P'</m> op de <m>x</m>-as volgens de richting van de <m>y</m>-as.
+        </p>
+      </li>
+      <li>
+        <title><m>y</m></title>
+        <p>
+          Het punt <m>P_2(0,y,0)</m> is de projectie van <m>P'</m> op de <m>y</m>-as volgens de richting van de <m>x</m>-as.
+        </p>
+      </li>
+      <li>
+        <title><m>z</m></title>
+        <p>
+          Het punt <m>P_3(0,0,z)</m> is de projectie van <m>P</m> op de <m>z</m>-as volgens de richting van <m>OP'</m>.
+        </p>
+      </li>
+    </dl>
+    </p>
+
+    <sidebyside widths="80%">
+      <image source="coordinaten.png"/>
+      <!--betere tekening maken-->
+    </sidebyside>
+
+    <remark>
+      <p>
+        Denk eraan dat ook <m>co(\vv{P})=(x,y,z)</m> (of <m>\vv{P}(x,y,z)</m>) en dat <m>\vv{P}</m> kan geschreven worden als een lineaire combinatie van de <term>basisvectoren</term> <m>\vv{E}_x</m>, <m>\vv{E}_y</m> en <m>\vv{E}_z</m>:
+        <me>
+          \vv{P} = x \vv{E}_x+y\vv{E}_y+z\vv{E}_z
+        </me>
+      </p>
+    </remark>
+
+    <p>
+      Rekenen met coördinaten verloopt natuurlijk op dezelfde manier als in het vlak:
+    </p>
+
+    <assemblage xml:id="assemblage-rekenen-co">
+      <title>Rekenen met coördinaten</title>
+          <p>
+      Voor de punten <m>P(x_1,y_1,z_1)</m> en <m>Q(x_2,y_2,z_2)</m> en een reëel getal <m>k \in \mathbb{R}_0</m> geldt er:
+        <mdn>
+          <mrow xml:id="vgl-som-coordinaten">\amp co(k\vv{P})=k \cdot co(\vv{P})=(kx_1,ky_1,kz_1)</mrow>
+          <mrow xml:id="vgl-scalairv-coordinaten">\amp co(\vv{P}+\vv{Q})= co(\vv{P})+co(\vv{Q})=(x_1+x_2,y_1+y_2,z_1+z_2)</mrow>
+        </mdn>
+    </p>
+    <p>
+      Uit <xref ref="vgl-som-coordinaten"/> en <xref ref="vgl-scalairv-coordinaten"/> volgt dat
+      <me>
+      co(k\vv{P}+m\vv{Q})=k \cdot co(\vv{P})+m \cdot co(\vv{Q})
+      </me>
+      De coördinaat van de vector <m>\vv{PQ}</m> tenslotte is gelijk aan:
+      <me>
+        co(\vv{PQ})=co(\vv{Q})-co(\vv{P})
+      </me>
+    </p>
+    </assemblage>
+
+    <p>
+      We herhalen tenslotte nog de formules voor het berekenen van de coördinaten van het midden van een lijnstuk en het zwaartepunt van een driehoek en voegen er nog eentje aan toe: het zwaartepunt van een viervlak.
+    </p>
+
+    <assemblage xml:id="assemblage-midden-lijnstuk">
+      <title>Het midden van een lijnstuk</title>
+      <p>
+        Gegeven <m>A(x_1,y_1,z_1)</m> en <m>B(x_2,y_2,z_2)</m>. De coördinaten van het midden <m>M</m> van het lijnstuk <m>[AB]</m> zijn
+        <me>
+          co(M)=\left ( \frac{x_1+x_2}{2}, \frac{y_1+y_2}{2} ,\frac{z_1+z_2}{2}\right )
+        </me>
+      </p>
+    </assemblage>
+
+    <assemblage xml:id="assemblage-zwaartepunt-driehoek">
+      <title>Het zwaartepunt van een driehoek</title>
+      <p>
+        Gegeven <m>A(x_1,y_1,z_1)</m>, <m>B(x_2,y_2,z_2)</m> en <m>C(x_3,y_3,z_3)</m>. De coördinaten van het zwaartepunt <m>Z</m> van de driehoek <m>ABC</m> zijn
+        <me>
+          co(Z)=\left ( \frac{x_1+x_2+x_3}{3}, \frac{y_1+y_2+y_3}{3} ,\frac{z_1+z_2+z_3}{3}\right )
+        </me>
+      </p>
+    </assemblage>
+
+    <assemblage xml:id="assemblage-zwaartepunt-viervlak">
+      <title>Het zwaartepunt van een viervlak</title>
+      <p>
+        Gegeven <m>A(x_1,y_1,z_1)</m>, <m>B(x_2,y_2,z_2)</m>, <m>C(x_3,y_3,z_3)</m> en <m>D(x_4,y_4,z_4)</m>. De coördinaten van het zwaartepunt <m>Z</m> van het viervlak <m>ABCD</m> zijn
+        <me>
+          co(Z)=\left ( \frac{x_1+x_2+x_3+x_4}{4}, \frac{y_1+y_2+y_3+y_4}{4} ,\frac{z_1+z_2+z_3+z_4}{4}\right )
+        </me>
+      </p>
+      <sidebyside width="80%">
+        <image source="zwaartepunt-viervlak.png"/>
+      </sidebyside>
+    </assemblage>
+
+    
+
+</section>

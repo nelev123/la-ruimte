@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Parametervoorstelling en cartesische vergelijking van een vlak</title>
+    
+    <exercise>
+      <statement>
+        <p>
+          Geef de cartesiche vergelijking en een stelsel parametervergelijkingen van
+          <ol>
+            <li>
+              <p>
+                het <m>xy</m>-vlak
+              </p>
+            </li>
+            <li>
+              <p>
+                het <m>xz</m>-vlak
+              </p>
+            </li>
+            <li>
+              <p>
+                het <m>yz</m>-vlak
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>z=0</m> en <m>\begin{cases}x=k \\ y=m \\z=0 \end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>y=0</m> en <m>\begin{cases}x=k \\ y=0 \\z=m \end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x=0</m> en <m>\begin{cases}x=0 \\ y=k \\z=m \end{cases}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Bepaal een parametervoorstelling en een cartesische vergelijking van het vlak
+          <ol>
+            <li>
+              <p>
+                door <m>P(2,-1,1)</m> en evenwijdig met het vlak <m>xz</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                door <m>P_1(1,-1,0)</m>, <m>P_2(1,1,0)</m> en <m>P_3(0,1,-1)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                door <m>P_1(1,3,5)</m> en de <m>x</m>-as
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Een mogelijke parametervoorstelling is <m>\begin{cases} x=2+k \\y=-1 \\z=1+m \end{cases}</m> en de cartesische vergelijking is <m>y=-1</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Een mogelijke parametervoorstelling is <m>\begin{cases} x=1-m \\y=-1+2k+2m \\z=-m \end{cases}</m> en de cartesische vergelijking is <m>x-z=1</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                  Een mogelijke parametervoorstelling is <m>\begin{cases} x=k+m \\y=3m \\z=5m \end{cases}</m> en de cartesische vergelijking is <m>5y-3z=0</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Gegeven het vlak <m>\alpha \leftrightarrow x-2y+z+4=0</m>. Bepaal twee richtingsvectoren van dit vlak.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Bepaal drie punten van het vlak en op basis daarvan 2 richtingsvectoren. Oneindig veel mogelijkheden, dus controleer met Geogebra.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p><!--wordt een opdracht-->
+          Beschouw het vlak dat door de punten <m>P_1(-1,2,0)</m> en <m>P_2(1,3,-2)</m> gaat en evenwijdig is met de rechte <m>a \leftrightarrow \dfrac{x-1}{-3}=y=\dfrac{z+1}{2}</m>
+          <ol>
+            <li>
+              <p>
+                Teken de punten en de rechte met Geogebra. Je kan de vergelijking van de rechte gewoon intikken zoals ze gegeven is.
+              </p>
+            </li>
+            <li>
+              <p>
+                Bepaal en teken twee richtingsvectoren van het vlak.
+              </p>
+            </li>
+            <li>
+              <p>
+                Teken het vlak en schrijf de cartesische vergelijking over.
+              </p>
+            </li>
+            <li>
+              <p>
+                Bepaal de parametervoorstelling van het vlak en tik ze ter controle in.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Tik in <c>P1=(-1,2,0)</c> en idem voor het tweede punt.
+              </p>
+            </li>
+            <li>
+              <p>
+                Tik de vergelijkingen van de rechte in. Geogebra zet dit om in een parametervoorstelling, geeft er een naam aan en tekent ook de rechte.
+              </p>
+            </li>
+            <li>
+              <p>
+                Tik in <c>R=Vector(P2-P1)</c> om de eerste richtingsvector te berekenen. De tweede richtingsvector is de richtingsvector van de rechte en die is al gegeven: tik in <c>S=Vector((-3,1,2))</c>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Tik in <c>Vlak(P1,R,S)</c> en je krijgt het gevraagde vlak en de cartesische vergelijking <m>4x+2y+5z=0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Een mogelijke parametervoorstelling is <m>\begin{cases} x=-1+2k-3m \\y=2+k+m \\z=-2k +2m \end{cases}</m>, dus je tikt in <c>(-1+2k-3m,2+k+m,-2k+2m)</c> en je krijgt variabel punt van het vlak (elke waarde van <m>k</m> en <m>m</m> leidt tot een ander punt).
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Bepaal een parametervoorstelling en een cartesische vergelijking van het vlak door <m>P(0,0,1)</m> en evenwijdig met de rechten <m>e \leftrightarrow \begin{cases} 3x+2y-z=6 \\ 2x-2y+z=4 \end{cases}</m> en <m>f \leftrightarrow x = y = -z</m>.  Je mag alle berekeningen door Geogebra laten uitvoeren.
+        </p>
+      </statement>
+      <solution>
+        <p>
+            Een mogelijke parametervoorstelling is <m>\begin{cases} x=-k \\y=-k-m \\z=1+k-10m \end{cases}</m> en de cartesische vergelijking is <m>3x-2y+z=1</m>. Stap voor stap:
+            <ol>
+              <li>
+                <p>
+                  Tik in <c>3x+2y-z=6</c>, <c>2x-2y+z=4</c> en bepaal de doorsnede met het commando <c>Snijpunten(vgl1,vgl2)</c>. <c>vgl1/2</c> zijn de namen van de vergelijkingen van de vlakken, pas aan indien nodig.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Je krijgt onmiddellijk een parametervoorstelling van de rechte <m>e</m>, dus je kan de richtingsvector aflezen en intikken: <c>R=Vector((0,-5,-10))</c>. De richtingsvector van de tweede rechte volgt onmiddellijk uit de opgave: <c>S=Vector((1,1,-1)</c>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  De parametervoorstelling kan je nu met de hand opstellen en ingeven zoals bij de vorige oefening. De vergelijking van het vlak bepaal je via <c>Vlak((0,0,1),R,S)</c> .
+                </p>
+              </li>
+            </ol>
+        </p>
+      </solution>
+    </exercise>
+    
+    <exercise>
+      <statement>
+        <p>
+          Toon aan dat de vergelijking van het vlak door de punten <m>P_1(a,0,0)</m>, <m>P_2(0,b,0)</m> en <m>P_3(0,0,c)</m> in de vorm <m>\dfrac{x}{a}+\dfrac{y}{b}+\dfrac{z}{c}=1</m> kan geschreven worden.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Stel <m>\vv{R}=\vv{P_2}-\vv{P_1}</m> en <m>\vv{S}=\vv{P_3}-\vv{P_2}</m>, dan is <m>R(-a,b,0)</m> en <m>S(-a,0,c)</m>. Parametervoorstelling: <me>\begin{cases} x=a-ka-ma \\ y=kb \\ z = mc \end{cases}</me> Uit de tweede en derde vergelijking volgt dat <m>k=\dfrac{y}{b}</m> en <m>m=\dfrac{z}{c}</m> en substitutie in de eerste vergelijking leidt tot de vergelijking <m>x=a-\dfrac{y}{b}a-\dfrac{z}{c}a</m>. Delen door <m>a</m> en wat herschrijven levert dan de gevraagde vorm.
+        </p>
+      </solution>
+    </exercise>
+  
+</subexercises>

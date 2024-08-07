@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <subexercises>
-    <title>Cöordinaten in de ruimte</title>
+    <title>Coördinaten in de ruimte</title>
     
       <exercise>
         <statement>
@@ -42,18 +42,18 @@
       <exercise>
         <statement>
           <p>
-            Gegeven de ijk <m>(O,E_1,E_2,E_3)</m>.
+            Gegeven de ijk <m>(O,E_x,E_y,E_z)</m>.
             <ol>
               <li>
                 Bepaal de coördinaten van de punten <m>A, B</m> en <m>C</m> als
                 <md>
-                  <mrow>\amp \vv{A}=2\vv{E_1}-3\vv{E_2}+7\vv{E_3}</mrow>
-                  <mrow>\amp \vv{B}=-3\vv{E_2}+5\vv{E_3}</mrow>
-                  <mrow>\amp \vv{OC}=3\vv{OE_1}-2\vv{OE_2}-\vv{OE_3}</mrow>
+                  <mrow>\amp \vv{A}=2\vv{E_x}-3\vv{E_y}+7\vv{E_z}</mrow>
+                  <mrow>\amp \vv{B}=-3\vv{E_y}+5\vv{E_z}</mrow>
+                  <mrow>\amp \vv{OC}=3\vv{OE_x}-2\vv{OE_y}-\vv{OE_z}</mrow>
                 </md>
               </li>
               <li>
-                Noteer <m>\vv{D}</m> als een lineaire combinatie van <m>\vv{E_1}</m>, <m>\vv{E_2}</m> en <m>\vv{E_3}</m> als <m>\vv{D}\left(3,-5,\frac{1}{2} \right)</m>
+                Noteer <m>\vv{D}</m> als een lineaire combinatie van <m>\vv{E_x}</m>, <m>\vv{E_y}</m> en <m>\vv{E_z}</m> als <m>\vv{D}\left(3,-5,\frac{1}{2} \right)</m>
               </li>
             </ol>
           </p>
@@ -68,7 +68,7 @@
               </li>
               <li>
                 <p>
-                  <m>\vv{D}=3\vv{E_1}-5\vv{E_2}+\dfrac{1}{2}\vv{E_3}</m>
+                  <m>\vv{D}=3\vv{E_x}-5\vv{E_y}+\dfrac{1}{2}\vv{E_z}</m>
                 </p>
               </li>
             </ol>
@@ -121,33 +121,6 @@
           </p>
         </solution>
       </exercise>
-
-      <exercise>
-        <statement>
-          <p>
-            T.o.v. de ijk <m>(O,E_1,E_2,E_3)</m> geldt: <m>co(A)=(-2,3,4)</m>. Bepaal <m>co(A)</m> t.o.v. de ijk <m>(O,E_1',E_2',E_3')</m> als
-            <md>
-              <mrow> \amp \vv{E'_1}=\vv{E_1}+\vv{E_2}+\vv{E_3}</mrow>
-              <mrow> \amp \vv{E'_2}=-\vv{E_1}+2\vv{E_2}</mrow>
-              <mrow>\amp \vv{E'_3}=-\vv{E_3}</mrow>
-            </md>
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Gebruik de combinatiemethode om de basisvectoren van de oude ijk te schrijven in functie van de basisvectoren van de nieuwe ijk:
-            <md>
-              <mrow> \amp \vv{E_1} = \dfrac{2\vv{E'_1}-\vv{E'_2}+2\vv{E'_3}}{3}</mrow>
-              <mrow> \amp \vv{E_2} = \dfrac{\vv{E'_1}+\vv{E'_2}+\vv{E'_3}}{3}</mrow>
-              <mrow> \amp \vv{E_3} = -\vv{E'_3}</mrow>
-            </md>
-            We kunnen <m>\vv{A}</m> daarmee schrijven als 
-            <me>
-              \vv{A}=-2\vv{E_1}+3\vv{E_2}+4\vv{E_3}=-\dfrac{1}{3}\vv{E'_1}+\dfrac{5}{3}\vv{E'_2}-\dfrac{13}{3}\vv{E'_3}
-            </me>
-          </p>
-        </solution>
-      </exercise>
       
       <exercise>
         <statement>
@@ -156,7 +129,7 @@
             <ol>
               <li>
                 <p>
-                  Bepaal de coördinaten van de zwaartepunten <m>Z_1,Z_2,Z_3,Z_4</m> van de zijvlakken van het viervlak <m>ABCD</m>. Bereken de coördinaat van het zwaartepunt <m>Z</m> van het viervlak ABCD<fn>Het zwaartepunt van een viervlak <m>ABCD</m> is <m>\vv{Z}=\dfrac{\vv{A}+\vv{B}+\vv{C}+\vv{D}}{4}</m></fn> en ga na dat <m>Z</m> ook het zwaartepunt is van het viervlak <m>Z_1Z_2Z_3Z_4</m>.
+                  Bepaal de coördinaten van de zwaartepunten <m>Z_1,Z_2,Z_3,Z_4</m> van de zijvlakken van het viervlak <m>ABCD</m>. Bereken de coördinaat van het zwaartepunt <m>Z</m> van het viervlak <m>ABCD</m> en ga na dat <m>Z</m> ook het zwaartepunt is van het viervlak <m>Z_1Z_2Z_3Z_4</m>.
                 </p>
               </li>
               <li>

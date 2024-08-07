@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Parametervoorstelling en cartesische vergelijkingen van een rechte</title>
+    <exercise>
+      <statement>
+        <p>
+          Onderzoek of de rechten <m>AB</m> en <m>CD</m> evenwijdig zijn als <m>A(2,1,-1)</m>, <m>B(-1,2,-5)</m>, <m>C(4,-1,-3)</m> en <m>D(7,-2,1)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Ze zijn evenwijdig omdat de richtingsvectoren tegengesteld zijn: <m>\vv{AB}(-3,1,-4)</m> en <m>\vv{CD}(3,-1,4)</m>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bepaal een parametervoorstelling en een stelsel cartesische vergelijkingen van
+          <ol>
+            <li>
+              <p>
+                de <m>x</m>-as;
+              </p>
+            </li>
+            <li>
+              <p>
+                de <m>y</m>-as;
+              </p>
+            </li>
+            <li>
+              <p>
+                de <m>z</m>-as;
+              </p>
+            </li>
+            <li>
+              <p>
+                de rechte door <m>(2,1,3)</m> evenwijdig met de <m>x</m>-as;
+              </p>
+            </li>
+            <li>
+              <p>
+                de rechte door <m>(2,1,3)</m> evenwijdig met het <m>yz</m>-vlak;
+              </p>
+            </li>
+            <li>
+              <p>
+                de rechte door de punten <m>P_1(-2,5,2)</m> en <m>P_2(4,-1,1)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>\begin{cases} x = k \\ y=0 \\ z=0 \end{cases}</m> en <m>\begin{cases} y=0 \\ z=0 \end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{cases} x = 0 \\ y=k \\ z=0 \end{cases}</m> en <m>\begin{cases} x=0 \\ z=0 \end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{cases} x = 0 \\ y=0 \\ z=k \end{cases}</m> en <m>\begin{cases} x=0 \\ y=0 \end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{cases} x = 2+k \\ y=1 \\ z=3 \end{cases}</m> en <m>\begin{cases} y=1 \\ z=3 \end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{cases} x = 2 \\ y=1+k \\ z=3+k \end{cases}</m> en <m>\begin{cases} x=2 \\ y-1=z-3 \end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+               
+                <m>co(\vv{R})=co(\vv{P_2}-\vv{P_1})=(6,-6,-1) \Rightarrow \begin{cases} x = -2+6k \\ y=5-6k \\ z=2-k \end{cases} </m> en <m>\dfrac{x+2}{6} = \dfrac{y-5}{-6} = \dfrac{z-2}{-1}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <!-- <exercise>
+      <statement>
+        <p>
+          Bepaal een parametervoorstelling van de rechte <m>e \leftrightarrow \begin{cases} 3x+2y-z=6 \\ 2x-2y+z=4 \end{cases}</m>.
+        </p>
+      </statement>
+      <solution>
+        <sage>
+          <input>
+            A = matrix(2,4,[3,2,-1,6,
+                            2,-2,1,4])
+            B = A.rref()
+            show(A,"~",B)
+            var('x y z t')
+            vlak1 = implicit_plot3d(3*x+2*y-z==6,(x,-10,10),(y,-10,10),(z,-10,10),opacity=0.7)
+            vlak2 = implicit_plot3d(2*x-2*y+z==4,(x,-10,10),(y,-10,10),(z,-10,10),color='red',opacity=0.3)
+            snijlijn = parametric_plot3d([2,t,2*t],(t,-5,5),color='black',thickness="5")
+            show(vlak1+vlak2+snijlijn)
+          </input>
+        </sage>
+        <p>
+          Een parametervoorstelling is <m>\begin{cases} x=2 \\ y=t \\ z=2t \end{cases} \quad t \in \mathbb{R}</m>
+        </p>
+      </solution>
+    </exercise>-->
+    
+    <exercise>
+      <statement>
+        <p>
+          In een geijkte ruimte is de rechte <m>k \leftrightarrow \dfrac{x}{2}=\dfrac{y-3}{-2}=z+1</m> gegeven. <ol>
+          <li>
+            <p>
+              Bepaal de coördinaat van het punt van <m>k</m> met als eerste coördinaatgetal 2.
+            </p>
+          </li>
+          <li>
+            <p>
+              Bepaal de coördinaat van het snijpunt van <m>k</m> en het <m>xz</m>-vlak.
+            </p>
+          </li>
+          <li>
+            <p>
+              Bepaal twee verschillende parametervoorstellingen van <m>k</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Ligt het punt <m>D\left(-5,8,\dfrac{-7}{2} \right)</m> op de rechte <m>k</m>?
+            </p>
+          </li>
+        </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Stel <m>x=2</m> en los de cartesische vergelijkingen op naar de andere variabelen <m>\Rightarrow (2,1,0)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Stel <m>y=0</m> en los de cartesische vergelijkingen op naar de andere variabelen <m>\Rightarrow (3;0;0,5)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{cases} x=2k \\ y=3-2k \\ z=-1+k\end{cases}</m> en <m>\begin{cases} x=2+2k \\ y=1-2k \\ z=k\end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Ja: <m>\begin{cases} -5=2k \\ 8=3-2k \\ -3,5=-1+k\end{cases} \Rightarrow k=-2,5</m> 
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+        <statement>
+          <p>
+            Een raket wordt gevolgd op een radarscherm dat op elk moment de positie van de raket weergeeft. Op het tijdstip <m>t=0</m> bevindt de raket zich in het punt <m>A(5,10,15)</m>. Per tijdseenheid verplaatst de raket zich volgens de vector <m>(1,1,2)</m>. <ol>
+            <li>
+              <p>
+                Bepaal een parametervoorstelling van de baan van de raket.
+              </p>
+            </li>
+            <li>
+              <p>
+                Wat is de positie van de raket als <m>t=5</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Waar was de raket op <m>t=-5</m>?
+              </p>
+            </li>
+            <li>
+              Geef een stelsel cartesische vergelijkingen van de baan van de raket.
+            </li>
+            <li>
+              <p>
+                Bereikt de raket de positie <m>(25,30,53)</m>?
+              </p>
+            </li>
+          </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+           <ol>
+            <li>
+              <p>
+                <m>\begin{cases} x=5+t \\ y=10+t \\ z=15+2t\end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(10,15,25)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(0,5,5)</m>
+              </p>
+            </li>
+            <li>
+              <m>\begin{cases} x-5 = y-10 \\ 2y-20 = z-15\end{cases}  </m>
+            </li>
+            <li>
+              <p>
+                Neen, maar wel de positie <m>(25,30,55)</m> als <m>t=20</m>.
+              </p>
+            </li>
+          </ol>
+          </p>
+        </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bepaal een stel richtingsgetallen van onderstaande rechten
+          <ol>
+            <li>
+              <p>
+                <me>
+                  \dfrac{x-1}{2}=\dfrac{2-y}{3}=z
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \begin{cases}
+                    x+y+z=6\\
+                    3x-y=9
+                  \end{cases}
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>(2,-3,1)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(1,3,-4)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+        <sage>
+          <input>
+            A = matrix(2,4,[1,1,1,6,
+                            3,-1,0,9])
+            B = A.rref()
+            show(A,"~",B)
+          </input>
+        </sage>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bepaal een parametervoorstelling van
+          <ol>
+            <li>
+              <p>
+                de rechte door <m>(-1,3,1)</m> en evenwijdig met <m>r \leftrightarrow \dfrac{x-3}{3}=\dfrac{2-y}{2}=-z</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                de rechte door <m>(1,4,-2)</m> evenwijdig met <m>r \leftrightarrow \begin{cases} x+y-z=4 \\x-3z=2 \end{cases}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>\begin{cases} x=-1+3k \\ y=3-2k \\ z=1-k\end{cases}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{cases} x=1+3k \\ y=4-2k \\ z=-2+k\end{cases}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+        <sage>
+          <input>
+            A = matrix(2,4,[1,1,-1,4,
+                            1,0,-3,2])
+            B = A.rref()
+            show(A,"~",B)
+          </input>
+        </sage>
+      </solution>
+    </exercise>
+</subexercises>
+
