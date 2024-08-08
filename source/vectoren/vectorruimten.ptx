@@ -107,14 +107,14 @@
     </me>
       noemen we een lineaire combinatie van de vectoren <m>\lbrace v_1,v_2, \ldots ,v_n \rbrace</m>. De verzameling van alle lineaire combinaties van <m>\lbrace v_1,v_2, \ldots ,v_n \rbrace</m> noemen we de opspanning van <m>\lbrace v_1,v_2, \ldots ,v_n \rbrace</m>:
     </p>
-    <assemblage>
+    <definition>
       <title>Opspanning</title>
       <p>
         <me>
           \text{Span}\lbrace v_1,v_2, \ldots ,v_n \rbrace = \lbrace r_1 v_1 + r_2 v_2 + \ldots + r_n v_n | r_1, r_2, \ldots, r_n \in \mathbb{R} \rbrace
         </me>
       </p>
-    </assemblage>
+    </definition>
     <p>
       Beschouw de verzameling <m>W_1= \lbrace (1,0),(1,1) \rbrace </m>. Er geldt dan dat <m>\text{Span} \; W_1 = \lbrace (r_1+r_2,r_2) | r_1, r_2 \in \mathbb{R} \rbrace</m> en bijgevolg is  <m>\text{Span} \; W_1=\mathbb{R}^2</m>. We zeggen dat vectoren <m>(1,0)</m> en <m>(1,1)</m> de vectorruimte <m>\mathbb{R},\mathbb{R}^2,+</m> voortbrengen. Hetzelfde geldt natuurlijk voor de vectoren <m>(1,0)</m> en <m>(0,1)</m> of elk ander paar vectoren van <m>\mathbb{R}^2</m> dat niet evenwijdig is.
     </p>
@@ -122,116 +122,12 @@
      Beschouwen we echter de verzameling <m>W_2= \lbrace (1,1), (3,3) \rbrace </m>, dan is <m>\text{Span} \; W_2 = \lbrace (r_1+3r_2,r_1+3r_2) | r_1, r_2 \in \mathbb{R} \rbrace= \lbrace (k,k) | k \in \mathbb{R} \rbrace </m>. Deze verzameling stelt alle vectoren voor die op de rechte door de oorsprong en het punt <m>(1,1)</m> liggen. De verzameling <m>W_2</m> brengt in dit geval een deelruimte van de vectorruimte <m>\mathbb{R},\mathbb{R}^2,+</m> voort.
     </p>
 
-    <assemblage>
+    <definition>
       <title>Deelruimte</title>
       <p>
         Als <m>W \subset V</m> en <m>\mathbb{R},V,+</m> en <m>\mathbb{R},W,+</m> vectorruimten zijn, dan noemen we <m>\mathbb{R},W,+</m> een deelruimte of deelvectorruimte van <m>\mathbb{R},V,+</m>.
       </p>
-    </assemblage>
-
-    <exercises>
-      <exercise>
-        <statement>
-          <p>
-            Kan <m>(-3,2)</m> geschreven worden als een lineaire combinatie van <m>(1,2)</m> en <m>(-3,-2)</m>?
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <m>(-3,2)=r_1(1,2)+r_2(-3,-2) \Leftrightarrow r_1=3 \text{ en } r_2=2</m>, dus ja
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Gegeven <m>v,w \in \mathbb{R}^3</m>. Wat is de meetkundige betekenis van Span<m>\lbrace v \rbrace</m> en Span<m>\lbrace v, w \rbrace</m>?
-          </p>
-        </statement>
-        <solution>
-          <p>
-            De verzameling van alle punten die liggen op de rechte door de oorsprong met richtingsvector <m>v</m> en de verzameling van alle punten die liggen in het vlak door de oorsprong met richtingsvectoren <m>v</m> en <m>w</m>.
-           </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            De verzameling <m>W</m> van alle punten die in <m>\mathbb{R}^3</m> een vlak vormen dat niet door de oorsprong gaat is een deelvectorruimte van <m>\mathbb{R},\mathbb{R}^3,+</m>. Waar of niet waar? Verklaar.
-           </p>
-        </statement>
-        <solution>
-          <p>
-            Niet waar. Optelling is niet gesloten. Er is geen neutraal element voor de optelling.
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Gegeven de vectorruimte <m>\mathbb{R},\mathbb{R}^2,+</m> en de verzameling <m>W=\lbrace (3r,2+5r)| r \in \mathbb{R} \rbrace</m>.  <m>\mathbb{R},W,+</m> is een deelruimte van  <m>\mathbb{R},\mathbb{R}^2,+</m>. Waar of niet waar? Leg uit.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Niet waar, <m>W</m> stelt een rechte voor die niet door de oorsprong gaat (dus geen neutraal element voor optelling en de optelling in <m>W</m> is niet gesloten).
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Gegeven de vectorruimte <m>\mathbb{R},\mathbb{R}^3,+</m> en de verzameling <m>W=\lbrace (2r,3r-s,r+5s)| r,s \in \mathbb{R} \rbrace</m>.  <m>\mathbb{R},W,+</m> is een deelruimte van <m>\mathbb{R},\mathbb{R}^3,+</m>. Waar of niet waar? Leg uit.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Waar. Deze verzameling van vectoren stelt een vlak door de oorsprong voor.
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Gegeven de vectorruimte <m>\mathbb{R},\mathbb{R}^3,+</m> en de vectoren <m>v_1=(1,0,-1)</m>,  <m>v_2=(2,1,3)</m>, <m>v_3=(4,2,6)</m> en <m>v_4=(3,1,2)</m>. Ga na of <m>v_4 \in \text{Span}\lbrace  v_1,v_2,v_3 \rbrace</m>.
-          </p>
-          </statement>
-        <solution>
-          <p>
-            <m>(3,1,2)=r_1(1,0,-1)+r_2(2,1,3)+r_3(4,2,6) \Leftrightarrow \begin{cases} r_1=1 \\ r_2=1-2k \\ r_3=k\end{cases} (k \in \mathbb{R})</m>. Dit stelsel heeft een oneindig aantal
-                oplossingen dus <m>v_4</m> behoort tot <m>\text{Span}\lbrace v_1,v_2,v_3 \rbrace</m>.  Meetkundig gezien betekent dit dat <m>v_4</m> ligt in het vlak door de oorsprong met richtingsvectoren <m>v_1</m> en <m>v_2</m> (teken eens!). Merk op dat er een oneindig aantal oplossingen zijn omdat <m>v_3</m> een veelvoud is van <m>v_2</m>; <m>v_3</m> kan dus eigenlijk van in het begin weggelaten worden.
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Gegeven de vectorruimte <m>\mathbb{R},\mathbb{R}^3,+</m> en de vectoren <m>v_1=(1,-1,-2)</m>, <m>v_2=(5,-4,-7)</m>, <m>v_3=(-3,1,0)</m> en <m>v_4=(-4,3,h)</m>. Voor welke waarde van <m>h</m> is <m>v_4 \in \text{Span}\lbrace v_1,v_2,v_3 \rbrace</m>?
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Het stelsel <m>(-4,3,h)=r_1(1,-1,-2)+r_2(5,-4,-7)+r_3(-3,1,0)</m> moet een oplossing hebben. We lossen het stelsel op door de matrix te herleiden naar de rij-canonieke vorm
-          </p>
-          <sage>
-            <input>
-              R.&lt; h &gt; = QQ[]  # nodig om symbolisch met matrices te kunnen rekenen
-              A = matrix(3,4,[1,5,-3,-4,
-                              -1,-4,1,3,
-                              -2,-7,0,h])
-              B = A.echelon_form() # i.p.v rref als er parameters in de matrix staan
-              show(A,"~",B)
-            </input>
-          </sage>
-          <p>
-            en besluiten dat <m>v_4 \in \text{Span}\lbrace v_1,v_2,v_3 \rbrace</m> als <m>h=5</m>.
-          </p>
-          <p>
-            Merk op dat de rang van de coëfficiëntenmatrix gelijk is aan 2 omdat <m>v_3</m> een lineaire combinatie is van <m>v_1</m> en <m>v_2</m>: <m>v_3=7v_1-2v_2</m>.
-          </p>
-        </solution>
-      </exercise>
-    </exercises>
+    </definition>
   </subsection>
 
   <subsection>
@@ -246,7 +142,7 @@
     <p>
       We kunnen de vergelijking <m>v_3=7v_1-2v_2</m> herschrijven als <m>7v_1-2v_2-v_3=0</m>. Dit leidt  tot de volgende definitie:
     </p>
-    <assemblage>
+    <definition>
       <title>Lineair afhankelijk</title>
       <p>
         <md>
@@ -256,7 +152,7 @@
         </md>
         Deze definitie is equivalent met <m>\lbrace v_1,v_2,\ldots, v_n \rbrace</m> zijn lineair afhankelijk als minstens één vector kan geschreven worden als een lineaire combinatie van de andere vectoren.
       </p>
-    </assemblage>
+    </definition>
     <p>
       Toepassen van deze definitie op bovenstaand voorbeeld geeft
       <md>
@@ -268,7 +164,7 @@
     <p>
       Een verzameling vectoren die niet lineair afhankelijk is, noemen we lineair onafhankelijk. Dit betekent dat geen enkele vector kan geschreven worden als een lineaire combinatie van de andere vectoren.
     </p>
-    <assemblage>
+    <definition>
       <title>Lineair onafhankelijk</title>
       <p>
         <md>
@@ -278,75 +174,11 @@
         </md>
         Deze definitie is equivalent met <m>\lbrace v_1,v_2,\ldots, v_n \rbrace</m> zijn lineair onafhankelijk als geen enkele vector kan geschreven worden als een lineaire combinatie van de andere vectoren.
       </p>
-    </assemblage>
+    </definition>
     <p>
       De drie vectoren  <m>v_1(1,-1,-2)</m> en <m>v_2(5,-4,-7)</m> en <m>v_3(-3,1,2)</m> zijn lineair onafhankelijk omdat de oplossing van het stelsel <m>r_1(1,-1,-2)+r_2(5,-4,-7)+r_3(-3,1,2)=(0,0,0)</m> gelijk is aan <m>(0,0,0)</m>:
       <me>\begin{bmatrix} 1 \amp 5 \amp -3 \amp 0 \\-1 \amp -4 \amp 1 \amp 0 \\ -2 \amp -7 \amp 2 \amp 0 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 0 \amp  0 \\ 0 \amp 1 \amp 0  \amp 0 \\ 0 \amp 0 \amp 1  \amp 0 \end{bmatrix}</me>
     </p>
-
-    <exercises>
-      <exercise>
-        <statement>
-          <p>
-            Ga telkens na of onderstaande vectoren lineair afhankelijk of onafhankelijk zijn.
-            <ol>
-              <li>
-                <p>
-                  <m>(-1,4,1)</m>, <m>(3,9,3)</m>, <m>(-3,5,1)</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>(1,0,0)</m>, <m>(1,1,1)</m>, <m>(0,1,2)</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>(1,2,3)</m>, <m>(4,5,5)</m>, <m>(2,1,0)</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>(0,1,5)</m>, <m>(1,2,8)</m>, <m>(4,-1,0)</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>(2,1)</m>, <m>(4,-1)</m>, <m>(-2,2)</m>
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-        <solution>
-          <p>
-            a) afhankelijk; b) onafhankelijk; c) afhankelijk; d) onafhankelijk; e) afhankelijk
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Bepaal <m>m</m> zodat <m>(2,1,3)</m>, <m>(4,-1,0)</m>, <m>(1,m,2)</m> lineair afhankelijk zijn.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <me>
-                \begin{bmatrix} 2 \amp 4 \amp 1  \\ 1 \amp -1 \amp m  \\ 3 \amp 0 \amp 2  \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \frac{2}{3}m+\frac{1}{6} \\ 0 \amp 1 \amp -\frac{1}{3}m+\frac{1}{6} \\ 0 \amp 0 \amp -2m+\frac{3}{2}\end{bmatrix}
-            </me>
-            Het stelsel heeft een oplossing als <m>-2m+\frac{3}{2} =0 \Rightarrow m=\frac{3}{4}</m>
-          </p>
-          <p>
-            Of neem telkens het eerste en derde element van elke vector, bepaal de lineaire combinatie en gebruik deze om <m>m</m> te berekenen:
-            <me>
-              \begin{bmatrix} 2 \amp 4 \amp 1 \\ 3 \amp 0 \amp 2 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \frac{2}{3} \\ 0 \amp 1 \amp -\frac{1}{12} \end{bmatrix}
-            </me>
-            Dus <m>m=\frac{2}{3}+\frac{1}{12}=\frac{3}{4}</m>
-          </p>
-        </solution>
-      </exercise>
-    </exercises>
   </subsection>
 
   <subsection>
@@ -359,19 +191,18 @@
     Een basis voor een vectorruimte is niet uniek, maar elke basis heeft wel steeds hetzelfde aantal elementen. Dit aantal is de dimensie van de vectorruimte. Voor bovenstaand voorbeeld is de dimensie gelijk aan twee.
     </p>
 
-    <assemblage>
+    <definition>
       <title>Basis en dimensie</title>
       <p>
         <m> \lbrace v_1, v_2, \ldots, v_n \rbrace</m> is een basis van de vectorruimte <m>\mathbb{R},V,+ \Leftrightarrow</m> Elke vector van <m>V</m> is op precies één manier te schrijven als een lineaire combinatie van <m>\lbrace v_1, v_2, \ldots, v_n \rbrace</m>: <m>\exists ! \, x_1,x_2, \ldots, x_n \in \mathbb{R}: v=x_1v_1+x_2v_2+\ldots x_nv_n</m>.
       </p>
       <p>
-        Het <m>n</m>-tal <m>(x_1,x_2,\ldots,x_n)</m> noemen we de coördinaat van <m>v</m> ten
-        opzichte van de gekozen basis. <m>n</m> is de dimensie van <m>\mathbb{R},V,+ </m>: <m>\text{dim} V =n</m>.
+        Het <m>n</m>-tal <m>(x_1,x_2,\ldots,x_n)</m> noemen we de coördinaten van <m>v</m> ten opzichte van de gekozen basis. <m>n</m> is de dimensie van <m>\mathbb{R},V,+ </m>: <m>\text{dim} V =n</m>.
       </p>
       <p>
         Een verzameling van <m>n</m> lineair onafhankelijke vectoren vormt steeds een basis voor de corresponderende vectorruimte met dimensie <m>n</m>.
       </p>
-    </assemblage>
+    </definition>
 
     <example>
       <title>Veeltermen van graad hoogstens twee</title>
@@ -379,39 +210,6 @@
         De verzameling <m>\lbrace 1,x,x^2\rbrace</m> is een basis voor de vectorruimte <m>\mathbb{R},V,+</m> met <m>V=\lbrace ax^2+bx+c | a,b,c \in \mathbb{R} \rbrace</m> en de dimensie van deze vectorruimte is bijgevolg gelijk aan drie.
       </p>
     </example>
-
-    <exercises>
-      <exercise>
-        <statement>
-          <p>
-            Ga na of de vectoren <m>(2,4,-1)</m>, <m>(3,-5,6)</m> en <m>(1,13,-8)</m> een basis vormen voor <m>\mathbb{R},\mathbb{R}^3,+</m>.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Ze zijn lineair onafhankelijk en ze vormen dus een basis.
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Ga na dat de vectoren <m>(1,0,0)</m>, <m>(2,1,0)</m> en <m>(3,2,1)</m> een basis vormen voor <m>\mathbb{R},\mathbb{R}^3,+</m>. Bepaal eveneens de coördinaat van de vector <m>v=(1,1,1)</m> t.o.v. deze basis.
-
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Ze zijn lineair onafhankelijk en ze vormen dus een basis. De coördinaat
-            t.o.v. deze basis is <m>(0,-1,1)</m>:
-            <me>
-              \begin{bmatrix} 1 \amp 2 \amp 3 \amp 1 \\ 0 \amp 1 \amp 2 \amp 1 \\ 0 \amp 0 \amp 1 \amp 1 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \amp -1 \\ 0 \amp 0 \amp 1 \amp 1 \end{bmatrix}
-            </me>
-
-          </p>
-        </solution>
-      </exercise>
-    </exercises>
   </subsection>
 
   <subsection>
@@ -454,5 +252,6 @@
       Het feit dat elke <m>n</m>-dimensionale vectorruimte isomorf is met <m>\mathbb{R},\mathbb{R}^n,+</m> betekent dat het volstaat om <m>\mathbb{R},\mathbb{R}^n,+</m> grondig te bestuderen en de resultaten vervolgens te <q>vertalen</q> naar andere <m>n</m>-dimensionale vectorruimten.
     </p>
   </subsection>
+  <!--TODO Meer voorbeelden toevoegen-->
 
 </section>

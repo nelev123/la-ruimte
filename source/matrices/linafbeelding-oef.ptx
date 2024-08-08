@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Lineaire afbeeldingen</title>
+    
+    
+    <exercise>
+      <statement>
+        <p>
+          Bereken onderstaande matrix-vector producten via de definitie en de praktische regel.
+          <ol>
+            <li>
+              <p>
+                <m>\begin{bmatrix} 1 \amp 2 \amp -1 \\0 \amp -5 \amp 3\end{bmatrix} \begin{bmatrix} 4\\3\\7\end{bmatrix}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{bmatrix} 2 \amp -3 \\8 \amp 0\\-5 \amp 2 \end{bmatrix}\begin{bmatrix} 4 \\ 7\end{bmatrix}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bepaal het beeld van het vierkant met hoekpunten <m>(3,2)</m>, <m>(5,2)</m>, <m>(5,0)</m> en <m>(3,0)</m> onder een rotatie van <m>90^{\circ}</m> rond de oorsprong in tegenwijzerzin.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <m>(-2,3)</m>, <m>(-2,5)</m>, <m>(0,5)</m> en <m>(0,3)</m>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Ga na dat de matrix van een rotatie over een hoek <m>\theta</m> in tegenwijzerzin gegeven wordt door:
+          <me>
+            A=\begin{bmatrix} \cos \theta \amp -\sin \theta \\ \sin \theta \amp \cos \theta \end{bmatrix}
+          </me>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Welke lineaire transformatie wordt telkens voorgesteld door de onderstaande matrices?
+          <ol>
+            <li>
+              <p>
+                <m>\begin{bmatrix} 1 \amp 0 \\ 0 \amp 0 \end{bmatrix}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{bmatrix} 1 \amp 0 \\ 0 \amp -1 \end{bmatrix}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{bmatrix} 2 \amp 0 \\ 0 \amp 2 \end{bmatrix}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{bmatrix} 2 \amp 0 \\ 0 \amp 3 \end{bmatrix}</m>
+              </p>
+            </li>
+          </ol>
+          Je kan verder experimenteren via <url href="https://www.geogebra.org/m/BHw6fDmB"> deze link </url> en <url href="https://www.geogebra.org/m/qpuA8ASQ">
+          deze link.
+        </url>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          a) projectie op de <m>x</m>-as; b) spiegeling om de <m>x</m>-as; c) homothetie met factor <m>2</m>, i.e. herschalen met factor 2; d) herschalen met factor 2 volgens <m>x</m> en factor 3 volgens <m>y</m>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Onderzoek het effect van de lineaire transformatie, voorgesteld door de matrix
+          <me>
+            \begin{bmatrix} 1 \amp 2 \\ 0 \amp 1\end{bmatrix},
+          </me>
+          door het beeld te bepalen van het vierkant met hoekpunten <m>(3,2)</m>, <m>(5,2)</m>, <m>(5,0)</m> en <m>(3,0)</m>.  Een dergelijke tranformatie wordt scheeftrekken genoemd (Engels: shear). Controleer jezelf door de berekeningen ook eens in Geogebra uit te voeren. De matrix ingeven kan met het commando <m>M=\lbrace \lbrace 1,2 \rbrace, \lbrace 0,1 \rbrace \rbrace</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <url href="https://www.geogebra.org/geometry/gwtaz8qn"/>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Gegeven de lineaire transformatie <m>f</m> die voorgesteld wordt door de matrix
+          <me>
+            A=\begin{bmatrix} 2 \amp -2 \\ 1 \amp -1 \end{bmatrix}
+          </me>
+          Bepaal het beeld <m>f(v)</m> van een willekeurige vector <m>v=\begin{bmatrix} x \\ y \end{bmatrix}</m>. Interpreteer dit resultaat meetkundig.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <m>f(v)=(x-y)\begin{bmatrix} 2 \\ 1 \end{bmatrix}</m>, dus alle beeldpunten liggen op de rechte met richtingsvector <m>(2,1)</m>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Stel de matrix op van de lineaire afbeelding die elke <m>v \in \mathbb{R}^3</m> afbeeldt op zijn projectie volgens de <m>z</m>-as op het <m>xy</m>-vlak.
+        </p>
+      </statement>
+      <solution>
+        <m>\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix}</m>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Stel telkens de matrix op van de rotatie in <m>\mathbb{R}^3</m> over een hoek <m>\theta</m> in tegenwijzerzin rond de <m>x</m>-as, de <m>y</m>-as of de <m>z</m>-as. Ga uit van een othonormaal assenstelsel.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Teken elk individueel geval en bepaal telkens grafisch <m>f(e_x)</m>, <m>f(e_y)</m> en <m>f(e_z)</m>. Dit leidt tot onderstaande matrices:
+          <ol>
+            <li>
+              <p>
+                rotatie rond <m>x</m>-as:
+                <m>\begin{bmatrix} 1  \amp 0 \amp 0 \\ 0 \amp \cos \theta \amp -\sin \theta \\ 0  \amp \sin \theta
+                   \amp \cos \theta \end{bmatrix}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                rotatie rond <m>y</m>-as:
+                <m>\begin{bmatrix} \cos \theta  \amp 0 \amp \sin \theta \\ 0 \amp 1 \amp 0 \\  -\sin \theta \amp 0
+                   \amp \cos \theta \end{bmatrix}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                rotatie rond <m>z</m>-as:
+                <m>\begin{bmatrix} \cos \theta \amp - \sin \theta \amp 0\\ \sin \theta \amp \cos \theta \amp 0 \\  0 \amp 0
+                   \amp 1 \end{bmatrix}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>u</m> en <m>v</m> zijn twee lineair onafhankelijke vectoren in <m>\mathbb{R}^3</m>. Een lineaire transformatie beeldt een vlak door de oorsprong met parametervergelijking <m>p = k u+l v</m> (<m>k,l \in \mathbb{R}</m>) achtereenvolgens af op
+          <ol>
+            <li>
+              <p>
+                op een vlak door de oorsprong;
+              </p>
+            </li>
+            <li>
+              <p>
+                op een rechte door de oorsprong;
+              </p>
+            </li>
+            <li>
+              <p>
+                op de oorsprong zelf.
+              </p>
+            </li>
+          </ol>
+          Wat weet je over <m>f(u)</m> en <m>f(v)</m> in elk van deze gevallen?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>f(u)</m> en <m>f(v)</m>  zijn lineair onafhankelijk
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(u)</m> en <m>f(v)</m> zijn lineair afhankelijk
+              </p>
+            </li>
+            <li>
+              <p>
+                 <m>f(u)=f(v)=o</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+  </subexercises>

@@ -8,10 +8,6 @@
     <xi:include href="./vectoren/coordinaten.ptx" />
     <xi:include href="./rechten-vlakken/parameter-rechte.ptx" />
     <xi:include href="./rechten-vlakken/parameter-vlak.ptx" />
-
-    <!-- oef kubus met parameters hernemen, stukjes Geogebra toevoegen-->
-    <!-- stel parameter en cartesische vergelijkingen op van de rechten DH, GH, EC en DB, later ook snijpunt van de diagonalen berekenen-->
-
     <xi:include href="./rechten-vlakken/ligging.ptx" />
 
     <exercises xml:id="exercises-rechten-vlakken">

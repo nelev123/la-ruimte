@@ -33,6 +33,17 @@
         We vinden een oplossing voor <m>k</m> en <m>m</m> en het punt <m>(3,3,1)</m> behoort dus tot het vlak.
       </p>
     </example>
+
+    <activity>
+      <statement>
+        <p>
+          Beschouw onderstaande kubus. Kies een geschikt assenstelsel en stel parametervoorstellingen op van de rechten <m>DH</m>, <m>GH</m>, <m>EC</m> en <m>DB</m>.
+        </p>
+        <sidebyside width="70%">
+          <image source="vectorvgl-vlak-kubus-2.png"/>
+        </sidebyside>
+      </statement>
+    </activity>
     
   </subsection>
 

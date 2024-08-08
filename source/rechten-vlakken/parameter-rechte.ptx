@@ -113,6 +113,18 @@
         </me> 
       </p>
     </example> 
+
+    <activity xml:id="activ-kubus-1">
+      <statement>
+        <p>
+          Beschouw onderstaande kubus. Kies een geschikt assenstelsel en stel parametervoorstellingen op van de rechten <m>DG</m>, <m>DH</m>, <m>GH</m>, <m>EC</m> en <m>DB</m>.
+        </p>
+        <sidebyside width="70%">
+          <image source="vectorvgl-vlak-kubus-2.png"/>
+        </sidebyside>
+      </statement>
+    </activity>
+    
   </subsection>
 
   <subsection xml:id="subsec-cartesisch-rechte">
@@ -219,6 +231,18 @@
        </me>
       </p>
     </example>
+
+    <activity xml:id="activ-kubus-2">
+      <statement>
+        <p>
+          Beschouw opnieuw onderstaande kubus. Bepaal de cartesische vergelijkingen van de rechten <m>DG</m>, <m>DH</m>, <m>GH</m>, <m>EC</m> en <m>DB</m>.
+        </p>
+        <sidebyside width="70%">
+          <image source="vectorvgl-vlak-kubus-2.png"/>
+        </sidebyside>
+      </statement>
+    </activity>
+
   </subsection>
 
   <subsection>

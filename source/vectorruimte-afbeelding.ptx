@@ -5,9 +5,10 @@
 <title>Vectorruimten en lineaire afbeeldingen</title>
 
 <xi:include href="./vectoren/vectorruimten.ptx" />
-<!-- <xi:include href="./matrices/linafbeelding.ptx" /> -->
-<exercises xml:id="exercises-">
+<xi:include href="./matrices/linafbeelding.ptx" />
+<exercises xml:id="exercises-vectorruimte-afbeelding">
     <xi:include href="./vectoren/vectorruimten-oef.ptx" />
+    <xi:include href="./matrices/linafbeelding-oef.ptx" />
 </exercises>
 
 </chapter>
