@@ -1,5 +1,6 @@
 <section>
   <title>Onderlinge ligging van rechten en vlakken</title>
+
   <paragraphs>
     <title>Twee rechten</title>
     <p>
@@ -95,6 +96,7 @@
       en dit stelsel is inderdaad strijdig.
     </p>
   </example>
+  <!--Geogebra visualisatie toevoegen-->
 
   <paragraphs>
     <title>Twee vlakken</title>
@@ -165,10 +167,10 @@
   <paragraphs>
     <title>Rechte en vlak</title>
     <p>
-      Om de gemeenschappelijke punten van een rechte en een vlak te bepalen los je het stelsel van hun cartesische vergelijkingen op. Als dit stelsel strijdig is, dan is de rechte evenwijdig met het vlak. Er geldt dan dat <m>\boxed{ua+vb+wc=0}</m> met <m>(a,b,c)</m> de richtingsgetallen van de rechte en <m>ux+vy+wz+t=0</m> de cartesische vergelijking van het vlak.
+      Om de gemeenschappelijke punten van een rechte en een vlak te bepalen los je het stelsel van hun cartesische vergelijkingen op of substitueer je een parametervoorstelling van de rechte in de cartesische vergelijking van het vlak.
     </p>
     <p>
-      Je kan ook een parametervoorstelling van de rechte substitueren in de cartesische vergelijking van het vlak en de bekomen vergelijking oplossen.  
+      Je kan echter beter eerst altijd even controleren of de rechte evenwijdig is met het vlak. Een rechte met richtingsvector <m>\vv{R}(a,b,c)</m> is evenwijdig met het vlak <m>ux+vy+wz+t=0</m> als en slechts als <m>\boxed{ua+vb+wc=0}</m>. Deze vergelijking drukt immers uit dat <m>\vv{R}</m> behoort tot het vlak <m>ux+vy+wz=0</m>.
     </p>
   </paragraphs>
 

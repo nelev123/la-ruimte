@@ -1,5 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <section>
   <title>Vectorruimten</title>
+
   <subsection>
     <title>Wat is een vector?</title>
     <aside>
@@ -10,7 +13,7 @@
     </aside>
 
     <p>
-      Een vector in de ruimte kan voorgesteld worden door een pijl of, na keuze van een assenstelsel, door zijn coördinaat. Een pijl in vier dimensies valt niet meer te visualiseren, maar het idee van een coördinaat kan wel naar hogere dimensies uitgebreid worden. Een vierdimensionale vector kan bijvoorbeeld voorgesteld worden door een geordend viertal <m>(w_1,x_1,y_1,z_1)</m>. We zouden een <m>n</m>-dimensionale vector dus kunnen definiëren als een geordend <m>n</m>-tal <m>(x_1,x_2,\ldots,x_n)</m>, maar wiskundigen houden het eigenlijk graag wat algemener.
+      Een vector in de ruimte kan voorgesteld worden door een pijl of, na keuze van een assenstelsel, door zijn coördinaten. Een pijl in vier dimensies valt niet meer te visualiseren, maar het idee van coördinaten kan wel naar hogere dimensies uitgebreid worden. Een vierdimensionale vector kan bijvoorbeeld voorgesteld worden door een geordend viertal <m>(w_1,x_1,y_1,z_1)</m>. We zouden een <m>n</m>-dimensionale vector dus kunnen definiëren als een geordend <m>n</m>-tal <m>(x_1,x_2,\ldots,x_n)</m>, maar wiskundigen houden het eigenlijk graag wat algemener.
     </p>
 
     <assemblage>
@@ -93,33 +96,6 @@
     <p>
       In dit hoofdstuk zullen we ons meestal beperken tot de vectorruimten <m>\mathbb{R},\mathbb{R}^{2,3},+</m>.
     </p>
-
-    <exercises>
-      <exercise>
-        <statement>
-          <p>
-            Gegeven de verzameling <m>V=\lbrace (x,y)| x \ge 0, y \ge 0 \rbrace</m>. Toon aan dat <m>\mathbb{R},V,+</m> geen vectorruimte is.
-           </p>
-        </statement>
-        <solution>
-          <p>
-            De scalaire vermenigvuldiging is niet gesloten: <m>k(x,y) \notin V</m> als <m>k \lt 0</m>.
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Gegeven de verzameling <m>V \subset \mathbb{R}^2</m> gevormd door alle punten van een rechte die niet door de oorsprong gaat. Toon aan dat <m>\mathbb{R},V,+</m> geen vectorruimte is.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            De optelling is niet gesloten. Grafisch is dit onmiddellijk duidelijk. Aangezien de rechte niet door de oorsprong gaat, bevat <m>V</m> ook geen neutraal element voor de optelling.
-          </p>
-        </solution>
-      </exercise>
-    </exercises>
   </subsection>
 
   <subsection>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Inleiding</title>
+    <p>
+      <dl width="narrow">
+        <li>
+           <title>notatie</title>
+           <p> In dit hoofdstuk leer je rekenen met matrices. De algemene notatie voor een <m>m \times n</m> matrix is <m>A = \begin{bmatrix} a_{11} \amp  a_{12} \amp a_{13} \amp  \ldots \amp  a_{1j} \ldots \amp  a_{1n}\\ a_{21} \amp  a_{22} \amp  a_{23} \amp  \ldots \amp  a_{2j} \ldots \amp  a_{2n}\\ \vdots \amp  \vdots \amp  \vdots \amp \ldots \amp  \vdots \amp  \vdots \\ a_{i1} \amp  a_{i2} \amp  a_{i3} \amp  \ldots \amp a_{ij} \ldots \amp  a_{in}\\ \vdots \amp  \vdots \amp  \vdots \amp  \ldots \amp  \vdots \amp  \vdots \\ a_{m1} \amp  a_{m2} \amp  a_{m3} \amp  \ldots \amp  a_{mj} \ldots \amp a_{mn}\\ \end{bmatrix}</m> of kort <m>A=[a_{ij}]</m>. De getallen <m>a_{ij}</m> noemen we de elementen van de matrix <m>A</m>. Een <m>m \times n</m> matrix <m>A</m> wordt ook een matrix met dimensie <m>m \times n</m> genoemd. De verzameling van alle <m>m \times n</m> matrices noteren we als <m>\mathbb{R}^{m \times n}</m>.
+           </p>
+        </li>
+        <li>
+          <title>vectoren</title>
+          <p>
+            Een vector <m>v \in \mathbb{R}^n</m> kan beschouwd worden als een kolomvector (<m>n \times 1</m> matrix) of een rijvector (<m>1 \times n</m> matrix).
+          </p>
+        </li>
+        <li>
+          <title>gelijke matrices</title>
+          <p>
+            Twee matrices noemen we gelijk als de overeenkomstige elementen gelijk zijn.
+            <me>
+              [a_{ij}]=[b_{ij}] \Leftrightarrow \forall i \in \lbrace 1,\ldots,m \rbrace, \forall j \in \lbrace 1,\ldots, n \rbrace : a_{ij}=b_{ij}
+            </me>
+          </p>
+        </li>
+        <li>
+          <title>lineaire afbeelding</title>
+          <p>
+            Elke matrix kan beschouwd worden als de voorstelling van een lineaire afbeelding <m>f:\mathbb{R}^n \to \mathbb{R}^m</m>, waarbij elke kolom van <m>A</m> het beeld voorstelt van de corresponderende basisvector <m>e_i</m>: <me> a_i = f(e_i) = \begin{bmatrix} a_{1i} \\ a_{2i} \\ \vdots \\ a_{mi} \end{bmatrix} \qquad (i=1,2, \ldots ,n) </me>
+          </p>
+          <p>
+             We noteren de matrix dan vaak ook als <me>A= \begin{bmatrix} a_1 \amp a_2 \amp \ldots \amp a_n \end{bmatrix} </me>. Het beeld <m>f(v)</m> van een willekeurige vector <m>v= [ x_1,x_2,\ldots,x_n] \in \mathbb{R}^n</m> is gelijk aan het matrix-vector product <m>Av</m>: <me>f(v)=Av=a_1x_1+a_2x_2+\ldots + a_n x_n</me>
+          </p>
+        </li>
+      </dl>
+    </p>
+  </section>

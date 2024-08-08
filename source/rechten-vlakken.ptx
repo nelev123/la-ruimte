@@ -17,8 +17,9 @@
     <exercises xml:id="exercises-rechten-vlakken">
       <xi:include href="./vectoren/vectorvgl-vlak-oef.ptx" />
       <xi:include href="./vectoren/coordinaten-oef.ptx" />
-      <xi:include href="rechten-vlakken/rechte-oef.ptx"/>
-      <xi:include href="rechten-vlakken/vlak-oef.ptx" />
+      <xi:include href="./rechten-vlakken/rechte-oef.ptx"/>
+      <xi:include href="./rechten-vlakken/vlak-oef.ptx" />
+      <xi:include href="./rechten-vlakken/ligging-oef.ptx" />
     </exercises>
 
 </chapter>

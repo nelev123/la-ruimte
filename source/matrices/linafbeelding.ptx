@@ -1,0 +1,356 @@
+<section>
+  <title>Lineaire afbeeldingen</title>
+  <!--TODO Even dieper ingaan op verschillende soorten functies gezien tot hiertoe. -->
+
+  <subsection>
+    <title>Definitie en inleidend voorbeeld</title>
+    <p>
+      We beschouwen de functie <m>f_1: \mathbb{R} \to \mathbb{R}: x \to 2+\sqrt{x-4}</m> en de functie <m>f_2: [4,+\infty[ \to \mathbb{R}: x \to 2+\sqrt{x-4}</m>. De functie <m>f_2</m> noemen we een afbeelding omdat elke invoerwaarde precies één beeld heeft. De functie <m>f_1</m> is geen afbeelding omdat alle invoerwaarden kleiner dan 4 geen beeld hebben.
+    </p>
+
+    <definition>
+      <title>Afbeelding</title>
+      <p>
+        Een afbeelding is een relatie tussen twee verzamelingen <m>X</m> en <m>Y</m> met de eigenschap dat aan elke <m>x \in X</m> precies één <m>y \in Y</m> gekoppeld wordt.
+      </p>
+    </definition>
+    <p>
+      In deze paragraaf bestuderen we afbeeldingen tussen twee verzamelingen van vectoren <m>V</m> en <m>W</m>. We beperken ons meestal tot de verzamelingen <m>\mathbb{R}^2</m> en/of <m>\mathbb{R}^3</m> omdat we deze afbeeldingen relatief gemakkelijk kunnen visualiseren.
+    </p>
+
+    <definition>
+      <title>Lineaire afbeelding</title>
+      <p>
+        Een afbeelding <m>f: V \to W</m> van een vectorruimte <m>\mathbb{R},V,+</m> naar een vectorruimte <m>\mathbb{R},W,+</m> noemen we lineair als een lineaire combinatie van vectoren behouden blijft:
+        <me>
+            \forall r_1,r_2 \in \mathbb{R}, \forall v_1,v_2 \in V:f(r_1v_1+r_2v_2)=r_1f(v_1)+r_2f(v_2)
+        </me>
+      </p>
+    </definition>
+    <example>
+      <title>Spiegelen over de <m>y</m>-as</title>
+      <p>
+        Stel dat <m>f</m> een spiegeling over de <m>y</m>-as is. We beschouwen de drie vectoren <m>u=(4,2)</m>, <m>v=(1,2)</m> en <m>w=\frac{1}{2}u-3v=(-1,-5)</m>. Er geldt dan dat <m>u'=f(u)=(-4,2)</m>, <m>v'=f(v)=(-1,2)</m>, <m>w'=f(w)=(1,-5)</m> en bijgevolg dat <m>f(w)=\frac{1}{2}f(u)-3f(v)</m>.
+      </p>
+      <sidebyside width="100%">
+        <image source="images/linafb1.png"/>
+      </sidebyside>
+      <p>
+        Algemeen krijgen we voor <m>v_1=(x_1,y_1)</m> en <m>v_2=(x_2,y_2)</m> dat
+        <md>
+          <mrow>f(r_1v_1+r_2v_2) = \amp \; f\left( (r_1 x_1+r_2x_2,r_1y_1+r_2y_2) \right)</mrow>
+          <mrow> = \amp  \; (-r_1 x_1-r_2x_2,r_1y_1+r_2y_2) </mrow>
+          <mrow> = \amp  \; r_1(-x_1,y_1)+r_2(-x_2,y_2) </mrow>
+          <mrow> = \amp  \; r_1f(v_1)+r_2f(v_2) </mrow>
+        </md> en <m>f</m> is bijgevolg een lineaire afbeelding.
+      </p>
+    </example>
+    <p>
+      Andere voorbeelden van lineaire afbeeldingen zijn rotaties rond de oorsprong en homothetieën met als centrum de oorsprong. Een lineaire afbeelding <alert>beeldt de oorsprong steeds op zichzelf af</alert>. Er geldt immers dat
+      <me>
+        f(v)=f(v+o)=f(v)+f(o) \Rightarrow f(o)=o
+      </me>
+      Dit betekent dat een verschuiving geen lineaire transformatie is.
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Matrixvoorstelling van een lineaire afbeelding</title>
+    <p>
+       We starten in de vectorruimte <m>\mathbb{R},\mathbb{R}^2,+</m> opgespannen door de basis <m>\lbrace e_x, e_y \rbrace</m> met <m>e_x=(1,0)</m> en <m>e_y=(0,1)</m> en beschouwen afbeeldingen van <m>\mathbb{R}^2 \to \mathbb{R}^2</m><fn>Een afbeelding van <m>V \to V</m> noemen we een transformatie.</fn>.
+    </p>
+    <p>
+      Het beeld van de vector <m>v=(3,2)</m> onder een rotatie van <m>90^{\circ}</m> rond de oorsprong in tegenwijzerzin is gelijk aan:
+      <me>
+        f(v)=f(3e_x+2e_y)=3f(e_x)+2f(e_y)
+      </me>
+      De beelden van de basisvectoren zijn eenvoudig te bepalen: <m>f(e_x)=(0,1)</m> en <m>f(e_y)=(-1,0)</m>, dus wordt het beeld van <m>v</m>:
+      <me>
+        f(v)=3(0,1)+2(-1,0)=(-2,3)
+      </me>
+    </p>
+    <sidebyside>
+      <image source="images/rotatie.png"/>
+    </sidebyside>
+    <p>
+      Deze berekening kunnen we herhalen voor een willekeurige vector <m>(x,y)</m> met als resultaat <m>f((x,y))=(-y,x)</m>. Het rekenwerk kan overzichtelijker voorgesteld worden als we de vectoren schrijven als <m>2 \times 1</m> matrices of kolomvectoren:
+      <me>
+        x \begin{bmatrix} 0\\1 \end{bmatrix} + y \begin{bmatrix} -1\\0 \end{bmatrix}=\begin{bmatrix} -y \\ x \end{bmatrix}
+      </me>
+      De rotatie wordt volledig bepaald door 4 getallen, namelijk de coördinaten van de beelden van de basisvectoren en stellen we voor door de matrix <m>A</m>:
+     <me>
+       A= \begin{bmatrix}
+       0 \amp -1 \\ 1 \amp 0\\
+       \end{bmatrix}
+     </me>
+     Het beeld <m>f(v)</m> van de vector <m>v</m> is gelijk aan de lineaire combinatie van de kolommen van <m>A</m> met de elementen van <m>v</m>.
+    </p>
+    <definition>
+      <title>Matrix-vector product</title>
+      <p>
+        Als <m>A</m> een <m>m \times n</m> (<m>m</m> rijen en <m>n</m> kolommen) matrix is, met
+        kolommen <m>a_1, a_2, \ldots a_n</m> en <m>v=(x_1,x_2,\ldots,x_n) \in \mathbb{R}^n</m>, dan definiëren we het product van de matrix <m>A</m> en de vector <m>v</m> als:
+        <me>
+          Av=a_1x_1+a_2x_2+\ldots + a_n x_n
+        </me>
+      </p>
+    </definition>
+    <p>
+      Het beeld <m>f(v)=Av</m> kunnen we dus ook als volgt noteren:
+      <me>
+        \begin{bmatrix}
+        -y\\x
+        \end{bmatrix} = \begin{bmatrix}
+        0 \amp -1 \\ 1 \amp 0\\
+        \end{bmatrix}
+        \begin{bmatrix}
+        x \\y
+        \end{bmatrix}
+      </me>
+    </p>
+
+    <assemblage>
+      <title>Beeld van een vector onder een lineaire transformatie</title>
+      <p>
+        Het beeld <m>f(v)</m> van een vector <m>v</m> onder een lineaire transformatie bepaal je als volgt:
+        <ol>
+          <li>
+            <p>
+              Bepaal het beeld van elke basisvector en plaats deze kolomsgewijs in een matrix <m>A</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Het beeld <m>f(v)</m> is gelijk aan het product <m>Av</m>: <me>f(v)=Av</me>
+            </p>
+          </li>
+        </ol>
+        Het matrix-vector product <m>Av</m> kan je op twee manier berekenen.
+        <ol>
+          <li>
+            <p>
+              Door de definitie rechtstreeks toe te passen:
+              <me>
+                  Av=a_1x_1+a_2x_2+\ldots + a_n x_n
+              </me>
+              met <m>a_i</m> (<m>i=1,2,\ldots,n</m>) de kolommen van de matrix <m>A</m> en <m>v=(x_1,x_2,\ldots,x_n)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Door toepassen van de volgende praktische regel voor het berekenen van het <m>i</m>-de element van de vector <m>f(v)</m> (<m>i=1,2,\ldots,m</m>):
+              <me>
+                f(v)_i=a_{i1}x_1+a_{i2}x_2+\ldots+a_{in}x_n
+              </me>
+              met <m>a_{ij}</m> het matrixelement op de <m>i</m>-de rij en de <m>j</m>-de kolom.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </assemblage>
+  </subsection>
+
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Bereken onderstaande matrix-vector producten via de definitie en de praktische regel.
+          <ol>
+            <li>
+              <p>
+                <m>\begin{bmatrix} 1 \amp 2 \amp -1 \\0 \amp -5 \amp 3\end{bmatrix} \begin{bmatrix} 4\\3\\7\end{bmatrix}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{bmatrix} 2 \amp -3 \\8 \amp 0\\-5 \amp 2 \end{bmatrix}\begin{bmatrix} 4 \\ 7\end{bmatrix}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bepaal het beeld van het vierkant met hoekpunten <m>(3,2)</m>, <m>(5,2)</m>, <m>(5,0)</m> en <m>(3,0)</m> onder een rotatie van <m>90^{\circ}</m> rond de oorsprong in tegenwijzerzin.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <m>(-2,3)</m>, <m>(-2,5)</m>, <m>(0,5)</m> en <m>(0,3)</m>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Ga na dat de matrix van een rotatie over een hoek <m>\theta</m> in tegenwijzerzin gegeven wordt door:
+          <me>
+            A=\begin{bmatrix} \cos \theta \amp -\sin \theta \\ \sin \theta \amp \cos \theta \end{bmatrix}
+          </me>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Welke lineaire transformatie wordt telkens voorgesteld door de onderstaande matrices?
+          <ol>
+            <li>
+              <p>
+                <m>\begin{bmatrix} 1 \amp 0 \\ 0 \amp 0 \end{bmatrix}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{bmatrix} 1 \amp 0 \\ 0 \amp -1 \end{bmatrix}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{bmatrix} 2 \amp 0 \\ 0 \amp 2 \end{bmatrix}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\begin{bmatrix} 2 \amp 0 \\ 0 \amp 3 \end{bmatrix}</m>
+              </p>
+            </li>
+          </ol>
+          Je kan verder experimenteren via <url href="https://www.geogebra.org/m/BHw6fDmB"> deze link </url> en <url href="https://www.geogebra.org/m/qpuA8ASQ">
+          deze link.
+        </url>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          a) projectie op de <m>x</m>-as; b) spiegeling om de <m>x</m>-as; c) homothetie met factor <m>2</m>, i.e. herschalen met factor 2; d) herschalen met factor 2 volgens <m>x</m> en factor 3 volgens <m>y</m>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Onderzoek het effect van de lineaire transformatie, voorgesteld door de matrix
+          <me>
+            \begin{bmatrix} 1 \amp 2 \\ 0 \amp 1\end{bmatrix},
+          </me>
+          door het beeld te bepalen van het vierkant met hoekpunten <m>(3,2)</m>, <m>(5,2)</m>, <m>(5,0)</m> en <m>(3,0)</m>.  Een dergelijke tranformatie wordt scheeftrekken genoemd (Engels: shear). Controleer jezelf door de berekeningen ook eens in Geogebra uit te voeren. De matrix ingeven kan met het commando <m>M=\lbrace \lbrace 1,2 \rbrace, \lbrace 0,1 \rbrace \rbrace</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <url href="https://www.geogebra.org/geometry/gwtaz8qn"/>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Gegeven de lineaire transformatie <m>f</m> die voorgesteld wordt door de matrix
+          <me>
+            A=\begin{bmatrix} 2 \amp -2 \\ 1 \amp -1 \end{bmatrix}
+          </me>
+          Bepaal het beeld <m>f(v)</m> van een willekeurige vector <m>v=\begin{bmatrix} x \\ y \end{bmatrix}</m>. Interpreteer dit resultaat meetkundig.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <m>f(v)=(x-y)\begin{bmatrix} 2 \\ 1 \end{bmatrix}</m>, dus alle beeldpunten liggen op de rechte met richtingsvector <m>(2,1)</m>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Stel de matrix op van de lineaire afbeelding die elke <m>v \in \mathbb{R}^3</m> afbeeldt op zijn projectie volgens de <m>z</m>-as op het <m>xy</m>-vlak.
+        </p>
+      </statement>
+      <solution>
+        <m>\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix}</m>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Stel telkens de matrix op van de rotatie in <m>\mathbb{R}^3</m> over een hoek <m>\theta</m> in tegenwijzerzin rond de <m>x</m>-as, de <m>y</m>-as of de <m>z</m>-as. Ga uit van een othonormaal assenstelsel.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Teken elk individueel geval en bepaal telkens grafisch <m>f(e_x)</m>, <m>f(e_y)</m> en <m>f(e_z)</m>. Dit leidt tot onderstaande matrices:
+          <ol>
+            <li>
+              <p>
+                rotatie rond <m>x</m>-as:
+                <m>\begin{bmatrix} 1  \amp 0 \amp 0 \\ 0 \amp \cos \theta \amp -\sin \theta \\ 0  \amp \sin \theta
+                   \amp \cos \theta \end{bmatrix}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                rotatie rond <m>y</m>-as:
+                <m>\begin{bmatrix} \cos \theta  \amp 0 \amp \sin \theta \\ 0 \amp 1 \amp 0 \\  -\sin \theta \amp 0
+                   \amp \cos \theta \end{bmatrix}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                rotatie rond <m>z</m>-as:
+                <m>\begin{bmatrix} \cos \theta \amp - \sin \theta \amp 0\\ \sin \theta \amp \cos \theta \amp 0 \\  0 \amp 0
+                   \amp 1 \end{bmatrix}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>u</m> en <m>v</m> zijn twee lineair onafhankelijke vectoren in <m>\mathbb{R}^3</m>. Een lineaire transformatie beeldt een vlak door de oorsprong met parametervergelijking <m>p = k u+l v</m> (<m>k,l \in \mathbb{R}</m>) achtereenvolgens af op
+          <ol>
+            <li>
+              <p>
+                op een vlak door de oorsprong;
+              </p>
+            </li>
+            <li>
+              <p>
+                op een rechte door de oorsprong;
+              </p>
+            </li>
+            <li>
+              <p>
+                op de oorsprong zelf.
+              </p>
+            </li>
+          </ol>
+          Wat weet je over <m>f(u)</m> en <m>f(v)</m> in elk van deze gevallen?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>f(u)</m> en <m>f(v)</m>  zijn lineair onafhankelijk
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(u)</m> en <m>f(v)</m> zijn lineair afhankelijk
+              </p>
+            </li>
+            <li>
+              <p>
+                 <m>f(u)=f(v)=o</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+  </exercises>

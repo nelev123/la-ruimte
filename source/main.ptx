@@ -104,8 +104,8 @@
 
     <xi:include href="./stelsels.ptx"/>
     <xi:include href="./rechten-vlakken.ptx"/>
+    <xi:include href="./vectorruimte-afbeelding.ptx"/>
     <!-- <xi:include href="./matrices.ptx"/> -->
-    <!-- <xi:include href="./vectorruimte-afbeelding.ptx"/> -->
     <!-- <xi:include href="./rechten-vlakken/orthonormaal.ptx"/> -->
 
     <backmatter xml:id="backmatter">

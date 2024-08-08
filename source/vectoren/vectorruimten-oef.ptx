@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Vectorruimten</title>
+
+    <exercise>
+        <statement>
+          <p>
+            Gegeven de verzameling <m>V=\lbrace (x,y)| x \ge 0, y \ge 0 \rbrace</m>. Toon aan dat <m>\mathbb{R},V,+</m> geen vectorruimte is.
+           </p>
+        </statement>
+        <solution>
+          <p>
+            De scalaire vermenigvuldiging is niet gesloten: <m>k(x,y) \notin V</m> als <m>k \lt 0</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Gegeven de verzameling <m>V \subset \mathbb{R}^2</m> gevormd door alle punten van een rechte die niet door de oorsprong gaat. Toon aan dat <m>\mathbb{R},V,+</m> geen vectorruimte is.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            De optelling is niet gesloten. Grafisch is dit onmiddellijk duidelijk. Aangezien de rechte niet door de oorsprong gaat, bevat <m>V</m> ook geen neutraal element voor de optelling.
+          </p>
+        </solution>
+      </exercise>
+    
+</subexercises>

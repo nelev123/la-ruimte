@@ -1,5 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <section>
   <title>Parametervoorstelling en cartesische vergelijking van een vlak</title>
+  
   <subsection>
     <title>Van vectoriële vergelijking naar parametervoorstelling</title>
     <p>
@@ -41,7 +44,7 @@
         <me>
           \begin{cases} k=x-4 \\ y=-k+2m \\ m = z \end{cases}
         </me> 
-        Hieruit volgt dat de cartesiche vergelijking gelijk is aan <m>y=-x+4+2z</m>.
+        Hieruit volgt dat de cartesische vergelijking gelijk is aan <m>y=-x+4+2z</m>.
       </p>
     </example>
 
@@ -64,13 +67,9 @@
         <me>
           z-2-2x-y = 0 \Leftrightarrow 2x+y-z+2=0
         </me>
-        en we krijgen de cartesische vergelijking van het vlak. De cartesisch vergelijking is opnieuw de coëxistentievoorwaarde van het stelsel parametervergelijkingen. Enkel als aan deze voorwaarde voldaan is, heeft het stelsel parametervergelijkingen een oplossing. <!--in k,m vlak drie rechten door hetzelfde punt-->    
+        en we krijgen de cartesische vergelijking van het vlak. De cartesische vergelijking is opnieuw de coëxistentievoorwaarde van het stelsel parametervergelijkingen. Enkel als aan deze voorwaarde voldaan is, heeft het stelsel parametervergelijkingen een oplossing. 
     </p>
     </example>
-
-
-<!-- Stelsel in k, m, unieke oplossing, rang moet 2 zijn of 1 van de drie vergelijkingen moet een lineire combinatie zijn van de andere twee. Deze voorwaarde noemen we de coexistentievoorwaarde als hier niet aan voldaan is, dan is het stelsel strijdig. De cartesische vergelijking is dus niets anders dan deze coexistentievoorwaarde-->
-    
   </subsection>
 
   <subsection>

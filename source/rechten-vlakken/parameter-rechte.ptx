@@ -1,15 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <section xml:id="sec-parameter-rechte">
   <title>Parametervoorstelling en cartesische vergelijkingen van een rechte</title>
 
   <subsection>
     <title>Van vectoriële vergelijking naar parametervoorstelling</title>
     <p>
-      We kiezen nu een affien assenstelsel. De richtingsvector <m>\vv{R}</m> is ondubbelzinnig bepaald door zijn coördinaat t.o.v. dit assenstelsel:
+      We kiezen nu een affien assenstelsel. De richtingsvector <m>\vv{R}</m> is ondubbelzinnig bepaald door zijn coördinaten t.o.v. dit assenstelsel:
         <me>co(\vv{R})=(a,b,c) \qquad \neg(a=b=c=0)</me>
-       We noemen deze coördinaat een stel <term>richtingsgetallen</term> van de rechte met vectoriële vergelijking
+       We noemen <m>(a,b,c)</m> een stel <term>richtingsgetallen</term> van de rechte met vectoriële vergelijking
       <m>
         \vv{P}=\vv{P_1}+k\vv{R}
-      </m>. Deze rechte heeft oneindig veel richtingsgetallen aangezien elke vector die een veelvoud is van <m>\vv{R}</m> eveneens een richtingsvector is van de rechte.
+      </m>. Een rechte heeft oneindig veel richtingsgetallen aangezien elke vector die een veelvoud is van <m>\vv{R}</m> eveneens een richtingsvector is van de rechte.
     </p>
 
     <aside>
@@ -31,14 +33,13 @@
     </assemblage>
 
     <p>
-      We beschouwen de rechte <m>r</m> die gaat door het punt <m>P_1(x_1,y_1,z_1)</m> en evenwijdig is met de vector <m>\vv{R}(a,b,c)</m>. De coördinaat van een willekeurig punt <m>P(x,y,z)</m> van deze rechte is dan
+      We beschouwen de rechte <m>r</m> die gaat door het punt <m>P_1(x_1,y_1,z_1)</m> en evenwijdig is met de vector <m>\vv{R}(a,b,c)</m>. De coördinaten van een willekeurig punt <m>P(x,y,z)</m> van deze rechte zijn dan
       <md>
         <mrow>\amp co(\vv{P})=co(\vv{P_1})+k \cdot co(\vv{R}) </mrow>
         <mrow>\Leftrightarrow \amp (x,y,z)=(x_1,y_1,z_1)+k(a,b,c)</mrow>
         <mrow>\Leftrightarrow \amp \boxed{\begin{cases} x = x_1+k \cdot a \\ y=y_1+k \cdot b \\ z=z_1+k \cdot c  \end{cases} }\qquad (k \in \mathbb{R})</mrow>
       </md>
-      We noemen dit stelsel een stelsel parametervergelijkingen of een parametervoorstelling van de rechte <m>r</m>. Elke waarde van de parameter <m>k</m> correspondeert met een punt van de rechte en
-      omgekeerd. De parametervoorstelling definieert dus een functie van <m>\mathbb{R} \rightarrow \mathbb{R}^2</m>.
+      Dit is de parametervoorstelling van de rechte <m>r</m>.
     </p>
 
     <p>
@@ -111,7 +112,6 @@
           \end{cases} \qquad (k \in \mathbb{R})
         </me> 
       </p>
-      <!--intermezzo: elke parametervergelijking bepaald een functie. x y of x in functie van k. Lineaire functies, dus x(k) grafiek stelt een rechte voor. Drie lineaire functie, samen een functie van R naar R^3. Rechte in de ruimte. Rechte. Grafische weergave van rechtlijnige beweging met constante snelheid-->
     </example> 
   </subsection>
 
@@ -119,7 +119,7 @@
     <title>Van parametervoorstelling naar cartesische vergelijkingen</title>
     <example>
     <p>
-        Het stelsel cartesische vergelijkingen van de rechte vinden we door een parametervoorstelling te beschouwen als een stelsel in <m>k</m> en de voorwaarde op te stellen waarvoor dit stelsel een unieke oplossing heeft <mdash/> we noemen dit het elimineren van de parameter. We lossen dus elke parametervergelijking eerst op naar <m>k</m> en drukken vervolgens uit dat de oplossing uniek moet zijn. Voor de rechte met parametervoorstelling
+        Een stelsel <fn>Je hebt twee lineaire vergelijkingen nodig omdat een rechte de doorsnede is van twee vlakken.</fn> cartesische vergelijkingen van een rechte vinden we door een parametervoorstelling te beschouwen als een stelsel in <m>k</m> en de voorwaarde op te stellen waarvoor dit stelsel een unieke oplossing heeft <mdash/> we noemen dit het elimineren van de parameter. We lossen dus elke parametervergelijking eerst op naar <m>k</m> en drukken vervolgens uit dat de oplossing uniek moet zijn. Voor de rechte met parametervoorstelling
         <me>
           \begin{cases}
           x=-2+6k \\
@@ -151,7 +151,7 @@
       <me>
          \begin{cases} x = x_1+k \cdot a \\ y=y_1+k \cdot b \\ z=z_1+k \cdot c \end{cases} \quad (k \in \mathbb{R})
       </me> 
-      Om de cartesische vergelijking te bepalen elimineren we de parameter <m>k</m>.
+      Om de cartesische vergelijkingen te bepalen elimineren we de parameter <m>k</m>.
       <me>
         \begin{cases} k = \dfrac{x-x_1}{a} \\ k = \dfrac{y-y_1}{b} \\ k = \dfrac{z-z_1}{c} \end{cases} \Leftrightarrow \boxed{\frac{x-x_1}{a}=\frac{y-y_1}{b}=\frac{z-z_1}{c}}
       </me>
@@ -182,21 +182,23 @@
       </p>
     </example>
 
-    <p>
-      De parametervoorstelling <m> \begin{cases} x = x_1+k \cdot a \\ y=y_1+k \cdot b \\ z=z_1+k \cdot c \end{cases} \quad (k \in \mathbb{R})
-      </m> kan beschouwd worden als een <m>3 \times 1</m> stelsel in de onbekende <m>k</m> met als uitgebreide matrix <m>\begin{bmatrix} a \amp  x-x_1 \\ b \amp  y-y_1 \\ c \amp z-z_1 \end{bmatrix}</m>. We bepalen de rij-canonieke vorm 
-      <me>
-        \begin{bmatrix} a \amp  x-x_1 \\ b \amp  y-y_1 \\ c \amp z-z_1 \end{bmatrix} \sim \begin{bmatrix} 1 \amp  \frac{x-x_1}{a} \\ 0 \amp  y-y_1-\frac{b}{a}(x-x_1) \\ 0 \amp z-z_1-\frac{c}{a}(x-x_1) \end{bmatrix}
-      </me>
-      Het stelsel heeft precies één oplossing als <m>r(A)=r(A_b)=1</m> en dus moet er gelden dat
-      <me>
-        \begin{cases}
-         y-y_1-\frac{b}{a}(x-x_1) = 0 \\ z-z_1-\frac{c}{a}(x-x_1) = 0 
-        \end{cases}   \Leftrightarrow \begin{cases} \dfrac{x-x_1}{a}=\dfrac{y-y_1}{b}\\   \dfrac{x-x_1}{a}=\dfrac{z-z_1}{c} \end{cases}
-      </me>
-      en we krijgen opnieuw de standaardvorm van het stelsel cartesische vergelijkingen van een rechte. We noemen het stelsel cartesische vergelijkingen de <term>coëxistentievoorwaarde</term> van het stelsel parametervergelijkingen, d.w.z. dat het stelsel parametervergelijkingen slechts een oplossing heeft als aan deze voorwaarde voldaan is. 
-      <!-- verband tussen x,y en z -->
-    </p>
+    <remark>
+      <p>
+        De parametervoorstelling <m> \begin{cases} x = x_1+k \cdot a \\ y=y_1+k \cdot b \\ z=z_1+k \cdot c \end{cases} \quad (k \in \mathbb{R})
+        </m> kan beschouwd worden als een <m>3 \times 1</m> stelsel in de onbekende <m>k</m> met als uitgebreide matrix <m>\begin{bmatrix} a \amp  x-x_1 \\ b \amp  y-y_1 \\ c \amp z-z_1 \end{bmatrix}</m>. We bepalen de rij-canonieke vorm 
+        <me>
+          \begin{bmatrix} a \amp  x-x_1 \\ b \amp  y-y_1 \\ c \amp z-z_1 \end{bmatrix} \sim \begin{bmatrix} 1 \amp  \frac{x-x_1}{a} \\ 0 \amp  y-y_1-\frac{b}{a}(x-x_1) \\ 0 \amp z-z_1-\frac{c}{a}(x-x_1) \end{bmatrix}
+        </me>
+        Het stelsel heeft precies één oplossing als <m>r(A)=r(A_b)=1</m> en dus moet er gelden dat
+        <me>
+          \begin{cases}
+           y-y_1-\frac{b}{a}(x-x_1) = 0 \\ z-z_1-\frac{c}{a}(x-x_1) = 0 
+          \end{cases}   \Leftrightarrow \begin{cases} \dfrac{x-x_1}{a}=\dfrac{y-y_1}{b}\\   \dfrac{x-x_1}{a}=\dfrac{z-z_1}{c} \end{cases}
+        </me>
+        en we krijgen opnieuw de standaardvorm van het stelsel cartesische vergelijkingen. We noemen het stelsel cartesische vergelijkingen de <term>coëxistentievoorwaarde</term> van het stelsel parametervergelijkingen, d.w.z. dat het stelsel parametervergelijkingen slechts een oplossing heeft als aan deze voorwaarde voldaan is. 
+      </p>
+    </remark>
+
     <example>
       <p>
         Gegeven de rechte met parametervoorstelling
@@ -215,7 +217,6 @@
          y-2-3z=0 \\ x-1-2z=0
         \end{cases}   \Leftrightarrow \begin{cases} y-3z=2 \\ x-2z=1  \end{cases}
        </me>
-       <!-- slechts 1 onafhankelijke vergelijking, andere twee zijn lineaire combinaties-->
       </p>
     </example>
   </subsection>
@@ -269,7 +270,7 @@
         <me>
           \begin{cases} x-2z=1 \\ y-3z=2 \end{cases}
         </me>
-        Hieruit kan nu snel de standaardvorm<fn><m>\frac{x-x_1}{a}=\frac{y-y_1}{b}=\frac{z-z_1}{c} </m></fn> van de rechte afgeleid worden:
+        Hieruit kan nu snel de standaardvorm<fn><m>\frac{x-x_1}{a}=\frac{y-y_1}{b}=\frac{z-z_1}{c} </m></fn> van de cartesische vergelijkingen afgeleid worden:
         <me>
           \begin{cases} x-1=2z \\ y-2=3z \end{cases} \Leftrightarrow \frac{x-1}{2}=\frac{y-2}{3}=z
         </me>

@@ -1,0 +1,320 @@
+  <section>
+    <title>Matrices en stelsels</title>
+    <introduction>
+      <example>
+        <p>
+          We beschouwen alle parabolen met de algemene vergelijking <m>y=ax^2+bx+c</m>. Er gaat slechts één van deze parabolen door de punten <m>(-1,-5)</m>, <m>(1,-6)</m> en <m>(3,-3)</m>. Om die parabool te bepalen moeten we onderstaand stelsel oplossen:
+          <me>
+            \begin{cases}
+            a-b+c=-5\\
+            a+b+c=-6\\
+            9a+3b+c=-3
+            \end{cases}
+          </me>
+          Dit stelsel kan geschreven worden als een matrix-vector vermenigvuldiging:
+          <md>
+            <mrow>
+              \amp \begin{bmatrix} 1 \\ 1 \\ 9 \end{bmatrix} a + \begin{bmatrix} -1 \\ 1\\ 3 \end{bmatrix} b + \begin{bmatrix}1 \\ 1 \\ 1 \end{bmatrix}  c
+              = \begin{bmatrix} -5 \\ -6 \\ -3 \end{bmatrix}
+            </mrow>
+            <mrow>
+             \Leftrightarrow \;  \amp \begin{bmatrix} 1 \amp -1 \amp 1 \\ 1 \amp 1 \amp 1 \\ 9 \amp 3 \amp
+                1 \end{bmatrix} \begin{bmatrix} a \\ b \\ c \end{bmatrix}
+              = \begin{bmatrix} -5 \\ -6 \\ -3 \end{bmatrix}
+            </mrow>
+          </md>
+        </p>
+      </example>
+
+      <assemblage>
+        <title>Matrixvorm van een stelsel</title>
+        <p>
+          Een <m>m \times n</m> stelsel lineaire vergelijkingen kan in matrixvorm geschreven worden als
+          <me>Ax=b</me> De <m>m \times n</m> matrix <m>A</m> noemen we de coëfficiëntenmatrix, de <m>n \times 1</m> kolommatrix <m>x</m> bevat de onbekenden en de <m>n \times 1</m> kolommatrix <m>b</m> de rechterleden. </p>
+      </assemblage>
+    </introduction>
+
+    <subsection>
+      <title>Oplosbaarheid van stelsels</title>
+      <p>
+        We beginnen met enkele beschouwingen naar analogie met functies van <m>\mathbb{R} \to \mathbb{R}</m>.
+      </p>
+      <sidebyside widths="47% 50%" margins="0% 0%" valign="top">
+        <p>
+          Gegeven de functie van <m>\mathbb{R} \to \mathbb{R}</m> met functievoorschrift <m>f(x)=\sqrt{x-3}</m>.
+          <ul>
+            <li>
+              <p>
+                Het oplossen van de vergelijking <m>f(x)=b</m> komt neer op het bepalen van de reële getallen <m>x</m> die door de functie afgebeeld worden op het reële getal <m>b</m>. De vergelijking <m>f(x)=b</m> is dus oplosbaar als <m>b \in ber f</m>. Dit geldt bijvoorbeeld voor <m>\sqrt{x-3}=2</m>, maar niet voor <m>\sqrt{x-3}=-2</m>.
+                <me>
+                  \sqrt{x-3}=2 \Leftrightarrow x = 7
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                Het functievoorschrift van de inverse functie is <m>f^{-1}(y)=y^2+3</m> met <m>y \ge 0</m> en de oplossing van de vergelijking <m>\sqrt{x-3}=2</m> is gelijk aan de functiewaarde <m>f^{-1}(2)=7</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Als de functie <m>f</m> geen bijectie is, dan kan de vergelijking <m>f(x)=b</m> meer dan één oplossing hebben. Dit is bijvoorbeeld het geval voor de vergelijking <m>x^2+3=12</m>. Deze vergelijking heeft twee oplossingen, <m>x=\pm 3</m>, omdat de funtie <m>x^2</m> enkel kan geïnverteerd worden na het opsplitsen van het domein.
+              </p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          Gegeven de lineaire afbeelding <m>f</m> voorgesteld door de matrix
+          <me>
+            A = \begin{bmatrix} 1 \amp -1 \amp 1 \\ 1 \amp 1 \amp 1 \\ 9 \amp 3 \amp 1 \end{bmatrix}
+          </me>
+          <ul>
+            <li>
+              <p>
+                Het oplossen van het stelsel <m>Ax=b</m> komt neer op het bepalen van de vectoren <m>x</m> die door de functie afgebeeld worden op de vector <m>b</m>. We schrijven het matrix-vector product <m>Ax</m> expliciet als een lineaire combinatie van de kolommen van <m>A</m>
+                <me>
+                  \begin{bmatrix} 1 \\ 1 \\ 9 \end{bmatrix} x_1 +
+                  \begin{bmatrix} -1 \\ 1 \\ 3 \end{bmatrix} x_2 +
+                  \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} x_3 = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix}
+                </me>
+                en zien onmiddellijk dat het stelsel een unieke oplossing heeft als de vector <m>b</m> op precies één manier kan geschreven worden als een lineaire combinatie van de kolommen van <m>A</m>. Aangezien de kolommen van <m>A</m> lineair onafhankelijke vectoren zijn, is dit in dit geval mogelijk voor elke vector <m>b</m>. We kiezen <m>b=[-5,-6,-3]^T</m> en gebruiken de Gauss-Jordan eliminatiemethode om het stelsel op te lossen.
+                <me>
+                  \begin{bmatrix} 1 \amp -1 \amp 1 \amp -5 \\ 1 \amp 1 \amp 1 \amp -6\\ 9 \amp 3 \amp 1 \amp -3\end{bmatrix}\sim \begin{bmatrix} 1 \amp 0 \amp 0 \amp 0,5 \\ 0 \amp 1 \amp 0 \amp -0,5\\ 0 \amp 0 \amp 1 \amp -6\end{bmatrix}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                Net zoals het oplossen van de vergelijking <m>f(x)=b</m> eigenlijk neerkomt op het stapsgewijs bepalen van de functiewaarde <m>f^{-1}(b)</m>, is de Gauss-Jordan eliminatiemethode een manier om stapsgewijs <m>x=f^{-1}(b)=A^{-1}b</m> te bepalen als <m>b</m> een vector is. De matrix <m>A^{-1}</m> noemen we de inverse matrix van <m>A</m> en is de voorstelling van de inverse lineaire afbeelding <m>f^{-1}</m>. Als <m>A^{-1}</m> bestaat (zie later), geldt dus <me> A x = b \Leftrightarrow A^{-1}A x = A^{-1} b \Leftrightarrow x = A^{-1}b</me>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </sidebyside>
+      <assemblage>
+        <title>Twee equivalente problemen</title>
+        <p>
+          Gegeven de vectoren <m>a_1</m>, <m>a_2</m>, <m>\ldots</m>, <m>a_n \in \mathbb{R}^m</m>, en
+          een vector <m>b</m> die ook een element is van <m>\mathbb{R}^m</m>. De volgende
+          twee problemen zijn equivalent:
+          <ul>
+            <li>
+              <p>
+                De vector <m>b</m> schrijven als een lineaire combinatie van <m>\lbrace a_1, a_2, \ldots, a_n \rbrace</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Het oplossen van het stelsel <m>\begin{bmatrix} a_1 \amp a_2 \amp \ldots \amp a_n \end{bmatrix} x = b</m>.
+              </p>
+            </li>
+          </ul>
+          <me>A x = b \text{ heeft een oplossing } \Leftrightarrow b \in \text{
+            Span}\lbrace a_1,a_2,\ldots, a_n \rbrace
+          </me>
+        </p>
+      </assemblage>
+
+      <p>
+        Een <m>m \times n</m> stelsel lineaire vergelijkingen <m>A x = b</m> heeft een oplossing als en slechts als <m>b \in \text{ Span}\lbrace a_1,a_2,\ldots a_n \rbrace</m>, waarbij <m>a_1,a_2,\ldots,a_n</m> de kolomvectoren van de matrix <m>A</m> zijn.
+        <dl width="narrow">
+          <li>
+            <title><m>m=n</m></title>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    Als <m>b</m> niet behoort tot <m>\text{ Span}\lbrace a_1,a_2,\ldots a_n \rbrace</m>,  dan zijn de kolomvectoren sowieso lineair afhankelijk.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Als <m>b</m> behoort tot <m>\text{ Span}\lbrace a_1,a_2,\ldots a_n \rbrace</m>, dan heeft het stelsel
+                    <ul>
+                      <li>
+                        <p>
+                          een unieke oplossing als alle kolomvectoren lineair onafhankelijk zijn. De verzameling <m>\lbrace a_1, a_2, \ldots, a_n \rbrace</m> is dan immers een basis voor de vectorruimte <m>\mathbb{R},\mathbb{R}^n,+</m> en <m>b</m> kan op een unieke manier geschreven worden als een lineaire combinatie van de kolomvectoren.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                            een oneindig aantal oplossingen als de kolomvectoren lineair afhankelijk zijn. De verzameling <m>\lbrace a_1, a_2, \ldots, a_n \rbrace</m> is dan immers geen basis voor de vectorruimte en <m>b</m> kan dan op een oneindig aantal manieren geschreven worden als een lineaire combinatie van de kolomvectoren.
+                        </p>
+                      </li>
+                    </ul>
+                  </p>
+                </li>
+              </ul>
+              We illustreren dit a.h.v. het bovenstaande stelsel voorgesteld door de matrix
+              <me>
+                \begin{bmatrix} 1 \amp -1 \amp 1 \amp -5 \\ 1 \amp 1 \amp 1 \amp -6\\ 9 \amp 3 \amp 1 \amp -3\end{bmatrix}
+              </me>
+              Als we deze matrix herleiden tot zijn rij-canonieke vorm, dan zien we dat de kolomvectoren lineair onafhankelijk zijn en het stelsel precies één oplossing heeft:
+              <me>
+              \sim  \begin{bmatrix} 1 \amp 0 \amp 0 \amp 0,5 \\ 0 \amp 1 \amp 0 \amp -0,5\\ 0 \amp 0 \amp 1 \amp -6\end{bmatrix} \Rightarrow V= \left \lbrace  \left (\frac{1}{2},-\frac{1}{2},-6 \right ) \right \rbrace </me>
+              We vervangen nu de derde vergelijking door een lineaire combinatie van de eerste twee:
+              <me>
+                \begin{bmatrix} 1 \amp -1 \amp 1 \amp -5 \\ 1 \amp 1 \amp 1 \amp -6\\ 2 \amp 0 \amp 2 \amp -11\end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 1 \amp -5,5 \\ 0 \amp 1 \amp 0 \amp -0,5\\ 0 \amp 0 \amp 0 \amp 0\end{bmatrix}
+              </me>
+              Er zijn nu slechts twee lineair onafhankelijke kolomvectoren en het stelsel heeft een oneindig aantal oplossingen: <m>V= \left \lbrace \left (-\frac{11}{2}-k,-\frac{1}{2},k \right ) |k \in \mathbb{R} \right \rbrace</m>. Tenslotte maken we het stelsel strijdig
+              <me>
+                \begin{bmatrix} 1 \amp -1 \amp 1 \amp -5 \\ 1 \amp 1 \amp 1 \amp -6\\ 1 \amp -1 \amp 1 \amp -3\end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 1 \amp 0 \\ 0 \amp 1 \amp 0 \amp 0\\ 0 \amp 0 \amp 0 \amp 1\end{bmatrix}
+             </me>
+             Er zijn opnieuw slechts twee lineair onafhankelijke kolomvectoren, maar het stelsel heeft nu geen oplossingen omdat <m>b</m> niet behoort tot <m>\text{ Span}\lbrace a_1,a_2,\ldots a_n \rbrace</m>. Als we het aantal lineair onafhankelijke kolomvectoren van de matrix <m>A</m> vergelijken met het aantal lineair onafhankelijke kolomvectoren van de uitgebreide matrix <m>[A \quad b]</m>, dan is dit aantal voor het eerste en het tweede geval gelijk en voor het derde geval verschillend. Dit doet denken aan wat je als weet over het verband tussen de oplosbaarheid van een stelsel en de rang van <m>A</m> en <m>A_b</m>. De rang van een matrix is inderdaad ook gelijk aan het aantal lineair onafhankelijke kolomvectoren van die matrix.
+            </p>
+          </li>
+          <li>
+            <title><m>m \gt n</m></title>
+            <p>
+              In dit geval kunnen de <m>n</m> kolomvectoren natuurlijk nooit de vectorruimte <m>\mathbb{R},\mathbb{R}^m,+</m> opspannen. Het stelsel is strijdig tenzij <m>b \in \text{ Span} \lbrace a_1, a_2, \ldots a_n \rbrace</m> en er dus slechts <m>n</m> lineair onafhankelijke vergelijkingen zijn.
+            </p>
+            <p>
+              We kunnen het stelsel bijvoorbeeld uitbreiden met een vierde vergelijking die afhankelijk is van de eerste drie. Dit voegt geen nieuwe informatie toe en de oplossing blijft dezelfde:
+              <me>
+                \begin{bmatrix} 1 \amp -1 \amp 1 \amp -5 \\ 1 \amp 1 \amp 1 \amp -6\\ 9 \amp 3 \amp 1 \amp -3 \\ 4 \amp 2 \amp 1 \amp -5\end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 0 \amp -0,5 \\ 0 \amp 1 \amp 0 \amp 0,5\\ 0 \amp 0 \amp 1 \amp -6 \\ 0 \amp 0 \amp 0 \amp 0 \end{bmatrix}
+              </me>
+            </p>
+          </li>
+          <li>
+            <title><m>m \lt n</m></title>
+            <p>
+              De <m>n</m> kolomvectoren zijn in dit geval altijd lineair afhankelijk en het stelsel is strijdig of heeft een oneindig aantal oplossingen. Beschouw bijvoorbeeld het stelsel voorgesteld door de uitgebreide matrix
+              <me>
+                \begin{bmatrix} 1 \amp -1 \amp 1 \amp -5 \\ 1 \amp 1 \amp 1 \amp -6 \end{bmatrix}
+              </me>
+              De matrix <m>A</m> stelt een lineaire afbeelding van <m>\mathbb{R}^3 \to \mathbb{R}^2</m> voor. Elke vector van <m>\mathbb{R}^3</m> wordt dus afgebeeld op het vlak opgespannen door de vectoren <m>(1,1)</m> en <m>(-1,1)</m>. De oplossing van het stelsel bestaat nu uit alle vectoren van <m>\mathbb{R}^3</m> die afgebeeld worden op <m>(-5,-6)</m>: <me>\begin{bmatrix} 1 \amp -1 \amp 1 \amp -5 \\ 1 \amp 1 \amp 1 \amp -6 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 1 \amp -5,5 \\ 0 \amp 1 \amp 0 \amp -0,5 \end{bmatrix}</me> Dit zijn alle punten van de rechte met parametervergelijking
+              <me>
+              \begin{cases}
+              x = -\frac{11}{2} -k \\
+              y = -0,5\\
+              z = k
+              \end{cases}  \Rightarrow V= \left \lbrace \left
+                  (-\frac{11}{2}-k,-\frac{1}{2},k \right ) |k \in \mathbb{R} \right \rbrace
+              </me>
+            </p>
+          </li>
+        </dl>
+      </p>
+      <assemblage>
+        <title>Rang van een matrix en oplosbaarheid van een stelsel</title>
+        <p>
+          De rang van een matrix <m>A</m> is gelijk aan het aantal lineair onafhankelijke kolomvectoren van de matrix <m>A</m> of het aantal niet-nulrijen van de rij-canonieke matrix van <m>A</m>.
+        </p>
+        <p>
+          Gegeven het <m>m \times n</m>-stelsel
+          <me>Ax=b</me>
+          met <m>a_1, a_2, \ldots, a_n</m> de kolomvectoren van de matrix <m>A</m>. De oplossingenverzameling van dit stelsel is steeds een deelverzameling  van <m>\text{Span}\lbrace a_1,a_2,\ldots, a_n \rbrace</m> en er geldt
+          <ul>
+            <li>
+              <p>
+                <m>Ax=b</m> is strijdig <m>\Leftrightarrow</m> <m>r(A_b) \gt r(A)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>Ax=b</m> heeft precies één oplossing <m>\Leftrightarrow</m> <m>r(A_b) = r(A) =
+                n</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>Ax=b</m> heeft een oneindig aantal oplossingen <m>\Leftrightarrow</m> <m>r(A_b) = r(A) \lt n</m>
+              </p>
+            </li>
+          </ul>
+          In het laatste geval is het aantal parameters nodig om de oplossingenverzameling te beschrijven gelijk aan <m>n-r(A)</m>.
+        </p>
+      </assemblage>
+      <activity>
+        <statement>
+          <p>
+            Gegeven het stelsel <m>\begin{cases} -2x_1-5x_2+8x_3=-17 \\ x_1+3x_2-5x_3+x_4=5 \\
+            3x_1+11x_2-19x_3+7x_4=1 \\ x_1+7x_2-13x_3+5x_4=-3 \end{cases}</m>. Ga voor jezelf na dat het aantal lineair onafhankelijke kolomvectoren gelijk is aan het aantal niet-nulrijen van de rij-canonieke matrix.
+          </p>
+        </statement>
+      </activity>
+    </subsection>
+
+    <subsection>
+      <title>De inverse matrix</title>
+      <assemblage>
+        <title>Reguliere en singuliere matrices</title>
+        <p>
+          Een <m>n \times n</m> matrix is regulier als <m>r(A)=n</m>. Een reguliere matrix <m>A</m> heeft een inverse matrix <m>A^{-1}</m> en er geldt dat
+          <me>
+            AA^{-1}=A^{-1}A=I
+          </me>
+          Een matrix die niet regulier is, noemen we singulier. Een singuliere matrix kan niet geïnverteerd worden.
+        </p>
+      </assemblage>
+      <example>
+        <p>
+          Een rotatie rond de oorsprong in tegenwijzerzin over een hoek van 45<m>^{\circ}</m> wordt voorgesteld door de matrix <m>\displaystyle A=\begin{bmatrix} \frac{\sqrt{2}}{2} \amp -\frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \end{bmatrix}</m>. De inverse lineaire afbeelding is dan een rotatie over een hoek van 45<m>^{\circ}</m> in wijzerzin en wordt voorgesteld door <m>\displaystyle A^{-1}=\begin{bmatrix} \frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \\ -\frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \end{bmatrix}</m>. Er geldt dat
+           <md>
+            <mrow> \begin{bmatrix} \frac{\sqrt{2}}{2} \amp -\frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \end{bmatrix} \begin{bmatrix} \frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \\ -\frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \end{bmatrix}  = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}</mrow>
+            <mrow> \begin{bmatrix} \frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \\ -\frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \end{bmatrix} \begin{bmatrix} \frac{\sqrt{2}}{2} \amp -\frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \end{bmatrix}  = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}</mrow>
+          </md>
+        </p>
+      </example>
+      <p>
+        Er bestaan verschillende manieren om de inverse matrix te bepalen. Met behulp van een rekenmachine kan je de inverse matrix bepalen door het stelsel <m>[A I]</m> te herleiden tot de rij-canonieke vorm. Als je dan een resultaat van de vorm <m>[I B]</m> krijgt, dan weet je dat <m>B=A^{-1}</m>. Bijvoorbeeld:
+        <me>
+          \begin{bmatrix} 3 \amp 8 \amp 1 \amp 0\\ 2 \amp 5 \amp 0 \amp 1 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp -5 \amp 8 \\ 0 \amp 1 \amp 2 \amp -3 \end{bmatrix}
+        </me>
+        waaruit volgt dat <m>A^{-1}=\begin{bmatrix} -5 \amp 8 \\ 2 \amp -3 \end{bmatrix}</m> als <m>A=\begin{bmatrix} 3 \amp 8 \\ 2 \amp 5 \end{bmatrix}</m>. </p>
+        <activity>
+          <statement>
+            <p>
+              Inverteer volgende matrices indien mogelijk:
+              <ol>
+                <li>
+                  <p>
+                    <m>\begin{bmatrix} 1 \amp 2 \\ 2 \amp 4 \end{bmatrix}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\begin{bmatrix} 1 \amp 0 \amp 4 \\ 0 \amp 2 \amp 0 \\ 1 \amp 0 \amp 3 \end{bmatrix}</m> </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\begin{bmatrix} 1 \amp 2 \amp 2 \\ 3 \amp 5 \amp 5 \\ 2 \amp 7 \amp 11 \end{bmatrix}</m> </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              De eerste matrix is niet inverteerbaar. De tweede en de derde wel:
+            </p>
+            <sage>
+              <input>
+                A = matrix(2,4,[1,2,1,0,
+                                2,4,0,1])
+                B = A.rref()
+                show(A,"~",B)
+              </input>
+            </sage>
+            <sage>
+              <input>
+                A = matrix(3,6,[1,0,4,1,0,0,
+                                0,2,0,0,1,0,
+                                1,0,3,0,0,1])
+                B = A.rref()
+                show(A,"~",B)
+              </input>
+            </sage>
+            <sage>
+              <input>
+                A = matrix(3,6,[1,2,2,1,0,0,
+                                3,5,5,0,1,0,
+                                2,7,11,0,0,1])
+                B = A.rref()
+                show(A,"~",B)
+              </input>
+            </sage>
+          </solution>
+        </activity>
+    </subsection>
+
+</section>
