@@ -174,4 +174,15 @@
     </p>
   </paragraphs>
 
+  <activity>
+    <statement>
+      <p>
+        Beschouw onderstaande kubus. Kies een geschikt assenstelsel en bepaal het zwaartepunt van de driehoek <m>DGH</m> door expliciet het snijpunt van twee zwaartelijnen te berekenen. 
+      </p>
+      <sidebyside width="70%">
+        <image source="vectorvgl-vlak-kubus-2.png"/>
+      </sidebyside>
+    </statement>
+  </activity>
+
 </section>

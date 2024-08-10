@@ -2,6 +2,7 @@
   <title>Rekenen met matrices</title>
   <subsection>
     <title>Optelling en scalaire vermenigvuldiging</title>
+
     <example>
       <title>Som van twee lineaire afbeeldingen</title>
       <p>
@@ -18,6 +19,7 @@
         De lineaire afbeelding <m>(f_1+f_2)</m> wordt voorgesteld door de matrix <m>C=\begin{bmatrix} 1 \amp -1 \\ 1 \amp -1 \end{bmatrix}</m> met elke kolom van <m>C</m> de som van de overeenkomstige kolommen van <m>A</m> en <m>B</m>.
       </p>
     </example>
+
     <p>
       We bepalen nu algemeen de matrix <m>C</m> die de lineaire afbeelding <m>(f_1+f_2)</m> voorstelt met <m>f_1</m> bepaald door een matrix <m>A</m> en <m>f_2</m> bepaald door een matrix <m>B</m>:
       <md>
@@ -27,7 +29,8 @@
         <mrow>= \amp \, (A+B) v \quad \text{(definitie som van matrices)}</mrow>
       </md>
     </p>
-    <assemblage>
+
+    <definition>
       <title>Som van twee matrices</title>
       <p>
         De som van twee <m>m \times n</m> matrices <m>A</m> en <m>B</m> is een <m>m \times n</m> matrix <m>C</m> waarvan elke kolom gelijk is aan de som van de overeenkomstige kolommen van <m>A</m> en <m>B</m>:
@@ -39,11 +42,12 @@
           [c_{ij}]=[a_{ij}]+[b_{ij}]=[a_{ij}+b_{ij}] \quad \forall i \in \lbrace 1,\ldots,m \rbrace, \forall j \in \mathbb \lbrace 1,\ldots, n \rbrace
         </me>
       </p>
-    </assemblage>
+    </definition>
+
     <example>
       <title>Product van een lineaire afbeelding met een reëel getal</title>
       <p>
-        Gegeven <m>f_1:</m> rotatie rond <m>O</m> over een hoek van <m>90^{\circ}</m> in tegenwijzerzin, voorgesteld door de matrix <m>A=\begin{bmatrix} 0 \amp -1 \\ 1 \amp 0 \end{bmatrix}</m> en een reëel getal <m>\mathbb{r}</m>. We berekenen voor een willekeurige vector <m>v=\begin{bmatrix} x \\ y \end{bmatrix}</m> het beeld <m>(rf_1)(v)</m>:
+        Gegeven <m>f_1:</m> rotatie rond <m>O</m> over een hoek van <m>90^{\circ}</m> in tegenwijzerzin, voorgesteld door de matrix <m>A=\begin{bmatrix} 0 \amp -1 \\ 1 \amp 0 \end{bmatrix}</m> en een reëel getal <m>r</m>. We berekenen voor een willekeurige vector <m>v=\begin{bmatrix} x \\ y \end{bmatrix}</m> het beeld <m>(rf_1)(v)</m>:
         <md>
           <mrow>(rf_1)(v) = \; \amp r(f_1(v))</mrow>
           <mrow> = \; \amp r(Av)</mrow>
@@ -56,6 +60,7 @@
         De lineaire afbeelding <m>(rf_1)</m> wordt voorgesteld door de matrix <m>C=\begin{bmatrix} 0 \amp -r \\ r \amp 0 \end{bmatrix}</m> met elk element van <m>C</m> gelijk aan het product van <m>r</m> met het overeenkomstige element van <m>A</m>.
       </p>
     </example>
+
     <p>
       We bepalen nu opnieuw algemeen de matrix <m>C</m> die de lineaire afbeelding <m>(rf_1)</m> voorstelt met <m>f_1</m> bepaald door een matrix <m>A</m>:
       <md>
@@ -65,12 +70,14 @@
         <mrow>= \amp \, (rA) v \quad \text{(definitie product van matrix met reëel getal)}</mrow>
       </md>
     </p>
-    <assemblage>
+
+    <definition>
       <title>Product van een matrix met een reëel getal</title>
       <p>
         Het product van een <m>m \times n</m> matrix met een reëel getal is een <m>m \times n</m> matrix waarvan elk element gelijk is aan het product van het overeenkomstige element met dit reële getal: <me>r \cdot [a_{ij}]=[r \cdot a_{ij}] \quad \forall i \in \lbrace 1,\ldots,m \rbrace, \forall j \in \mathbb \lbrace 1,\ldots, n \rbrace </me>
       </p>
-    </assemblage>
+    </definition>
+
     <assemblage>
       <title>Rekenregels voor het rekenen met matrices</title>
       <p>
@@ -151,7 +158,8 @@
         <mrow>= \amp \; (AB)v \quad \text{(definitie matrixvermenigvuldiging)}</mrow>
       </md>
     </p>
-    <assemblage>
+
+    <definition>
       <title>Product van twee matrices</title>
       <p>
         Het product van een <m>p \times m</m> matrix <m>B</m> en een <m>m \times n</m> matrix <m>A</m> is een <m>p \times n</m> matrix <m>C=B \cdot A</m> waarvoor geldt dat
@@ -159,10 +167,16 @@
           \begin{bmatrix}c_1 \amp c_2 \amp \ldots \amp c_n \end{bmatrix} = \begin{bmatrix} Ba_1 \amp Ba_2 \amp \ldots \amp Ba_n \end{bmatrix}
         </me>
         Elke kolom van <m>C</m> is dus zelf een matrix-vector product.
+      </p>
+    </definition>  
+
+    <assemblage>
+      <title>Eigenschappen van de matrixvermenigvuldiging</title>
+      <p>
         <ul>
           <li>
             <p>
-              Merk op dat het product slechts gedefinieerd is als het aantal kolommen van <m>B</m> gelijk is aan het aantal rijen van <m>A</m>.
+              Het product <m>B \cdot A </m> is slechts gedefinieerd als het aantal kolommen van <m>B</m> gelijk is aan het aantal rijen van <m>A</m>.
             </p>
           </li>
           <li>
@@ -183,6 +197,7 @@
         </md>
       </p>
     </assemblage>
+    
     <example>
       <p>
         We bereken onderstaand product met de praktische regel:
@@ -223,6 +238,7 @@
         </md>
       </p>
     </example>
+
     <assemblage>
       <title>Rekenregels voor het rekenen met matrices (II)</title>
       <p>
@@ -252,14 +268,13 @@
           </li>
         </ul>
       </p>
-
     </assemblage>
-
   </subsection>
 
   <subsection>
     <title>Macht van een matrix</title>
-    <assemblage>
+
+    <definition>
       <title>Macht van een matrix</title>
       <p>
         Als <m>A</m> een <m>n \times n</m> matrix is, dan is de <m>k</m>-de macht van deze matrix per definitie gelijk aan
@@ -267,14 +282,16 @@
           A^k=\underbrace{A \cdot A \ldots A}_{k \text{ factoren}}
         </me>
       </p>
-    </assemblage>
+    </definition>
+
     <p>
-      Een matrix met een gelijk aantal rijen en kolommen noemen we ook een vierkante matrix.
+      Een matrix met een gelijk aantal rijen en kolommen noemen we ook een <term>vierkante matrix</term>.
     </p>
   </subsection>
 
   <subsection>
     <title>De getransponeerde matrix</title>
+
     <example>
       <title>Rijen i.p.v. kolommen</title>
       <p>
@@ -289,6 +306,7 @@
         De beelden van de basisvectoren vormen nu de rijen van de matrix en het vector-matrix product is gelijk aan de lineaire combinatie van de elementen van de vector met de rijen van de matrix. Wat de praktische berekening betreft, kan je natuurlijk de regel voor het vermenigvuldigen van twee matrices gebruiken.
       </p>
     </example>
+
     <assemblage>
       <title>Een matrix transponeren</title>
       <p>
@@ -306,254 +324,5 @@
       </p>
     </assemblage>
   </subsection>
-
-  <exercises>
-    <exercise>
-      <statement>
-        <p>
-          Gegeven de volgende matrices:
-          <me>
-              A= \begin{bmatrix} 4 \amp 5 \\ -6 \amp 0 \\ 1 \amp -3 \end{bmatrix} \qquad B=\begin{bmatrix} 5 \amp 6 \\ -4 \amp -2 \\ 3 \amp 0 \end{bmatrix} \qquad  C= \begin{bmatrix} 7 \amp -8 \amp 10 \\1 \amp -9 \amp 2  \end{bmatrix}
-          </me>
-          Bereken, indien gedefinieerd:
-          <ol>
-            <li>
-              <p>
-                <m>A+3B</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>A-2C</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Gegeven de matrices <m>A=\begin{bmatrix}3 \amp  -6 \\-1 \amp  2 \end{bmatrix}</m>,
-          <m>B=\begin{bmatrix}-1 \amp  1 \\3 \amp  4 \end{bmatrix}</m> en <m>C=\begin{bmatrix}
-          -3 \amp  -5 \\2 \amp  1 \end{bmatrix}</m>. Controleer dat <m>AB=AC</m> ondanks het
-          feit dat <m>B \neq C</m>.
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Gegeven de matrix <m>A=\begin{bmatrix}3 \amp -6 \\-2 \amp 4 \end{bmatrix}</m>. Bepaal een matrix <m>B</m> zodat <m>AB=O</m>. De matrix <m>B</m> moet twee verschillende kolommen hebben en geen enkel element mag gelijk zijn aan nul.
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Gegeven de volgende matrices:
-          <me>
-            A= \begin{bmatrix} 2 \amp  1 \amp  5 \\ 6 \amp  -3 \amp  4 \\ 7 \amp  0 \amp  8 \end{bmatrix}   \quad  B=\begin{bmatrix} 9 \amp  -1 \\ 11 \amp  5 \\ 0 \amp  2 \end{bmatrix} \quad  C= \begin{bmatrix} -1 \amp  0 \amp  3 \\5 \amp  4 \amp  10  \end{bmatrix} \quad  D= \begin{bmatrix} -11 \amp  7 \\ 9 \amp  -12  \end{bmatrix}
-          </me>
-          Bereken, indien gedefinieerd:
-          <ol>
-            <li>
-              <p>
-                <m>AC</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>CA</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>AB</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>AD</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>BD</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>DB</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>BC</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Gegeven de volgende matrices:
-          <me>
-            B=\begin{bmatrix} 9 \amp -1 \\ 11 \amp 5 \\ 0 \amp 2 \end{bmatrix} \qquad D= \begin{bmatrix} -11 \amp 7 \\ 9 \amp -12  \end{bmatrix}
-          </me>
-          Bereken, indien gedefinieerd:
-          <ol>
-            <li>
-              <p>
-                <m>B^2</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>D^2</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Gegeven de volgende matrices:
-          <me>
-            A= \begin{bmatrix} 4 \amp 5 \\ -6 \amp 0 \\ 1 \amp -3 \end{bmatrix}  \quad B=\begin{bmatrix} 5 \amp 6 \\ -4 \amp -2 \\ 3 \amp 0 \end{bmatrix} \quad C= \begin{bmatrix} 7 \amp -8 \amp 10 \\1 \amp -9 \amp 2  \end{bmatrix} \quad D= \begin{bmatrix} -5 \amp 1 \amp -2 \\ 3 \amp 5 \amp 6  \end{bmatrix}
-          </me>
-          Bereken, indien gedefinieerd:
-          <ol>
-            <li>
-              <p>
-                <m>A+D^T</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>A^T-2(C-2D)</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                 <m>2B-3C^T</m>
-               </p>
-             </li>
-             <li>
-              <p>
-                 <m>A-3(B^T+D)</m>
-               </p>
-             </li>
-             <li>
-              <p>
-                 <m>B^TA</m>
-               </p>
-             </li>
-             <li>
-              <p>
-                 <m>C^TD</m>
-               </p>
-             </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Gegeven:
-          <me>
-            A=\begin{bmatrix} 2 \amp -3 \\ 1 \amp 0 \end{bmatrix} \quad B=\begin{bmatrix} 5 \amp -6 \\ 8 \amp -2 \end{bmatrix} \quad C=\begin{bmatrix} 4 \amp 8 \\ 0 \amp -9 \end{bmatrix} \quad D=\begin{bmatrix} 11 \amp -12 \\ 15 \amp 16 \end{bmatrix}
-          </me>
-          Los onderstaande matrixvergelijkingen op. Gebruik je rekenmachine.
-          <ol>
-            <li>
-              <p>
-                <m>2X-AB=C</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>X^T-4I^2=D^2-3B+2AC</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          a. <m>\begin{bmatrix}-5 \amp 1 \\\frac{5}{2} \amp -\frac{15}{2} \end{bmatrix}</m>; b.  <m>\begin{bmatrix}-54 \amp 392 \\ -220 \amp 102 \end{bmatrix}</m>
-        </p>
-      </solution>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Bepaal <m>a</m> en <m>b</m> zodat volgende uitdrukkingen zinvol zijn:
-          <ol>
-            <li>
-              <p>
-                <m>\begin{bmatrix} 2 \amp a \\ 3 \amp -1 \end{bmatrix} \begin{bmatrix} 4 \amp 1 \\ 5 \amp 0 \end{bmatrix} = \begin{bmatrix} 7a \amp 2 \\ 7 \amp a \end{bmatrix} -2I_2</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\begin{bmatrix} 2a \\ 3 \end{bmatrix} \begin{bmatrix} -4 \amp 1 \end{bmatrix} + \begin{bmatrix} -7 \amp b \\ 2 \amp 10 \end{bmatrix} = \begin{bmatrix} -23 \amp 0 \\ -3a+b \amp  13 \end{bmatrix}</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          a. <m>a=5</m>; b. <m>a=2</m> en <m>b=-4</m>
-        </p>
-      </solution>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Gegeven is de matrix <m>M=\begin{bmatrix} a \amp b \amp c \\ d \amp e \amp f \\ g \amp h \amp i \end{bmatrix}</m>.
-          <ol>
-            <li>
-              <p>
-                Met welke matrix <m>A</m> moet je <m>M</m> vermenigvuldigen zodat <m>AM=4M</m>?
-              </p>
-            </li>
-            <li>
-              <p>
-                Met welke matrix <m>B</m> moet je <m>M</m> vermenigvuldigen zodat <m>BM=\begin{bmatrix} a \amp b \amp c \\ 0 \amp 0 \amp 0 \\ 2g \amp 2h \amp 2i \end{bmatrix}</m>?
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <solution>
-        <p>
-          a. <m>A=4I_3</m>; b. <m>B=\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 2 \end{bmatrix}</m>.
-        </p>
-      </solution>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          De <m>n \times n</m> matrices <m>A</m> en <m>B</m> commuteren met elkaar enkel en alleen indien de matrices <m>A+B</m> en <m>A-B</m> met elkaar commuteren. Bewijs dit.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          <m>(A+B)(A-B)=(A-B)(A+B)</m> is equivalent met <m>AB=BA</m> (uitwerken en vereenvoudigen).
-        </p>
-      </solution>
-    </exercise>
-    <!--<m>(\star)<m> Gegeven is de matrix <m>A=\begin{bmatrix} -2 & -9  \\ 1 & 4 \end{bmatrix}<m>. Bewijs dat voor alle <m>n \in \mathbb{N}_0<m>, <m>A^n<m> de volgende vorm heeft:
-    <m><m> A^n =\begin{bmatrix} 1-3\beta_n & -9\beta_n \\ \beta_n &
-      1+3\beta_n \end{bmatrix}<m><m>
-    \noindent voor een zekere <m>\beta_n \in \mathbb{R}_0<m>. Bepaal <m>\beta_n<m> expliciet
-    als functie van <m>n<m>.-->
-  </exercises>
+  
 </section>

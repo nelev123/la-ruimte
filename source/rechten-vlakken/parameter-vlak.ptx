@@ -37,7 +37,7 @@
     <activity>
       <statement>
         <p>
-          Beschouw onderstaande kubus. Kies een geschikt assenstelsel en stel parametervoorstellingen op van de rechten <m>DH</m>, <m>GH</m>, <m>EC</m> en <m>DB</m>.
+          Beschouw onderstaande kubus. Kies een geschikt assenstelsel en stel parametervoorstellingen op van de vlakken <m>EFA</m>, <m>EFC</m> en <m>DGH</m>.
         </p>
         <sidebyside width="70%">
           <image source="vectorvgl-vlak-kubus-2.png"/>
@@ -81,6 +81,18 @@
         en we krijgen de cartesische vergelijking van het vlak. De cartesische vergelijking is opnieuw de coëxistentievoorwaarde van het stelsel parametervergelijkingen. Enkel als aan deze voorwaarde voldaan is, heeft het stelsel parametervergelijkingen een oplossing. 
     </p>
     </example>
+
+    <activity>
+      <statement>
+        <p>
+          Beschouw onderstaande kubus. Kies een geschikt assenstelsel en stel cartesische vergelijkingen op van de vlakken <m>EFA</m>, <m>EFC</m> en <m>DGH</m>.
+        </p>
+        <sidebyside width="70%">
+          <image source="vectorvgl-vlak-kubus-2.png"/>
+        </sidebyside>
+      </statement>
+    </activity>
+
   </subsection>
 
   <subsection>

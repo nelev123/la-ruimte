@@ -45,7 +45,7 @@
           <ul>
             <li>
               <p>
-                Het oplossen van de vergelijking <m>f(x)=b</m> komt neer op het bepalen van de reële getallen <m>x</m> die door de functie afgebeeld worden op het reële getal <m>b</m>. De vergelijking <m>f(x)=b</m> is dus oplosbaar als <m>b \in ber f</m>. Dit geldt bijvoorbeeld voor <m>\sqrt{x-3}=2</m>, maar niet voor <m>\sqrt{x-3}=-2</m>.
+                Het oplossen van de vergelijking <m>f(x)=b</m> komt neer op het bepalen van de reële getallen <m>x</m> die door de functie afgebeeld worden op het reële getal <m>b</m>. De vergelijking <m>f(x)=b</m> is dus oplosbaar als <m>b \in \text{ber} f</m>. Dit geldt bijvoorbeeld voor <m>\sqrt{x-3}=2</m>, maar niet voor <m>\sqrt{x-3}=-2</m>.
                 <me>
                   \sqrt{x-3}=2 \Leftrightarrow x = 7
                 </me>
@@ -160,7 +160,7 @@
               <me>
                 \begin{bmatrix} 1 \amp -1 \amp 1 \amp -5 \\ 1 \amp 1 \amp 1 \amp -6\\ 1 \amp -1 \amp 1 \amp -3\end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 1 \amp 0 \\ 0 \amp 1 \amp 0 \amp 0\\ 0 \amp 0 \amp 0 \amp 1\end{bmatrix}
              </me>
-             Er zijn opnieuw slechts twee lineair onafhankelijke kolomvectoren, maar het stelsel heeft nu geen oplossingen omdat <m>b</m> niet behoort tot <m>\text{ Span}\lbrace a_1,a_2,\ldots a_n \rbrace</m>. Als we het aantal lineair onafhankelijke kolomvectoren van de matrix <m>A</m> vergelijken met het aantal lineair onafhankelijke kolomvectoren van de uitgebreide matrix <m>[A \quad b]</m>, dan is dit aantal voor het eerste en het tweede geval gelijk en voor het derde geval verschillend. Dit doet denken aan wat je als weet over het verband tussen de oplosbaarheid van een stelsel en de rang van <m>A</m> en <m>A_b</m>. De rang van een matrix is inderdaad ook gelijk aan het aantal lineair onafhankelijke kolomvectoren van die matrix.
+             Er zijn opnieuw slechts twee lineair onafhankelijke kolomvectoren, maar het stelsel heeft nu geen oplossingen omdat <m>b</m> niet behoort tot <m>\text{ Span}\lbrace a_1,a_2,\ldots a_n \rbrace</m>. Als we het aantal lineair onafhankelijke kolomvectoren van de matrix <m>A</m> vergelijken met het aantal lineair onafhankelijke kolomvectoren van de uitgebreide matrix <m>[A \quad b]</m>, dan is dit aantal voor het eerste en het tweede geval gelijk en voor het derde geval verschillend. Dit doet denken aan wat je al weet over het verband tussen de oplosbaarheid van een stelsel en de rang van <m>A</m> en <m>A_b</m>. De rang van een matrix is inderdaad ook gelijk aan het aantal lineair onafhankelijke kolomvectoren van die matrix.
             </p>
           </li>
           <li>
@@ -237,7 +237,8 @@
 
     <subsection>
       <title>De inverse matrix</title>
-      <assemblage>
+
+      <definition>
         <title>Reguliere en singuliere matrices</title>
         <p>
           Een <m>n \times n</m> matrix is regulier als <m>r(A)=n</m>. Een reguliere matrix <m>A</m> heeft een inverse matrix <m>A^{-1}</m> en er geldt dat
@@ -246,7 +247,8 @@
           </me>
           Een matrix die niet regulier is, noemen we singulier. Een singuliere matrix kan niet geïnverteerd worden.
         </p>
-      </assemblage>
+      </definition>
+
       <example>
         <p>
           Een rotatie rond de oorsprong in tegenwijzerzin over een hoek van 45<m>^{\circ}</m> wordt voorgesteld door de matrix <m>\displaystyle A=\begin{bmatrix} \frac{\sqrt{2}}{2} \amp -\frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \end{bmatrix}</m>. De inverse lineaire afbeelding is dan een rotatie over een hoek van 45<m>^{\circ}</m> in wijzerzin en wordt voorgesteld door <m>\displaystyle A^{-1}=\begin{bmatrix} \frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \\ -\frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \end{bmatrix}</m>. Er geldt dat

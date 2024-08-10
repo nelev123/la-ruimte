@@ -9,4 +9,9 @@
 <xi:include href="./matrices/matrix-toepassingen.ptx" />
 <xi:include href="./matrices/matrixvorm-stelsel.ptx" />
 
+<exercises xml:id="exercises-matrix">
+    <xi:include href="./matrices/matrixrekenen-oef.ptx" />
+    <xi:include href="./matrices/matrix-toepassingen-oef.ptx" />
+</exercises>
+
 </chapter>

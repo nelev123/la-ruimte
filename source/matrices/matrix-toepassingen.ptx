@@ -43,6 +43,8 @@
         </me>
       </p>
     </example>
+
+    <!--TODO Voorbeelden toevoegen-->
     
     <activity>
       <statement>
@@ -78,135 +80,5 @@
         </p>
       </solution>    
     </activity>
-    <exercises>
-      <exercise>
-        <statement>
-          <p>
-             Ellen en Kasper, twee ornitologen, hebben een nieuwe vogelsoort ontdekt in het Amazonegebied. Na jaren observatie komen ze tot de volgende conclusies:
-             <ul>
-               <li>
-                 <p>
-                   slechts 40% van de eieren komt uit en bereikt de leeftijd van 1 jaar;
-                 </p>
-               </li>
-               <li>
-                 <p>
-                   de kans om het volgende levensjaar te halen is steeds 60%;
-                 </p>
-               </li>
-               <li>
-                 <p>
-                   geen enkele vogel wordt ouder dan 5 jaar;
-                 </p>
-               </li>
-               <li>
-                 <p>
-                   in het tweede en derde levensjaar legt elke vogel gemiddeld twee eieren, in het vierde levensjaar is dat gemiddeld slechts 1 ei.
-                 </p>
-               </li>
-             </ul>
-            De populatie telt momenteel 80 eenjarigen, 50 tweejarigen, 30 driejarigen, 20 vierjarigen en 180 eieren. Bereken de matrix en de populatie na 20, 40 en 60 jaar. Wat zal er gebeuren met
-            deze vogelsoort?
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Deze vogelsoort zal uitsterven.
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Op een eiland wonen er nu 8000 mensen. In het enige dorpje wonen er 3000 en de rest woont op het platteland. Per jaar trekt 18% van de dorpsbewoners naar het platteland, terwijl 24% van de plattelandsbewoners naar het dorp trekt. De bevolking van het eiland is constant, geboorte en sterfte houden elkaar in evenwicht.
-          </p>
-          <ol>
-            <li>
-              <p>
-                Geef het migratiepatroon op het eiland weer met een matrix.
-              </p>
-            </li>
-            <li>
-              <p>
-                Bereken hoe de bevolking verdeeld is na 3 jaar.
-              </p>
-            </li>
-            <li>
-              <p>
-                Hoe moet de bevolking verdeeld zijn om een stabiele situatie te creëren? (De aantallen wijzigen niet door de migratie.)
-              </p>
-            </li>
-          </ol>
-        </statement>
-        <solution>
-          <p>
-            a) De matrix is <m>\begin{bmatrix}
-            0,82 \amp 0,24 \\
-            0,18 \amp 0,76 \\
-            \end{bmatrix}</m>; b) uitrekenen met RM; c) Stelsel opstellen voor evenwichtsituatie en uitrekenen geeft als resultaat 4571 dorpsbewoners en 3429 plattelandsbewoners.
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Stel je een bepaald soort kevers voor die maximaal 3 jaar oud worden. Door statistisch onderzoek is het volgende gebleken:
-            <ol>
-              <li>
-                <p>
-                  30% van de kevers overleeft gemiddeld het eerste levensjaar;
-                </p>
-              </li>
-              <li>
-                <p>
-                  in het eerste levensjaar heeft een kever gemiddeld 0,7 nakomelingen;
-                </p>
-              </li>
-              <li>
-                <p>
-                  6% van de kevers overleeft gemiddeld het tweede levensjaar;
-                </p>
-              </li>
-              <li>
-                <p>
-                  in het tweede levensjaar heeft een kever gemiddeld 1,6 nakomelingen;
-                </p>
-              </li>
-              <li>
-                <p>
-                  geen enkele kever wordt ouder dan 3 jaar en in het derde jaar krijgt een kever geen nakomelingen.
-                </p>
-              </li>
-            </ol>
-            Ga na hoe deze populatie evolueert.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            De matrix is
-            <me>
-              \begin{bmatrix}
-              0 \amp 0,7 \amp 1,6 \\
-              0,3 \amp  0 \amp 0 \\
-              0  \amp 0,06 \amp 0 \\
-              \end{bmatrix}
-            </me>
-            en daaruit blijkt (bereken bijvoorbeeld <m>A^{10}</m>) dat deze populatie vrij snel uitsterft.
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Een chemische reactor is voor 30% gevuld met stof A, voor 50% met stof B en voor 20% met stof C. Deze stoffen reageren onderling en na een dag is het volgende gebeurd: van stof A blijft 60% behouden, 30% wordt omgezet in stof B en 10% in stof C; van stof B blijft 50%
-            behouden, 40% wordt omgezet in stof in stof A en 10% in stof C; van stof C blijft 40% behouden, 40% wordt omgezet in stof A en 20% in stof B. Bereken de situatie na 3 dagen.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            De matrix is <m>\begin{bmatrix}0,6 \amp 0,4 \amp 0,4 \\0,3 \amp 0,5 \amp 0,2 \\ 0,1 \amp 0,1 \amp 0,4 \end{bmatrix}</m> en na drie dagen zijn de respectievelijke percentages van A, B en C: 49,8% 35,7% en 14,5%.
-          </p>
-        </solution>
-      </exercise>
-    </exercises>
-  </section>
+
+</section>
