@@ -136,7 +136,7 @@
       <task>
         <statement>
           <p>
-            Beschouw het vlak met vergelijking <m>\vv{P} = (1-k-m)\vv{D} + k \vv{E} + m \vv{G}</m>. Voor welke waarden van <m>k</m> en <m>m</m> beschrijft deze vergelijking alle punten van het binnengebied van de driehoek <m>DGH</m>?
+            Beschouw het vlak met vergelijking <m>\vv{P} = (1-k-m)\vv{D} + k \vv{E} + m \vv{G}</m>. Voor welke waarden van <m>k</m> en <m>m</m> beschrijft deze vergelijking alle punten van het binnengebied van de driehoek <m>DGH</m>? (<m>H</m> is het midden van <m>[EF])</m>.
           </p>    
           <sidebyside width="70%">
             <image source="vectorvgl-vlak-kubus-2.png"/>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Scalair product en de hoek tussen vectoren</title>
+    <p>
+      De definitie en de eigenschappen van het scalair product blijven natuurlijk gelden in de ruimte. Er komt wel een extra coördinaat bij, dus de formule voor het berekenen van het scalair product via de coördinaten krijgt een extra term.
+    </p>
+    <assemblage>
+      <title>Scalair product</title>
+      <p>
+         Gegeven de vectoren <m>\vv{u}(x_1,y_1,z_1)</m> en <m>\vv{v}(x_2,y_2,z_2)</m>. Het scalair van deze vectoren wordt gegeven door
+         <me>
+           \vv{u} \cdot \vv{v} = x_1x_2+y_1y_2+z_1z_2
+         </me>
+      </p>
+    </assemblage>
+    <p>
+      Deze extra term vinden we natuurlijk ook terug in de formule voor het berekenen van de hoek tussen twee vectoren.
+    </p>
+    <assemblage>
+      <title>Hoek tussen twee vectoren</title>
+      <p>
+        De hoek <m>\theta</m> tussen de vectoren <m>\vv{u}(x_1,y_1,z_1)</m> en <m>\vv{v}(x_2,y_2,z_2)</m> kan berekend worden via
+        <me>\cos \theta = \frac{x_1 x_2 + y_1 y_2 + z_1 z_2}{||\vv{u}|| \; ||\vv{v}||}</me>
+      </p>
+    </assemblage>
+  
+    <assemblage>
+      <title>Hoek tussen rechten</title>
+      <p>
+        Gegeven een rechte <m>e</m> met richtingsvector <m>\vv{R_1}(a_1,b_1,c_1)</m> en een rechte <m>f</m> met richtingsvector <m>\vv{R_2}(a_2,b_2,c_2)</m>.
+        <ol>
+          <li>
+            <p>
+              De hoek tussen de twee rechten is gewoon de hoek tussen de twee richtingsvectoren en kan met bovenstaande formule bepaald worden.
+            </p>
+          </li>
+          <li>
+            <p>
+              De rechten <m>e</m> en <m>f</m> staan loodrecht op elkaar als en slechts als hun richtingsvectoren loodrecht op elkaar staan.
+              <me>
+                e \perp f \Leftrightarrow \vv{R_1} \cdot \vv{R_2} = 0 \Leftrightarrow a_1a_2+b_1b_2+c_1c_2=0
+              </me>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </assemblage>
+  
+    <activity>
+      <statement>
+        <p>
+          Verifieer dat onderstaande rechten loodrecht op elkaar staan:
+          <me>
+            e \leftrightarrow \frac{x+2}{-2}=\frac{y-3}{3}=\frac{z}{4}  \qquad f \leftrightarrow \begin{cases} 2x-5y+19 = 0 \\ y-2z-9 = 0 \end{cases}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          De richtingsvector van <m>e</m> is <m>(-2,3,4)</m> en de richtingsvector van <m>f</m> is <m>(5,2,1)</m>. De rechten staan loodrecht op elkaar omdat het scalair product gelijk is aan nul:
+          <me>
+            (-2,3,4) \cdot (5,2,1) = -10+6+4 = 0
+          </me>
+        </p>
+      </solution>
+    </activity>
+  </section>

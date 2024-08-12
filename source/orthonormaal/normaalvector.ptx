@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Normaalvector van een vlak</title>
+    <p>
+      Een vector die loodrecht staat op een vlak noemen we een normaalvector van dat vlak. Een vlak heeft oneindig veel normaalvectoren die allemaal een veelvoud zijn van elkaar.
+    </p>
+    <p>
+      <m>\vv{N}(u,v,w)</m> is een normaalvector van het vlak door het punt <m>\vv{P}_1(x_1,y_1,z_1)</m> als en slechts als
+    </p>
+    <md>
+      <mrow>\amp \vv{N} \cdot (\vv{P}-\vv{P_1})=0 \quad( \text{ met } P(x,y,z) \text{ een willekeurig punt van het vlak})</mrow> 
+      <mrow>\Leftrightarrow \; \amp (u,v,w) \cdot (x-x_1,y-y_1,z-z_1) =0</mrow>
+      <mrow>\Leftrightarrow
+        \; \amp u(x-x_1)+v(y-y_1)+w(z-z_1) = 0</mrow>
+    </md>
+    <p>
+      Dit is de algemene cartesische vergelijking van een vlak door een gegeven punt en met een gegeven normaalvector.
+    </p>
+    <assemblage>
+      <title>Normaalvector en cartesische vergelijking van een vlak</title>
+      <p>
+        Het vlak <m>ux+vy+wz+t=0</m> heeft de vector <m>\vv{N}(u,v,w)</m> als normaalvector.
+      </p>
+      <p>
+        De constante term <m>t</m> kan dan bepaald worden door een punt <m>P_1(x_1,y_1,z_1)</m> van het vlak in te vullen of onmiddellijk via
+        <me>
+          u(x-x_1)+v(y-y_1)+w(z-z_1) = 0
+        </me>
+      </p>
+    </assemblage>
+    <assemblage>
+      <title>Hoek tussen 2 vlakken en tussen een rechte en een vlak</title>
+      <p>
+        Gegeven het vlak <m>\alpha</m> met richtingsvector <m>\vv{N}_1(u_1,v_1,w_1)</m>, het vlak <m>\beta</m> met richtingsvector <m>\vv{N}_2(u_2,v_2,w_2)</m> en de rechte <m>e</m> met richtingsvector <m>\vv{R}(a,b,c)</m>.
+        <ol>
+          <li>
+            <p>
+              De hoek tussen twee snijdende vlakken <m>\alpha</m> en <m>\beta</m> is de hoek tussen de normaalvectoren <m>\vv{N}_1</m> en <m>\vv{N}_2</m> en kan met het scalair product bepaald worden.
+            </p>
+          </li>
+          <li>
+            <p>
+              De hoek tussen de rechte <m>e</m> en het vlak <m>\alpha</m> is het complement van de hoek tussen de richtingsvector <m>\vv{R}</m> van de rechte en de normaalvector <m>\vv{N}_1</m> van het vlak.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </assemblage>
+    <assemblage>
+      <title>Loodrechte stand, loodlijnen en loodvlakken</title>
+      <p>
+        Gegeven het vlak <m>\alpha</m> met normaalvector <m>\vv{N}_1(u_1,v_1,w_1)</m>, het vlak <m>\beta</m> met normaalvector <m>\vv{N}_2(u_2,v_2,w_2)</m> en de rechte <m>e</m> met richtingsvector <m>\vv{R}(a,b,c)</m>.
+        <ol>
+          <li>
+            <p>
+              <m>\alpha \perp \beta \Leftrightarrow u_1u_2+v_1v_2+w_1w_2=0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>e \perp \alpha \Leftrightarrow \vv{R}=k\vv{N_1} \Leftrightarrow (a,b,c)=k(u_1,v_1,w_1)</m> met <m>k \in \mathbb{R}_0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              De loodlijn uit <m>Q(x_1,y_1,z_1)</m> op het vlak <m>\alpha</m> wordt gegeven door de parametervoorstelling <m>\begin{cases}x=x_1+ku_1 \\ y=y_1+kv_1\\z=z_1+kw_1 \end{cases}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Het loodvlak uit <m>Q(x_1,y_1,z_1)</m> op de rechte <m>e</m> wordt gegeven door de cartesische vergelijking <m>a(x-x_1)+b(y-y_1)+c(z-z_1)=0</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </assemblage>
+  </section>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<chapter xml:id="reeks7" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<title>Loodrechte stand, afstanden en hoeken in de ruimte</title>
+
+<!--TODO: Eerste twee paragrafen meer in detail uitwerken met tekeningen, voorbeelden en oefeningen -->
+
+<introduction>
+  <p>
+    <alert>In dit hoofdstuk is het assenstelsel altijd orthonormaal.</alert>
+  </p>
+</introduction>
+
+<xi:include href="./orthonormaal/scalair-product.ptx" />
+<xi:include href="./orthonormaal/normaalvector.ptx" />
+<xi:include href="./orthonormaal/afstanden.ptx" />
+
+<!--TODO Oefeningen toevoegen-->
+
+</chapter>
