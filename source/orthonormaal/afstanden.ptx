@@ -2,11 +2,13 @@
 
 <section>
     <title>Afstanden in de ruimte</title>
+
     <p>
-      De afstand tussen twee punten <m>A</m> en <m>B</m> is de lengte van het lijnstuk <m>[AB]</m>. We noteren <m>d(A,B)=|AB|</m>.  Na het kiezen van een orthonormaal assenstelsel kan de afstand tussen de punten <m>A(x_1,y_1,z_1)</m> en <m>B(x_2,y_2,z_2)</m> onmiddellijk berekend worden met de stelling van Pythagoras:
-      <me>
-        \boxed{d(A,B)=|AB|=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}}
-      </me>
+      Gegeven de punten <m>P(x_1,y_1,z_1)</m> en <m>Q(x_2,y_2,z_2)</m>. De afstand <m>d(P,Q)=|PQ|</m> tussen deze twee punten is gelijk aan de norm van <m>\vv{PQ}</m>.
+      <md>
+        <mrow> |PQ|= \; \amp ||\vv{PQ}||=||\vv{Q}-\vv{P}|| </mrow>
+        <mrow> = \; \amp  \boxed{\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}}</mrow>
+      </md>
     </p>
   
     <example>
@@ -28,30 +30,22 @@
     </example>
   
     <p>
-      We kunnen ook een algemene formule afleiden voor de afstand van een punt tot een vlak.
-    </p>
-    <p>
-     De afstand van het punt <m>Q(x_2,y_2,z_2)</m> tot het vlak <m>\alpha</m> door <m>P_1(x_1,y_1,z_1)</m> met normaalvector <m>\vv{N}(u,v,w)</m> is
-  
-      <md>
-       <mrow> d(Q,\alpha)=  \amp   \frac{| \vv{N} \cdot (\vv{Q}-\vv{P}_1)|}{||\vv{N}||}</mrow>
-       <mrow>  = \amp   \frac{|u(x_2-x_1)+v(y_2-y_1)+w(z_2-z_1)|}{\sqrt{u^2+v^2+w^2}}</mrow>
-       <mrow> =  \amp \boxed{\frac{|ux_2+vy_2+wz_2+t|}{\sqrt{u^2+v^2+w^2}}}</mrow>
-     </md>
-         Bij de laatste stap hebben we gebruikt dat 
-         <md>
-          <mrow> \amp P_1 \in \alpha \Leftrightarrow ux_1+vy_1+wz_1+t =0 </mrow>
-          <mrow> \Rightarrow \amp t=-ux_1-vy_1-wz_1</mrow>
-         </md>
+      De afstand van het punt <m>Q(x_2,y_2,z_2)</m> tot het vlak <m>\alpha</m> door <m>P_1(x_1,y_1,z_1)</m> met normaalvector <m>\vv{N}(u,v,w)</m> kan ook berekend worden met de algemene formule
+      <me>
+        \boxed{d(Q,\alpha)=   \frac{|u(x_2-x_1)+v(y_2-y_1)+w(z_2-z_1)|}{\sqrt{u^2+v^2+w^2}}}
+      </me>
+      Als er geen punt van het vlak gekend is kan je de formule
+      <me>
+        \boxed{d(Q,\alpha) = \frac{|ux_2+vy_2+wz_2+t|}{\sqrt{u^2+v^2+w^2}} \qquad{t \in \mathbb{R}}}
+      </me>
+      gebruiken. De afleiding van bovenstaande formules verloopt volledig analoog aan de afleiding van de formule voor de afstand van een punt tot een rechte en herhalen we hier niet. 
     </p>
   
-    <p>
-      Bovenstaande formule kan je natuurlijk ook gebruiken om de afstand tussen twee evenwijdige vlakken te bepalen.
-    </p>
-  
-    <sidebyside width="60%">
-      <image  source="afstand-punt-vlak.png"/>
-    </sidebyside>
+    <remark>
+      <p>
+        Bovenstaande formule kan je natuurlijk ook gebruiken om de afstand tussen twee evenwijdige vlakken te bepalen.
+      </p>
+    </remark>
   
     <p>
       De afstand van een punt <m>Q</m> tot een rechte <m>a</m> kan je op twee manieren

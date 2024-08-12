@@ -8,7 +8,7 @@
     <assemblage>
       <title>Scalair product</title>
       <p>
-         Gegeven de vectoren <m>\vv{u}(x_1,y_1,z_1)</m> en <m>\vv{v}(x_2,y_2,z_2)</m>. Het scalair van deze vectoren wordt gegeven door
+         Gegeven de vectoren <m>\vv{u}(x_1,y_1,z_1)</m> en <m>\vv{v}(x_2,y_2,z_2)</m>. Het scalair product van deze vectoren wordt gegeven door
          <me>
            \vv{u} \cdot \vv{v} = x_1x_2+y_1y_2+z_1z_2
          </me>
